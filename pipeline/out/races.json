@@ -98,8 +98,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": -0.2,
-      "pts": -0.024,
+      "z": -0.22,
+      "pts": -0.026,
       "stat": "0 safety cars, 3 VSCs, 3 retirements"
      },
      {
@@ -127,10 +127,10 @@
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.183,
+    "raw": 0.181,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -142,7 +142,7 @@
    "locality": "Shanghai",
    "country": "China",
    "laps": 56,
-   "score": 91,
+   "score": 89,
    "tier": "Must Watch",
    "front_pct": 89,
    "pack_pct": 86,
@@ -229,8 +229,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": -0.45,
-      "pts": -0.054,
+      "z": -0.48,
+      "pts": -0.058,
       "stat": "1 safety car, 0 VSCs, 3 retirements"
      },
      {
@@ -258,10 +258,10 @@
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.69,
+    "raw": 0.687,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -359,8 +359,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": -0.58,
-      "pts": -0.07,
+      "z": -0.6,
+      "pts": -0.072,
       "stat": "1 safety car, 0 VSCs, 2 retirements"
      },
      {
@@ -388,10 +388,10 @@
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.23,
+    "raw": 0.227,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -491,8 +491,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": -0.33,
-      "pts": -0.04,
+      "z": -0.35,
+      "pts": -0.042,
       "stat": "1 safety car, 0 VSCs, 4 retirements"
      },
      {
@@ -520,10 +520,10 @@
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.342,
+    "raw": 0.339,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -628,8 +628,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": 0.55,
-      "pts": 0.066,
+      "z": 0.54,
+      "pts": 0.065,
       "stat": "0 safety cars, 3 VSCs, 5 retirements"
      },
      {
@@ -657,10 +657,10 @@
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": 0.092,
+    "raw": 0.091,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -788,8 +788,8 @@
     ],
     "raw": -0.556,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -893,8 +893,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": 0.55,
-      "pts": 0.066,
+      "z": 0.54,
+      "pts": 0.065,
       "stat": "0 safety cars, 2 VSCs, 7 retirements"
      },
      {
@@ -922,10 +922,10 @@
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": -0.528,
+    "raw": -0.529,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -937,7 +937,7 @@
    "locality": "Spielberg",
    "country": "Austria",
    "laps": 71,
-   "score": 41,
+   "score": 39,
    "tier": "Worth It",
    "front_pct": 73,
    "pack_pct": 11,
@@ -1032,8 +1032,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": -0.33,
-      "pts": -0.04,
+      "z": -0.35,
+      "pts": -0.042,
       "stat": "0 safety cars, 2 VSCs, 4 retirements"
      },
      {
@@ -1061,10 +1061,10 @@
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": -0.222,
+    "raw": -0.225,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -1161,8 +1161,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": 1.55,
-      "pts": 0.186,
+      "z": 1.56,
+      "pts": 0.187,
       "stat": "2 safety cars, 2 VSCs, 3 retirements"
      },
      {
@@ -1190,10 +1190,10 @@
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": -0.279,
+    "raw": -0.278,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -1308,8 +1308,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": 0.05,
-      "pts": 0.006,
+      "z": 0.03,
+      "pts": 0.004,
       "stat": "1 safety car, 2 VSCs, 3 retirements"
      },
      {
@@ -1337,10 +1337,10 @@
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": 0.858,
+    "raw": 0.856,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -1446,8 +1446,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": -0.2,
-      "pts": -0.024,
+      "z": -0.22,
+      "pts": -0.026,
       "stat": "0 safety cars, 1 VSC, 3 retirements"
      },
      {
@@ -1475,10 +1475,10 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.474,
+    "raw": -0.476,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -1604,8 +1604,8 @@
     ],
     "raw": 0.089,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -1704,8 +1704,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": 0.55,
-      "pts": 0.066,
+      "z": 0.54,
+      "pts": 0.065,
       "stat": "1 safety car, 0 VSCs, 1 red flag, 3 retirements"
      },
      {
@@ -1733,10 +1733,10 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": 0.628,
+    "raw": 0.627,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -1836,8 +1836,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": -0.58,
-      "pts": -0.07,
+      "z": -0.6,
+      "pts": -0.072,
       "stat": "0 safety cars, 1 VSC, 4 retirements"
      },
      {
@@ -1865,10 +1865,10 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.353,
+    "raw": -0.356,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -1966,8 +1966,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": 0.55,
-      "pts": 0.066,
+      "z": 0.54,
+      "pts": 0.065,
       "stat": "2 safety cars, 0 VSCs, 7 retirements"
      },
      {
@@ -1995,10 +1995,10 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": 1.413,
+    "raw": 1.412,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -2128,8 +2128,8 @@
     ],
     "raw": 0.785,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -2231,8 +2231,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": -0.33,
-      "pts": -0.04,
+      "z": -0.35,
+      "pts": -0.042,
       "stat": "0 safety cars, 2 VSCs, 4 retirements"
      },
      {
@@ -2260,10 +2260,10 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.576,
+    "raw": -0.579,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -2362,8 +2362,8 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": 0.05,
-      "pts": 0.006,
+      "z": 0.03,
+      "pts": 0.004,
       "stat": "0 safety cars, 2 VSCs, 3 retirements"
      },
      {
@@ -2391,10 +2391,10 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.358,
+    "raw": -0.36,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -2532,10 +2532,10 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": 0.156,
+    "raw": 0.155,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   },
@@ -2547,13 +2547,13 @@
    "locality": "S\u00e3o Paulo",
    "country": "Brazil",
    "laps": 71,
-   "score": 39,
+   "score": 50,
    "tier": "Worth It",
    "front_pct": 36,
    "pack_pct": 84,
    "action_meter": 4,
    "suspense_meter": 2,
-   "chaos_meter": 1,
+   "chaos_meter": 2,
    "advice": {
     "kind": "full",
     "text": "Watch the whole thing"
@@ -2642,9 +2642,9 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.12,
-      "z": -1.2,
-      "pts": -0.144,
-      "stat": "0 safety cars, 0 VSCs, 1 retirement"
+      "z": -0.48,
+      "pts": -0.058,
+      "stat": "0 safety cars, 0 VSCs, 1 retirement, rain"
      },
      {
       "key": "comeback",
@@ -2671,10 +2671,10 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.239,
+    "raw": -0.152,
     "raw_range": [
-     -0.615,
-     1.413
+     -0.617,
+     1.412
     ]
    }
   }

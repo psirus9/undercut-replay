@@ -171,7 +171,10 @@ def race_signals(rawdir, meta):
     starts = sorted(l["date_start"] for l in olaps if l.get("date_start"))
     t0 = starts[0] if starts else ""
     t1 = starts[-1] if starts else "9999"
-    rain = sum(1 for w in weather if (w.get("rainfall") or 0) > 0 and t0 <= w["date"] <= t1) >= 2
+    gauge_rain = sum(1 for w in weather if (w.get("rainfall") or 0) > 0 and t0 <= w["date"] <= t1) >= 2
+    # The rain gauge can miss a wet race (track still wet from earlier rain, or rain only at the end).
+    # The tyres don't: if a tenth of all laps were run on intermediates or wets, it was a wet race.
+    rain = gauge_rain or wet_share(stints) >= 0.10
 
     # championship stakes: leader's points gap after this race, and whether the lead changed
     stakes = 0.0
@@ -214,6 +217,16 @@ def race_signals(rawdir, meta):
     }
 
 CACHE = os.path.join(HERE, "out", "signals.json")
+
+def wet_share(stints):
+    """Share of all race laps run on intermediate or full wet tyres."""
+    tot = wet = 0
+    for s in stints:
+        if s.get("lap_start") is None or s.get("lap_end") is None: continue
+        n = s["lap_end"] - s["lap_start"] + 1
+        tot += n
+        if s.get("compound") in ("INTERMEDIATE", "WET"): wet += n
+    return wet / tot if tot else 0.0
 
 def collect():
     """All scored races: cached signals plus any newly fetched race (raw<year>/held.json)."""
