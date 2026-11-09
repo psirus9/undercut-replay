@@ -866,9 +866,9 @@ async function startFirebase() {
 // it sends anonymous, cookieless pings; nothing is stored on their device.
 async function startAnalytics() {
   if (window.claude || !/^https:/.test(location.protocol)) return;
-  let id;
-  try { const r = await fetch("/__/firebase/init.json"); if (!r.ok) return; id = (await r.json()).measurementId; } catch (e) { return; }
-  if (!id) return;
+  // Undercut Replay's Google Analytics stream. Firebase's own config is preferred if it names one.
+  let id = "G-VT0KHMPVQF";
+  try { const r = await fetch("/__/firebase/init.json"); if (r.ok) id = (await r.json()).measurementId || id; } catch (e) {}
   window.dataLayer = window.dataLayer || [];
   window.gtag = function () { dataLayer.push(arguments); };
   let choice = null;
