@@ -797,6 +797,11 @@ async function startFirebase() {
   catch (e) { $("vote-note").textContent = "Fan votes can't be reached right now. Try reloading."; renderFans(); return; }
   const app = A.initializeApp(cfg);
   const auth = AU.getAuth(app), fs = FS.getFirestore(app);
+  // Visit counter: one page view per load on the real site (not preview links), no cookies or IDs.
+  if (!location.hostname.includes("--")) {
+    const day = new Date().toISOString().slice(0, 10);
+    FS.setDoc(FS.doc(fs, "stats", day), { views: FS.increment(1) }, { merge: true }).catch(() => {});
+  }
   canVote = true;
   $("vote-note").textContent = "Seen it? Pick a verdict. You'll sign in with Google so each fan gets one vote.";
   signIn = () => AU.signInWithPopup(auth, new AU.GoogleAuthProvider()).then(c => { uid = c.user.uid; account = c.user.email || c.user.displayName; });

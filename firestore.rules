@@ -50,5 +50,17 @@ service cloud.firestore {
         && consistent(request.resource.data.race);
       allow delete: if false;
     }
+
+    // Daily page-view counter: stats/{YYYY-MM-DD} = { views }. Anyone can read the totals.
+    // A write may only add exactly one view, so the count can't be reset or inflated in a single write.
+    match /stats/{day} {
+      allow read: if true;
+      allow create: if day.matches('^20[0-9]{2}-[0-9]{2}-[0-9]{2}$')
+        && request.resource.data.keys().hasOnly(['views'])
+        && request.resource.data.views == 1;
+      allow update: if request.resource.data.keys().hasOnly(['views'])
+        && request.resource.data.views == resource.data.views + 1;
+      allow delete: if false;
+    }
   }
 }
