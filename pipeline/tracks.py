@@ -15,6 +15,7 @@ for m in held:
     cand.sort(key=lambda l: l["lap_duration"])
     from datetime import datetime, timedelta
     xy = []
+    full = {}
     for lap in (cand[len(cand) // 4: len(cand) // 4 + 6] + cand[::max(1, len(cand) // 25)]):
         t0 = lap["date_start"]
         t1 = (datetime.fromisoformat(t0) + timedelta(seconds=lap["lap_duration"])).isoformat()
@@ -22,7 +23,16 @@ for m in held:
         try:
             pts = json.load(urllib.request.urlopen(f"https://api.openf1.org/v1/location?{q}", timeout=60))
         except Exception:
-            time.sleep(1); continue
+            # OpenF1 sometimes refuses a time-window query (Monaco 2026 did). Fetch that car's whole
+            # trace once and cut the lap out locally instead.
+            try:
+                dn = lap["driver_number"]
+                if dn not in full:
+                    full[dn] = json.load(urllib.request.urlopen(f"https://api.openf1.org/v1/location?session_key={sk}&driver_number={dn}", timeout=180))
+                a, b = datetime.fromisoformat(t0), datetime.fromisoformat(t1)
+                pts = [p for p in full[dn] if a <= datetime.fromisoformat(p["date"]) <= b]
+            except Exception:
+                time.sleep(1); continue
         xy = [(p["x"], p["y"]) for p in pts if p["x"] or p["y"]]
         xy = [q for i, q in enumerate(xy) if i == 0 or q != xy[i - 1]]  # drop frozen samples
         if len(xy) >= 200: break
