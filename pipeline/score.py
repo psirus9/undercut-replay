@@ -268,13 +268,14 @@ def main():
             "late_action": r["late_passes"],
             "front_fight": r["lead_changes"] + 0.5 * r["front_passes"] + 20 * r["front_close_share"],
             "finish": -math.log(0.3 + min(r["margin"], r["min_late_gap"] + 2)),
-            "chaos": r["sc"] + 0.5 * r["vsc"] + 2 * r["red"] + 0.25 * r["dnfs"] + (1.5 if r["rain"] else 0) + r["late_sc"],
+            # retirements are listed in the breakdown but not scored: they rarely change how a race watches
+            "chaos": r["sc"] + 0.5 * r["vsc"] + 2 * r["red"] + (1.5 if r["rain"] else 0) + r["late_sc"],
             "comeback": r["comeback"],
             "strategy": r["strategies"],
             "stakes": r["stakes"],
         }
-    W = {"action": .16, "battles": .10, "late_action": .10, "front_fight": .16, "finish": .18,
-         "chaos": .12, "comeback": .07, "strategy": .05, "stakes": .06}
+    W = {"action": .16, "battles": .11, "late_action": .10, "front_fight": .22, "finish": .07,
+         "chaos": .16, "comeback": .07, "strategy": .05, "stakes": .06}
     F = [feat(r) for r in pool]
     keys = list(W)
     cols = {k: [f[k] for f in F] for k in keys}
