@@ -1,4 +1,4 @@
-# Undercut Replay
+# Replay Undercut
 
 Spoiler-free ratings for every Grand Prix. Each race gets one of three verdicts, Snoozer, Worth It or Must Watch, so someone who missed it knows whether to watch the full race or just the recap. Results and winners never appear on the page.
 

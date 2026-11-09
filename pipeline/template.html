@@ -1,4 +1,4 @@
-<title>Undercut Replay</title>
+<title>Replay Undercut</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=DM+Mono:wght@400;500&display=swap">
@@ -841,7 +841,7 @@ async function startFirebase() {
 // it sends anonymous, cookieless pings; nothing is stored on their device.
 async function startAnalytics() {
   if (window.claude || !/^https:/.test(location.protocol)) return;
-  // Undercut Replay's Google Analytics stream. Firebase's own config is preferred if it names one.
+  // Replay Undercut's Google Analytics stream. Firebase's own config is preferred if it names one.
   let id = "G-VT0KHMPVQF";
   try { const r = await fetch("/__/firebase/init.json"); if (r.ok) id = (await r.json()).measurementId || id; } catch (e) {}
   window.dataLayer = window.dataLayer || [];
@@ -856,7 +856,7 @@ async function startAnalytics() {
   if (choice) return;
   const bar = el("div", "consent");
   bar.setAttribute("role", "region"); bar.setAttribute("aria-label", "Usage stats");
-  const msg = el("p", "", "Help improve Undercut Replay? We'd like to count visits with Google Analytics. Your choice is saved on this device.");
+  const msg = el("p", "", "Help improve Replay Undercut? We'd like to count visits with Google Analytics. Your choice is saved on this device.");
   const yes = el("button", "consent-yes", "Allow"), no = el("button", "consent-no", "No thanks");
   yes.type = no.type = "button";
   const done = v => { try { localStorage.setItem("ur-stats", v); } catch (e) {} if (v === "yes") gtag("consent", "update", { analytics_storage: "granted" }); bar.remove(); };
