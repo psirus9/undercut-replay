@@ -6,5 +6,7 @@
       { "source": "/", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }] },
       { "source": "**/*.html", "headers": [{ "key": "Cache-Control", "value": "public, max-age=300" }] }
     ]
-  }
+  },
+  "firestore": { "rules": "firestore.rules" },
+  "emulators": { "firestore": { "port": 8085 } }
 }

@@ -144,6 +144,7 @@ h1, h2, h3 { font-family: var(--f-display); font-weight: 800; font-stretch: 110%
 .vote-btns button:disabled { cursor: default; opacity: .5; }
 .vote-btns button:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
 .vote small { color: var(--muted); font-size: 13px; }
+.linkish { font: inherit; color: var(--sky-ink); background: none; border: 0; padding: 0; text-decoration: underline; cursor: pointer; }
 .next { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; padding: 11px 24px; border-top: 1px solid var(--grid); background: var(--row); font-size: 14px; }
 .next b { font-family: var(--f-display); font-stretch: 110%; font-size: 16px; text-transform: uppercase; font-weight: 800; }
 .row .fan { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: .04em; color: var(--muted); margin-top: 2px; }
@@ -653,7 +654,7 @@ $("dlg-close").addEventListener("click", () => $("dlg").close ? $("dlg").close()
 $("dlg").addEventListener("click", e => { if (e.target === $("dlg")) $("dlg").close(); });
 $("how-btn").addEventListener("click", () => openDetail(last));
 
-// ---- fan vote (shared store: votes/<viewer id> = {v: {raceKey: 0|1|2}})
+// ---- fan vote. In Claude: votes/<viewer id> = {v: {raceKey: 0|1|2}}. Public site: Firebase ballots + tallies (firestore.rules).
 let db = null, uid = null, myVotes = {}, tallies = {}, canVote = false, votesLoaded = false;
 function fanSummary(key) {
   const c = tallies[key]; if (!c) return null;
@@ -684,30 +685,46 @@ function renderFans() {
     box.appendChild(b);
   });
 }
+// Two stores: Claude's shared store when the page is open in Claude, Firebase on the public site.
+let saveVote = null, signIn = null, account = null, doSignOut = null;
 async function castVote(k) {
-  if (!db || !uid) return;
-  const prev = myVotes[heroKey];
+  if (!saveVote) return;
+  if (!uid) {
+    try { await signIn(); } catch (e) { $("vote-note").textContent = "Sign-in was cancelled, so your vote wasn't saved."; return; }
+    if (!uid) return;
+  }
+  const key = heroKey, prev = myVotes[key];
   const next = { ...myVotes };
-  if (prev === k) delete next[heroKey]; else next[heroKey] = k;
+  if (prev === k) delete next[key]; else next[key] = k;
   myVotes = next; renderFans();
   try {
-    await db.doc("votes/" + uid).set({ v: next });
+    await saveVote(key, prev, prev === k ? -1 : k, next);
     $("vote-note").textContent = prev === k ? "Vote cleared." : `Saved: ${TIERS[k]}. Tap again to clear it.`;
+    showAccount();
   } catch (e) {
-    myVotes = { ...next }; if (prev === undefined) delete myVotes[heroKey]; else myVotes[heroKey] = prev;
+    myVotes = { ...next }; if (prev === undefined) delete myVotes[key]; else myVotes[key] = prev;
     if (e && e.code === "invalid_argument") { canVote = false; $("vote-note").textContent = "You can see the fan vote, but voting needs Contributor access to this page."; }
     else $("vote-note").textContent = "Couldn't save your vote. Try again in a moment.";
     renderFans();
   }
 }
-async function startFans() {
+function showAccount() {
+  const note = $("vote-note");
+  if (!account || !doSignOut) return;
+  const b = el("button", "linkish", "Sign out"); b.type = "button";
+  b.addEventListener("click", async () => { await doSignOut(); note.textContent = "Signed out. Pick a verdict to sign in and vote."; });
+  note.append(document.createTextNode(` Signed in as ${account}. `), b);
+}
+async function startClaude() {
   try {
-    db = window.claude && window.claude.use ? await window.claude.use("db") : null;
-    const user = window.claude && window.claude.use ? await window.claude.use("user") : null;
+    db = await window.claude.use("db");
+    const user = await window.claude.use("user");
     uid = user ? await user.id() : null;
     if (user && uid) { const w = await user.can("data.write"); canVote = w !== false; }
   } catch (e) { db = null; }
-  if (!db) { $("vote-note").textContent = window.claude ? "Fan voting works when you open this page in Claude while signed in." : "Fan voting opens soon. For now, the verdict above is ours alone."; renderFans(); return; }
+  if (!db) { $("vote-note").textContent = "Fan voting works when you open this page in Claude while signed in."; renderFans(); return; }
+  saveVote = (key, prev, k, next) => db.doc("votes/" + uid).set({ v: next });
+  signIn = async () => { throw new Error("no sign-in"); };
   if (!uid) $("vote-note").textContent = "Sign in to Claude to add your vote.";
   else if (!canVote) $("vote-note").textContent = "You can see the fan vote, but voting needs Contributor access to this page.";
   renderFans();
@@ -724,6 +741,56 @@ async function startFans() {
     renderFans(); renderBoard();
   }, () => { clearTimeout(timer); votesLoaded = true; $("vote-note").textContent = "Fan votes aren't available on this view."; renderFans(); });
 }
+async function startFirebase() {
+  const off = () => { $("vote-note").textContent = "Fan voting opens soon. For now, the verdict above is ours alone."; renderFans(); };
+  let cfg;
+  try { const r = await fetch("/__/firebase/init.json"); if (!r.ok) return off(); cfg = await r.json(); } catch (e) { return off(); }
+  const base = "https://www.gstatic.com/firebasejs/10.12.2/";
+  let A, AU, FS;
+  try { [A, AU, FS] = await Promise.all([import(base + "firebase-app.js"), import(base + "firebase-auth.js"), import(base + "firebase-firestore.js")]); }
+  catch (e) { $("vote-note").textContent = "Fan votes can't be reached right now. Try reloading."; renderFans(); return; }
+  const app = A.initializeApp(cfg);
+  const auth = AU.getAuth(app), fs = FS.getFirestore(app);
+  canVote = true;
+  $("vote-note").textContent = "Seen it? Pick a verdict. You'll sign in with Google so each fan gets one vote.";
+  signIn = () => AU.signInWithPopup(auth, new AU.GoogleAuthProvider()).then(c => { uid = c.user.uid; account = c.user.email || c.user.displayName; });
+  doSignOut = () => AU.signOut(auth);
+  saveVote = (key, prev, k) => FS.runTransaction(fs, async tx => {
+    const bRef = FS.doc(fs, "ballots", `${key}_${uid}`), tRef = FS.doc(fs, "tallies", key);
+    const b = await tx.get(bRef), tl = await tx.get(tRef);
+    const was = b.exists() ? b.data().t : -1;
+    if (was === k) return;
+    const c = tl.exists() ? { c0: 0, c1: 0, c2: 0, ...tl.data() } : { c0: 0, c1: 0, c2: 0 };
+    if (was >= 0) c["c" + was] -= 1;
+    if (k >= 0) c["c" + k] += 1;
+    tx.set(bRef, { race: key, uid, t: k });
+    tx.set(tRef, c);
+  });
+  renderFans();
+  const timer = setTimeout(() => { if (!votesLoaded) $("vote-note").textContent = "Fan votes can't be reached right now. They'll appear when the connection returns."; }, 10000);
+  FS.onSnapshot(FS.collection(fs, "tallies"), snap => {
+    const t = {};
+    snap.docs.forEach(d => { const c = d.data() || {}; t[d.id] = [c.c0 || 0, c.c1 || 0, c.c2 || 0]; });
+    tallies = t;
+    if (!snap.metadata.fromCache) { votesLoaded = true; clearTimeout(timer); }
+    renderFans(); renderBoard();
+  }, () => { clearTimeout(timer); votesLoaded = true; $("vote-note").textContent = "Fan votes can't be reached right now."; renderFans(); });
+  let unMine = null;
+  AU.onAuthStateChanged(auth, user => {
+    if (unMine) { unMine(); unMine = null; }
+    uid = user ? user.uid : null;
+    account = user ? (user.email || user.displayName) : null;
+    myVotes = {};
+    if (user) {
+      unMine = FS.onSnapshot(FS.query(FS.collection(fs, "ballots"), FS.where("uid", "==", user.uid)), snap => {
+        const m = {}; snap.docs.forEach(d => { const v = d.data(); if (v.t >= 0) m[v.race] = v.t; });
+        myVotes = m; renderFans();
+      });
+    }
+    renderFans();
+  });
+}
+function startFans() { return window.claude && window.claude.use ? startClaude() : startFirebase(); }
 
 renderHero();
 renderNext();

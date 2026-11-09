@@ -1,0 +1,54 @@
+rules_version = '2';
+
+// Fan votes for Undercut Replay.
+//   ballots/{race}_{uid}  { race, uid, t }  one per person per race; t is 0 Snoozer, 1 Worth It, 2 Must Watch, -1 cleared
+//   tallies/{race}        { c0, c1, c2 }    public vote counts
+// A ballot and its tally change together in one transaction. Each rule checks that the tally moved by
+// exactly the ballot's change, so nobody can stuff the counts or vote twice.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function ballotPath(race) { return /databases/$(database)/documents/ballots/$(race + '_' + request.auth.uid); }
+    function tallyPath(race) { return /databases/$(database)/documents/tallies/$(race); }
+
+    function prevT(race) { return exists(ballotPath(race)) ? get(ballotPath(race)).data.t : -1; }
+    function nextT(race) { return existsAfter(ballotPath(race)) ? getAfter(ballotPath(race)).data.t : -1; }
+    function oldC(race, k) { return exists(tallyPath(race)) ? get(tallyPath(race)).data[k] : 0; }
+    function delta(race, i) { return (nextT(race) == i ? 1 : 0) - (prevT(race) == i ? 1 : 0); }
+
+    function consistent(race) {
+      let after = getAfter(tallyPath(race)).data;
+      return existsAfter(tallyPath(race))
+        && after.keys().hasOnly(['c0', 'c1', 'c2'])
+        && after.c0 == oldC(race, 'c0') + delta(race, 0)
+        && after.c1 == oldC(race, 'c1') + delta(race, 1)
+        && after.c2 == oldC(race, 'c2') + delta(race, 2);
+    }
+
+    function validRace(race) { return race.matches('^20[0-9]{2}-[0-9]{1,2}$'); }
+
+    match /tallies/{race} {
+      allow read: if true;
+      allow create, update: if request.auth != null
+        && validRace(race)
+        && prevT(race) != nextT(race)
+        && consistent(race);
+      allow delete: if false;
+    }
+
+    match /ballots/{id} {
+      // A transaction reads your ballot before it exists, so a missing ballot is readable too.
+      allow get: if request.auth != null && (resource == null || resource.data.uid == request.auth.uid);
+      allow list: if request.auth != null && resource.data.uid == request.auth.uid;
+      allow create, update: if request.auth != null
+        && request.resource.data.keys().hasOnly(['race', 'uid', 't'])
+        && request.resource.data.uid == request.auth.uid
+        && validRace(request.resource.data.race)
+        && id == request.resource.data.race + '_' + request.auth.uid
+        && request.resource.data.t in [-1, 0, 1, 2]
+        && (resource == null || resource.data.race == request.resource.data.race)
+        && consistent(request.resource.data.race);
+      allow delete: if false;
+    }
+  }
+}

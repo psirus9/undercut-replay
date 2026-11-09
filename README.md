@@ -17,8 +17,10 @@ bash run.sh
 
 The last line says `PUBLISH: yes` when a new race was scored or the pre-race guess changed. Raw downloads go in `pipeline/raw<year>/` and are not committed. Scored races are cached in `pipeline/out/signals.json`, so only new races are fetched.
 
-## Not yet wired up
+## Fan votes
 
-Fan voting currently uses Claude's built-in storage, so it only works inside Claude. On the public site the vote buttons show a notice instead. Moving votes to Firebase or Supabase is the next step.
+On the public site, fans sign in with Google and vote Snoozer, Worth It or Must Watch. Votes live in Firestore: one private ballot per person per race, plus public counts. `firestore.rules` makes sure a ballot and its count always change together, so the counts can't be stuffed. `tests/` checks this against the emulator. Inside Claude, the page uses Claude's own storage instead.
+
+Rules are not deployed by the workflows. After changing `firestore.rules`, paste it into Firestore > Rules in the Firebase console and publish.
 
 Not affiliated with, endorsed by or connected to Formula 1, the FIA or any team.

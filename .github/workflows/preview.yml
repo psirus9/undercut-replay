@@ -1,0 +1,24 @@
+name: Preview link
+
+# Any branch other than main gets its own temporary Firebase link (kept 7 days), so changes can be checked before they go live.
+on:
+  push:
+    branches-ignore: [main]
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the page from this branch
+        run: cd pipeline && python3 build.py && cp out/replay-worthy.html ../site/index.html
+      - id: deploy
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_UNDERCUT_REPLAY }}
+          projectId: undercut-replay
+          channelId: ${{ github.ref_name }}
+          expires: 7d
+      - name: Preview address
+        run: echo "Preview at ${{ steps.deploy.outputs.details_url }}" >> $GITHUB_STEP_SUMMARY
