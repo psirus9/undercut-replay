@@ -707,7 +707,7 @@ async function startFans() {
     uid = user ? await user.id() : null;
     if (user && uid) { const w = await user.can("data.write"); canVote = w !== false; }
   } catch (e) { db = null; }
-  if (!db) { $("vote-note").textContent = "Fan voting works when you open this page in Claude while signed in."; renderFans(); return; }
+  if (!db) { $("vote-note").textContent = window.claude ? "Fan voting works when you open this page in Claude while signed in." : "Fan voting opens soon. For now, the verdict above is ours alone."; renderFans(); return; }
   if (!uid) $("vote-note").textContent = "Sign in to Claude to add your vote.";
   else if (!canVote) $("vote-note").textContent = "You can see the fan vote, but voting needs Contributor access to this page.";
   renderFans();

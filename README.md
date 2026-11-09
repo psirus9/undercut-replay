@@ -5,8 +5,8 @@ Spoiler-free ratings for every Grand Prix. Each race gets one of three verdicts,
 ## How it works
 
 - `pipeline/` fetches timing data from OpenF1 (and Jolpica-F1 once it posts), scores each race, and builds the page.
-- `site/index.html` is the built page. Point your host (Firebase Hosting, Vercel or Cloudflare Pages) at the `site` folder.
-- `.github/workflows/refresh.yml` runs the pipeline on race weekends and commits the new page, which triggers a redeploy.
+- `site/index.html` is the built page, served by Firebase Hosting (`firebase.json`).
+- `.github/workflows/refresh.yml` runs the pipeline on race weekends and commits the new page, and `deploy.yml` publishes it to Firebase. Deploys need a `FIREBASE_SERVICE_ACCOUNT_UNDERCUT_REPLAY` repository secret.
 
 ## Run it yourself
 
