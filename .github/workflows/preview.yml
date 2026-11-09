@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build the page from this branch
-        run: cd pipeline && python3 build.py && cp out/replay-worthy.html ../site/index.html
+        run: cd pipeline && python3 build.py && cp out/site.html ../site/index.html
       - id: deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:

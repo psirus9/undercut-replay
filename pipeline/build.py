@@ -13,5 +13,9 @@ data["provisional"] = prov if prov and prov["key"] not in season_keys else None
 cp = os.path.join(H, "out", "classics.json")
 data["classics"] = json.load(open(cp)) if os.path.exists(cp) else None
 t = open(os.path.join(H, "template.html")).read()
-open(os.path.join(H, "out", "replay-worthy.html"), "w").write(t.replace("/*DATA*/null", json.dumps(data, separators=(",", ":"))))
+page = t.replace("/*DATA*/null", json.dumps(data, separators=(",", ":")))
+# Claude adds its own document wrapper to replay-worthy.html; the public site needs a full document.
+open(os.path.join(H, "out", "replay-worthy.html"), "w").write(page)
+head = open(os.path.join(H, "site_head.html")).read()
+open(os.path.join(H, "out", "site.html"), "w").write(head + page + "\n</body>\n</html>\n")
 print("built")

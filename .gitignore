@@ -5,3 +5,4 @@ pipeline/out/debug.json
 pipeline/out/scored.txt
 pipeline/out/replay-worthy.html
 __pycache__/
+pipeline/out/site.html

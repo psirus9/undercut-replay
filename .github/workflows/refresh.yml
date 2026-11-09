@@ -46,7 +46,7 @@ jobs:
           PY
       - name: Publish the page
         run: |
-          cp pipeline/out/replay-worthy.html site/index.html
+          cp pipeline/out/site.html site/index.html
           git config user.name "undercut-replay-bot"
           git config user.email "undercut-replay-bot@users.noreply.github.com"
           git add site/index.html pipeline/out/*.json
