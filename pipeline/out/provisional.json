@@ -1,0 +1,17 @@
+{
+ "key": "2026-21",
+ "round": "21",
+ "name": "Las Vegas Grand Prix",
+ "date": "2026-11-22",
+ "start": "2026-11-22T04:00:00Z",
+ "locality": "Las Vegas",
+ "country": "USA",
+ "expected_tier": "Worth It",
+ "expected_pct": 51,
+ "basis": [
+  "Track history: about average across 3 races since 1996",
+  "Title fight: not much at stake",
+  "Grid: not set yet, qualifying still to come"
+ ],
+ "grid_known": false
+}

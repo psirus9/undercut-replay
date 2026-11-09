@@ -1,0 +1,7 @@
+pipeline/raw*/
+pipeline/hist_dl/
+pipeline/out/*.png
+pipeline/out/debug.json
+pipeline/out/scored.txt
+pipeline/out/replay-worthy.html
+__pycache__/

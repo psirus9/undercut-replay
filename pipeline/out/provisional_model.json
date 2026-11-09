@@ -1,0 +1,179 @@
+{
+ "weights": [
+  4.145289055170476,
+  73.54924649343727,
+  11.246753699107165,
+  21.941343405331104,
+  17.22441689265196,
+  4.275953237939766
+ ],
+ "circuits": {
+  "albert_park": {
+   "pct": 51.4,
+   "races": 28
+  },
+  "interlagos": {
+   "pct": 63.3,
+   "races": 29
+  },
+  "galvez": {
+   "pct": 52.2,
+   "races": 3
+  },
+  "nurburgring": {
+   "pct": 59.4,
+   "races": 16
+  },
+  "imola": {
+   "pct": 40.6,
+   "races": 16
+  },
+  "monaco": {
+   "pct": 43.9,
+   "races": 29
+  },
+  "catalunya": {
+   "pct": 34.0,
+   "races": 30
+  },
+  "villeneuve": {
+   "pct": 57.7,
+   "races": 27
+  },
+  "magny_cours": {
+   "pct": 34.2,
+   "races": 13
+  },
+  "silverstone": {
+   "pct": 58.1,
+   "races": 31
+  },
+  "hockenheimring": {
+   "pct": 50.5,
+   "races": 18
+  },
+  "hungaroring": {
+   "pct": 39.0,
+   "races": 30
+  },
+  "spa": {
+   "pct": 61.6,
+   "races": 27
+  },
+  "monza": {
+   "pct": 56.9,
+   "races": 30
+  },
+  "estoril": {
+   "pct": 43.8,
+   "races": 1
+  },
+  "suzuka": {
+   "pct": 45.7,
+   "races": 26
+  },
+  "red_bull_ring": {
+   "pct": 59.9,
+   "races": 21
+  },
+  "jerez": {
+   "pct": 60.5,
+   "races": 1
+  },
+  "sepang": {
+   "pct": 43.9,
+   "races": 19
+  },
+  "indianapolis": {
+   "pct": 51.0,
+   "races": 8
+  },
+  "bahrain": {
+   "pct": 52.0,
+   "races": 22
+  },
+  "shanghai": {
+   "pct": 57.5,
+   "races": 18
+  },
+  "istanbul": {
+   "pct": 40.2,
+   "races": 9
+  },
+  "fuji": {
+   "pct": 58.4,
+   "races": 2
+  },
+  "valencia": {
+   "pct": 39.0,
+   "races": 5
+  },
+  "marina_bay": {
+   "pct": 55.6,
+   "races": 16
+  },
+  "yas_marina": {
+   "pct": 39.5,
+   "races": 17
+  },
+  "yeongam": {
+   "pct": 53.0,
+   "races": 4
+  },
+  "buddh": {
+   "pct": 33.5,
+   "races": 3
+  },
+  "americas": {
+   "pct": 55.0,
+   "races": 13
+  },
+  "sochi": {
+   "pct": 45.4,
+   "races": 8
+  },
+  "rodriguez": {
+   "pct": 28.7,
+   "races": 10
+  },
+  "baku": {
+   "pct": 61.2,
+   "races": 9
+  },
+  "ricard": {
+   "pct": 52.9,
+   "races": 4
+  },
+  "mugello": {
+   "pct": 51.0,
+   "races": 1
+  },
+  "portimao": {
+   "pct": 52.6,
+   "races": 2
+  },
+  "zandvoort": {
+   "pct": 51.8,
+   "races": 5
+  },
+  "losail": {
+   "pct": 41.7,
+   "races": 4
+  },
+  "jeddah": {
+   "pct": 60.1,
+   "races": 5
+  },
+  "miami": {
+   "pct": 61.0,
+   "races": 4
+  },
+  "vegas": {
+   "pct": 58.8,
+   "races": 3
+  }
+ },
+ "cv_corr": 0.3,
+ "cv_same_tier": 0.5,
+ "pred_sd": 9.6
+}

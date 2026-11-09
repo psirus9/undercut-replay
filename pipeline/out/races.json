@@ -1,0 +1,2688 @@
+{
+ "season": [
+  {
+   "round": "1",
+   "session_key": 11234,
+   "name": "Australian Grand Prix",
+   "date": "2026-03-08",
+   "locality": "Melbourne",
+   "country": "Australia",
+   "laps": 58,
+   "score": 77,
+   "tier": "Worth It",
+   "front_pct": 77,
+   "pack_pct": 77,
+   "action_meter": 2,
+   "suspense_meter": 4,
+   "chaos_meter": 3,
+   "advice": {
+    "kind": "skip",
+    "from": 42,
+    "to": 56,
+    "text": "Skip laps 42 to 56"
+   },
+   "intensity_profile": [
+    7.5,
+    11.0,
+    11.0,
+    5.0,
+    4.0,
+    3.5,
+    0.0,
+    3.5,
+    3.5,
+    0.0,
+    1.5,
+    0.5,
+    0.5,
+    1.5,
+    1.0,
+    0.0,
+    3.0,
+    0.0,
+    4.0,
+    4.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 0.1,
+      "pts": 0.016,
+      "stat": "0.77 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -0.08,
+      "pts": -0.008,
+      "stat": "2.9 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -1.32,
+      "pts": -0.132,
+      "stat": "0.00 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 0.58,
+      "pts": 0.093,
+      "stat": "2 lead changes on track, 2 passes for podium places, top three nose to tail (under a second) on about 32% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": 0.47,
+      "pts": 0.085,
+      "stat": "Closest gap at the front late on: 3.0s. Winning margin: 3.0s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": -0.2,
+      "pts": -0.024,
+      "stat": "0 safety cars, 3 VSCs, 3 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": 1.49,
+      "pts": 0.104,
+      "stat": "Biggest climb by a top-six finisher: 14 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -0.13,
+      "pts": -0.007,
+      "stat": "3 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": 0.91,
+      "pts": 0.055,
+      "stat": "Championship very close afterwards"
+     }
+    ],
+    "raw": 0.183,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "2",
+   "session_key": 11245,
+   "name": "Chinese Grand Prix",
+   "date": "2026-03-15",
+   "locality": "Shanghai",
+   "country": "China",
+   "laps": 56,
+   "score": 91,
+   "tier": "Must Watch",
+   "front_pct": 89,
+   "pack_pct": 86,
+   "action_meter": 5,
+   "suspense_meter": 5,
+   "chaos_meter": 2,
+   "advice": {
+    "kind": "full",
+    "text": "Watch the whole thing"
+   },
+   "intensity_profile": [
+    9.5,
+    7.0,
+    4.0,
+    2.0,
+    3.5,
+    0.0,
+    15.0,
+    14.0,
+    7.0,
+    4.0,
+    7.0,
+    3.0,
+    3.0,
+    7.0,
+    2.0,
+    0.0,
+    3.0,
+    3.0,
+    2.0,
+    4.0,
+    1.0,
+    1.0,
+    7.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 2.06,
+      "pts": 0.33,
+      "stat": "1.60 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": 0.67,
+      "pts": 0.067,
+      "stat": "3.6 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": 0.48,
+      "pts": 0.048,
+      "stat": "0.64 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 1.81,
+      "pts": 0.29,
+      "stat": "1 lead change on track, 15 passes for podium places, top three nose to tail (under a second) on about 34% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": -0.17,
+      "pts": -0.031,
+      "stat": "Closest gap at the front late on: 5.5s. Winning margin: 5.5s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": -0.45,
+      "pts": -0.054,
+      "stat": "1 safety car, 0 VSCs, 3 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.19,
+      "pts": -0.013,
+      "stat": "Biggest climb by a top-six finisher: 5 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -0.13,
+      "pts": -0.007,
+      "stat": "3 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": 1.03,
+      "pts": 0.062,
+      "stat": "Championship very close afterwards"
+     }
+    ],
+    "raw": 0.69,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "3",
+   "session_key": 11253,
+   "name": "Japanese Grand Prix",
+   "date": "2026-03-29",
+   "locality": "Suzuka",
+   "country": "Japan",
+   "laps": 53,
+   "score": 82,
+   "tier": "Must Watch",
+   "front_pct": 59,
+   "pack_pct": 80,
+   "action_meter": 5,
+   "suspense_meter": 3,
+   "chaos_meter": 2,
+   "advice": {
+    "kind": "full",
+    "text": "Watch the whole thing"
+   },
+   "intensity_profile": [
+    5.5,
+    10.0,
+    4.0,
+    7.0,
+    5.0,
+    4.0,
+    1.0,
+    6.0,
+    0.5,
+    1.0,
+    4.0,
+    0.0,
+    0.0,
+    2.0,
+    4.5,
+    1.0,
+    0.0,
+    1.0,
+    2.0,
+    0.0,
+    2.0,
+    1.0,
+    0.0,
+    4.0,
+    4.0,
+    2.0,
+    0.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 0.55,
+      "pts": 0.088,
+      "stat": "0.96 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": 2.18,
+      "pts": 0.218,
+      "stat": "5.2 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": 0.68,
+      "pts": 0.068,
+      "stat": "0.71 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 1.38,
+      "pts": 0.221,
+      "stat": "2 lead changes on track, 10 passes for podium places, top three nose to tail (under a second) on about 31% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": -1.17,
+      "pts": -0.211,
+      "stat": "Closest gap at the front late on: 11.9s. Winning margin: 13.7s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": -0.58,
+      "pts": -0.07,
+      "stat": "1 safety car, 0 VSCs, 2 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.94,
+      "pts": -0.066,
+      "stat": "Biggest climb by a top-six finisher: 1 place"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -1.39,
+      "pts": -0.069,
+      "stat": "Everyone in the top ten ran the same tyre strategy"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": 0.83,
+      "pts": 0.05,
+      "stat": "Championship very close afterwards"
+     }
+    ],
+    "raw": 0.23,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "4",
+   "session_key": 11280,
+   "name": "Miami Grand Prix",
+   "date": "2026-05-03",
+   "locality": "Miami",
+   "country": "USA",
+   "laps": 57,
+   "score": 84,
+   "tier": "Must Watch",
+   "front_pct": 93,
+   "pack_pct": 64,
+   "action_meter": 4,
+   "suspense_meter": 5,
+   "chaos_meter": 3,
+   "advice": {
+    "kind": "full",
+    "text": "Watch the whole thing"
+   },
+   "intensity_profile": [
+    4.5,
+    8.0,
+    18.5,
+    0.0,
+    0.0,
+    3.0,
+    8.0,
+    6.5,
+    2.0,
+    2.0,
+    1.0,
+    3.0,
+    3.0,
+    0.0,
+    2.5,
+    2.0,
+    2.0,
+    4.0,
+    3.0,
+    3.0,
+    1.0,
+    1.0,
+    1.0,
+    4.0,
+    0.5,
+    1.0,
+    0.0,
+    3.0,
+    2.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 1.08,
+      "pts": 0.173,
+      "stat": "1.18 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -0.67,
+      "pts": -0.067,
+      "stat": "2.2 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": 0.17,
+      "pts": 0.017,
+      "stat": "0.53 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 1.63,
+      "pts": 0.261,
+      "stat": "4 lead changes on track, 7 passes for podium places, top three nose to tail (under a second) on about 35% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": 0.38,
+      "pts": 0.068,
+      "stat": "Closest gap at the front late on: 1.7s. Winning margin: 3.3s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": -0.33,
+      "pts": -0.04,
+      "stat": "1 safety car, 0 VSCs, 4 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.38,
+      "pts": -0.027,
+      "stat": "Biggest climb by a top-six finisher: 4 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -1.39,
+      "pts": -0.069,
+      "stat": "Everyone in the top ten ran the same tyre strategy"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": 0.4,
+      "pts": 0.024,
+      "stat": "Championship very close afterwards"
+     }
+    ],
+    "raw": 0.342,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "5",
+   "session_key": 11291,
+   "name": "Canadian Grand Prix",
+   "date": "2026-05-24",
+   "locality": "Montreal",
+   "country": "Canada",
+   "laps": 68,
+   "score": 70,
+   "tier": "Worth It",
+   "front_pct": 86,
+   "pack_pct": 30,
+   "action_meter": 2,
+   "suspense_meter": 5,
+   "chaos_meter": 4,
+   "advice": {
+    "kind": "full",
+    "text": "Watch the whole thing"
+   },
+   "intensity_profile": [
+    3.5,
+    4.0,
+    8.0,
+    7.0,
+    5.0,
+    6.0,
+    5.0,
+    4.0,
+    5.0,
+    3.0,
+    5.0,
+    2.0,
+    5.0,
+    4.0,
+    1.5,
+    3.0,
+    0.0,
+    1.0,
+    1.0,
+    2.0,
+    0.0,
+    0.0,
+    3.0,
+    0.0,
+    0.0,
+    0.0,
+    3.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    2.0,
+    0.0,
+    0.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": -0.3,
+      "pts": -0.048,
+      "stat": "0.59 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -0.8,
+      "pts": -0.08,
+      "stat": "2.1 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -0.83,
+      "pts": -0.083,
+      "stat": "0.18 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 2.5,
+      "pts": 0.4,
+      "stat": "4 lead changes on track, 5 passes for podium places, top three nose to tail (under a second) on about 68% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": -0.9,
+      "pts": -0.162,
+      "stat": "Closest gap at the front late on: 8.8s. Winning margin: 10.8s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": 0.55,
+      "pts": 0.066,
+      "stat": "0 safety cars, 3 VSCs, 5 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.38,
+      "pts": -0.027,
+      "stat": "Biggest climb by a top-six finisher: 4 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": 1.13,
+      "pts": 0.056,
+      "stat": "5 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -0.51,
+      "pts": -0.031,
+      "stat": "Championship fairly close afterwards"
+     }
+    ],
+    "raw": 0.092,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "6",
+   "session_key": 11299,
+   "name": "Monaco Grand Prix",
+   "date": "2026-06-07",
+   "locality": "Monte Carlo",
+   "country": "Monaco",
+   "laps": 78,
+   "score": 9,
+   "tier": "Snoozer",
+   "front_pct": 9,
+   "pack_pct": 34,
+   "action_meter": 1,
+   "suspense_meter": 1,
+   "chaos_meter": 5,
+   "advice": {
+    "kind": "recap",
+    "text": "Recap is enough"
+   },
+   "intensity_profile": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    3.0,
+    0.0,
+    3.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": -1.61,
+      "pts": -0.258,
+      "stat": "0.03 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -0.27,
+      "pts": -0.027,
+      "stat": "2.7 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -1.32,
+      "pts": -0.132,
+      "stat": "0.00 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": -1.3,
+      "pts": -0.208,
+      "stat": "0 lead changes on track, 0 passes for podium places, top three nose to tail (under a second) on about 2% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": -0.82,
+      "pts": -0.148,
+      "stat": "Closest gap at the front late on: 10.0s. Winning margin: 10.0s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": 2.5,
+      "pts": 0.3,
+      "stat": "2 safety cars, 0 VSCs, 1 red flag, 7 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": 0.56,
+      "pts": 0.039,
+      "stat": "Biggest climb by a top-six finisher: 9 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -0.76,
+      "pts": -0.038,
+      "stat": "2 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -1.42,
+      "pts": -0.085,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": -0.556,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "7",
+   "session_key": 11307,
+   "name": "Barcelona Grand Prix",
+   "date": "2026-06-14",
+   "locality": "Barcelona",
+   "country": "Spain",
+   "laps": 66,
+   "score": 11,
+   "tier": "Snoozer",
+   "front_pct": 14,
+   "pack_pct": 5,
+   "action_meter": 1,
+   "suspense_meter": 1,
+   "chaos_meter": 4,
+   "advice": {
+    "kind": "recap",
+    "text": "Recap is enough"
+   },
+   "intensity_profile": [
+    2.5,
+    1.0,
+    2.0,
+    2.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    2.0,
+    3.5,
+    1.0,
+    2.0,
+    1.0,
+    0.0,
+    3.5,
+    5.0,
+    3.0,
+    1.5,
+    0.0,
+    0.0,
+    3.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    2.0,
+    3.0,
+    3.0,
+    0.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": -0.48,
+      "pts": -0.077,
+      "stat": "0.52 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -1.41,
+      "pts": -0.141,
+      "stat": "1.5 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -0.5,
+      "pts": -0.05,
+      "stat": "0.29 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": -0.48,
+      "pts": -0.077,
+      "stat": "0 lead changes on track, 1 pass for podium places, top three nose to tail (under a second) on about 19% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": -1.27,
+      "pts": -0.229,
+      "stat": "Closest gap at the front late on: 13.0s. Winning margin: 19.6s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": 0.55,
+      "pts": 0.066,
+      "stat": "0 safety cars, 2 VSCs, 7 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.75,
+      "pts": -0.053,
+      "stat": "Biggest climb by a top-six finisher: 2 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": 1.13,
+      "pts": 0.056,
+      "stat": "5 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -0.43,
+      "pts": -0.026,
+      "stat": "Championship fairly close afterwards"
+     }
+    ],
+    "raw": -0.528,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "8",
+   "session_key": 11315,
+   "name": "Austrian Grand Prix",
+   "date": "2026-06-28",
+   "locality": "Spielberg",
+   "country": "Austria",
+   "laps": 71,
+   "score": 41,
+   "tier": "Worth It",
+   "front_pct": 73,
+   "pack_pct": 11,
+   "action_meter": 1,
+   "suspense_meter": 4,
+   "chaos_meter": 3,
+   "advice": {
+    "kind": "full",
+    "text": "Watch the whole thing"
+   },
+   "intensity_profile": [
+    8.5,
+    6.0,
+    1.0,
+    2.0,
+    0.0,
+    0.0,
+    0.0,
+    3.0,
+    2.0,
+    2.0,
+    5.0,
+    3.0,
+    3.0,
+    0.0,
+    4.0,
+    0.0,
+    0.0,
+    0.0,
+    1.5,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.5,
+    1.0,
+    3.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": -0.41,
+      "pts": -0.066,
+      "stat": "0.55 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -1.13,
+      "pts": -0.113,
+      "stat": "1.8 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -1.01,
+      "pts": -0.101,
+      "stat": "0.11 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": -0.37,
+      "pts": -0.059,
+      "stat": "0 lead changes on track, 4 passes for podium places, top three nose to tail (under a second) on about 14% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": 1.08,
+      "pts": 0.194,
+      "stat": "Closest gap at the front late on: 1.6s. Winning margin: 1.6s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": -0.33,
+      "pts": -0.04,
+      "stat": "0 safety cars, 2 VSCs, 4 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.57,
+      "pts": -0.04,
+      "stat": "Biggest climb by a top-six finisher: 3 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": 0.5,
+      "pts": 0.025,
+      "stat": "4 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -0.4,
+      "pts": -0.024,
+      "stat": "Championship fairly close afterwards"
+     }
+    ],
+    "raw": -0.222,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "9",
+   "session_key": 11326,
+   "name": "British Grand Prix",
+   "date": "2026-07-05",
+   "locality": "Silverstone",
+   "country": "UK",
+   "laps": 52,
+   "score": 30,
+   "tier": "Snoozer",
+   "front_pct": 11,
+   "pack_pct": 41,
+   "action_meter": 2,
+   "suspense_meter": 1,
+   "chaos_meter": 5,
+   "advice": {
+    "kind": "recap",
+    "text": "Recap is enough"
+   },
+   "intensity_profile": [
+    9.5,
+    4.0,
+    4.5,
+    1.0,
+    2.0,
+    3.0,
+    0.0,
+    2.0,
+    0.0,
+    1.0,
+    3.0,
+    1.0,
+    4.0,
+    4.0,
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    0.0,
+    4.0,
+    0.0,
+    1.0,
+    0.0,
+    3.0,
+    0.0,
+    3.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 0.32,
+      "pts": 0.051,
+      "stat": "0.86 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -0.74,
+      "pts": -0.074,
+      "stat": "2.2 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -0.89,
+      "pts": -0.089,
+      "stat": "0.15 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": -0.28,
+      "pts": -0.045,
+      "stat": "0 lead changes on track, 1 pass for podium places, top three nose to tail (under a second) on about 24% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": -1.6,
+      "pts": -0.288,
+      "stat": "Closest gap at the front late on: 20.2s. Winning margin: 20.2s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": 1.55,
+      "pts": 0.186,
+      "stat": "2 safety cars, 2 VSCs, 3 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.38,
+      "pts": -0.027,
+      "stat": "Biggest climb by a top-six finisher: 4 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -0.13,
+      "pts": -0.007,
+      "stat": "3 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": 0.2,
+      "pts": 0.012,
+      "stat": "Championship fairly close afterwards"
+     }
+    ],
+    "raw": -0.279,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "10",
+   "session_key": 11334,
+   "name": "Belgian Grand Prix",
+   "date": "2026-07-19",
+   "locality": "Spa",
+   "country": "Belgium",
+   "laps": 44,
+   "score": 98,
+   "tier": "Must Watch",
+   "front_pct": 98,
+   "pack_pct": 100,
+   "action_meter": 5,
+   "suspense_meter": 5,
+   "chaos_meter": 4,
+   "advice": {
+    "kind": "full",
+    "text": "Watch the whole thing"
+   },
+   "intensity_profile": [
+    3.0,
+    0.0,
+    0.0,
+    0.0,
+    10.0,
+    7.5,
+    5.5,
+    2.5,
+    3.5,
+    1.5,
+    1.5,
+    5.5,
+    1.5,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    3.0,
+    2.0,
+    3.0,
+    0.0,
+    0.0,
+    2.5,
+    1.0,
+    0.0,
+    3.0,
+    1.0,
+    1.0,
+    2.0,
+    2.5,
+    0.5,
+    0.5,
+    2.5,
+    3.5,
+    1.5,
+    1.5,
+    1.5,
+    0.5,
+    0.5,
+    1.5,
+    0.5,
+    0.0,
+    0.0,
+    0.5
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 1.48,
+      "pts": 0.237,
+      "stat": "1.35 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": 1.1,
+      "pts": 0.11,
+      "stat": "4.1 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -0.81,
+      "pts": -0.081,
+      "stat": "0.18 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 1.99,
+      "pts": 0.318,
+      "stat": "2 lead changes on track, 6 passes for podium places, top three nose to tail (under a second) on about 56% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": 0.89,
+      "pts": 0.16,
+      "stat": "Closest gap at the front late on: 0.8s. Winning margin: 2.0s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": 0.05,
+      "pts": 0.006,
+      "stat": "1 safety car, 2 VSCs, 3 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": 1.68,
+      "pts": 0.118,
+      "stat": "Biggest climb by a top-six finisher: 15 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": 0.5,
+      "pts": 0.025,
+      "stat": "4 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -0.59,
+      "pts": -0.035,
+      "stat": "Championship fairly close afterwards"
+     }
+    ],
+    "raw": 0.858,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "11",
+   "session_key": 11342,
+   "name": "Hungarian Grand Prix",
+   "date": "2026-07-26",
+   "locality": "Budapest",
+   "country": "Hungary",
+   "laps": 70,
+   "score": 14,
+   "tier": "Snoozer",
+   "front_pct": 34,
+   "pack_pct": 16,
+   "action_meter": 1,
+   "suspense_meter": 2,
+   "chaos_meter": 3,
+   "advice": {
+    "kind": "recap",
+    "text": "Recap is enough"
+   },
+   "intensity_profile": [
+    3.5,
+    4.0,
+    4.0,
+    2.0,
+    2.0,
+    2.0,
+    3.0,
+    2.5,
+    2.0,
+    1.0,
+    0.0,
+    4.0,
+    7.0,
+    3.0,
+    2.0,
+    3.0,
+    1.0,
+    0.0,
+    2.0,
+    1.0,
+    2.0,
+    2.0,
+    3.5,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.0,
+    0.0,
+    3.0,
+    2.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": -0.48,
+      "pts": -0.077,
+      "stat": "0.52 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -1.2,
+      "pts": -0.12,
+      "stat": "1.7 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -0.39,
+      "pts": -0.039,
+      "stat": "0.33 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 0.08,
+      "pts": 0.013,
+      "stat": "1 lead change on track, 1 pass for podium places, top three nose to tail (under a second) on about 27% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": -0.81,
+      "pts": -0.146,
+      "stat": "Closest gap at the front late on: 7.9s. Winning margin: 15.1s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": -0.2,
+      "pts": -0.024,
+      "stat": "0 safety cars, 1 VSC, 3 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.38,
+      "pts": -0.027,
+      "stat": "Biggest climb by a top-six finisher: 4 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -0.13,
+      "pts": -0.007,
+      "stat": "3 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -0.79,
+      "pts": -0.047,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": -0.474,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "12",
+   "session_key": 11353,
+   "name": "Dutch Grand Prix",
+   "date": "2026-08-23",
+   "locality": "Zandvoort",
+   "country": "Netherlands",
+   "laps": 72,
+   "score": 68,
+   "tier": "Worth It",
+   "front_pct": 55,
+   "pack_pct": 27,
+   "action_meter": 2,
+   "suspense_meter": 3,
+   "chaos_meter": 5,
+   "advice": {
+    "kind": "full",
+    "text": "Watch the whole thing"
+   },
+   "intensity_profile": [
+    0.0,
+    14.0,
+    4.5,
+    1.5,
+    3.0,
+    3.0,
+    1.0,
+    3.0,
+    5.0,
+    7.5,
+    3.5,
+    5.5,
+    3.5,
+    2.0,
+    3.0,
+    1.0,
+    2.0,
+    7.5,
+    3.0,
+    0.0,
+    0.0,
+    3.0,
+    0.0,
+    3.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": -0.28,
+      "pts": -0.045,
+      "stat": "0.60 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -0.31,
+      "pts": -0.031,
+      "stat": "2.6 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -1.01,
+      "pts": -0.101,
+      "stat": "0.11 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 0.95,
+      "pts": 0.152,
+      "stat": "2 lead changes on track, 6 passes for podium places, top three nose to tail (under a second) on about 31% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": -0.98,
+      "pts": -0.176,
+      "stat": "Closest gap at the front late on: 10.7s. Winning margin: 11.5s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": 2.5,
+      "pts": 0.3,
+      "stat": "0 safety cars, 2 VSCs, 1 red flag, 6 retirements, rain"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.94,
+      "pts": -0.066,
+      "stat": "Biggest climb by a top-six finisher: 1 place"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": 2.5,
+      "pts": 0.125,
+      "stat": "8 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -1.15,
+      "pts": -0.069,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": 0.089,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "13",
+   "session_key": 11361,
+   "name": "Italian Grand Prix",
+   "date": "2026-09-06",
+   "locality": "Monza",
+   "country": "Italy",
+   "laps": 53,
+   "score": 86,
+   "tier": "Must Watch",
+   "front_pct": 84,
+   "pack_pct": 89,
+   "action_meter": 4,
+   "suspense_meter": 5,
+   "chaos_meter": 4,
+   "advice": {
+    "kind": "from",
+    "lap": 41,
+    "text": "Start at lap 41 of 53"
+   },
+   "intensity_profile": [
+    10.5,
+    3.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    2.0,
+    1.0,
+    3.0,
+    3.0,
+    2.0,
+    4.0,
+    3.0,
+    0.5,
+    5.0,
+    6.0,
+    2.0,
+    1.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 1.04,
+      "pts": 0.166,
+      "stat": "1.17 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -0.74,
+      "pts": -0.074,
+      "stat": "2.2 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": 1.08,
+      "pts": 0.108,
+      "stat": "0.86 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 0.81,
+      "pts": 0.13,
+      "stat": "2 lead changes on track, 7 passes for podium places, top three nose to tail (under a second) on about 25% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": 0.75,
+      "pts": 0.135,
+      "stat": "Closest gap at the front late on: 0.3s. Winning margin: 3.9s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": 0.55,
+      "pts": 0.066,
+      "stat": "1 safety car, 0 VSCs, 1 red flag, 3 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": 2.24,
+      "pts": 0.157,
+      "stat": "Biggest climb by a top-six finisher: 18 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": 0.5,
+      "pts": 0.025,
+      "stat": "4 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -1.42,
+      "pts": -0.085,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": 0.628,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "14",
+   "session_key": 11369,
+   "name": "Spanish Grand Prix",
+   "date": "2026-09-13",
+   "locality": "Madrid",
+   "country": "Spain",
+   "laps": 57,
+   "score": 23,
+   "tier": "Snoozer",
+   "front_pct": 68,
+   "pack_pct": 18,
+   "action_meter": 1,
+   "suspense_meter": 4,
+   "chaos_meter": 2,
+   "advice": {
+    "kind": "recap",
+    "text": "Recap is enough"
+   },
+   "intensity_profile": [
+    2.0,
+    5.0,
+    20.0,
+    1.0,
+    1.0,
+    0.0,
+    3.0,
+    0.0,
+    2.0,
+    2.0,
+    0.0,
+    1.0,
+    0.0,
+    0.5,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": -0.36,
+      "pts": -0.058,
+      "stat": "0.57 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -0.85,
+      "pts": -0.085,
+      "stat": "2.1 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -1.14,
+      "pts": -0.114,
+      "stat": "0.07 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": -0.04,
+      "pts": -0.006,
+      "stat": "0 lead changes on track, 3 passes for podium places, top three nose to tail (under a second) on about 25% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": 0.46,
+      "pts": 0.083,
+      "stat": "Closest gap at the front late on: 1.0s. Winning margin: 4.4s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": -0.58,
+      "pts": -0.07,
+      "stat": "0 safety cars, 1 VSC, 4 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.75,
+      "pts": -0.053,
+      "stat": "Biggest climb by a top-six finisher: 2 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": 1.13,
+      "pts": 0.056,
+      "stat": "5 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -1.78,
+      "pts": -0.107,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": -0.353,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "15",
+   "session_key": 11377,
+   "name": "Azerbaijan Grand Prix",
+   "date": "2026-09-26",
+   "locality": "Baku",
+   "country": "Azerbaijan",
+   "laps": 51,
+   "score": 100,
+   "tier": "Must Watch",
+   "front_pct": 100,
+   "pack_pct": 95,
+   "action_meter": 5,
+   "suspense_meter": 5,
+   "chaos_meter": 4,
+   "advice": {
+    "kind": "from",
+    "lap": 39,
+    "text": "Start at lap 39 of 51"
+   },
+   "intensity_profile": [
+    3.5,
+    6.0,
+    3.0,
+    2.0,
+    2.0,
+    2.0,
+    2.0,
+    1.0,
+    2.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    3.0,
+    0.0,
+    3.0,
+    0.0,
+    17.5,
+    4.0,
+    3.0,
+    4.0,
+    5.0,
+    4.0,
+    2.5
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 0.82,
+      "pts": 0.131,
+      "stat": "1.07 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": 1.75,
+      "pts": 0.175,
+      "stat": "4.7 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": 2.5,
+      "pts": 0.25,
+      "stat": "1.62 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 2.49,
+      "pts": 0.398,
+      "stat": "0 lead changes on track, 3 passes for podium places, top three nose to tail (under a second) on about 85% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": 2.5,
+      "pts": 0.45,
+      "stat": "Closest gap at the front late on: 0.2s. Winning margin: 0.2s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": 0.55,
+      "pts": 0.066,
+      "stat": "2 safety cars, 0 VSCs, 7 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": 0.93,
+      "pts": 0.065,
+      "stat": "Biggest climb by a top-six finisher: 11 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -0.76,
+      "pts": -0.038,
+      "stat": "2 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -1.42,
+      "pts": -0.085,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": 1.413,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "16",
+   "session_key": 11731,
+   "name": "Bahrain Grand Prix in Malaysia",
+   "date": "2026-10-04",
+   "locality": "Kuala Lumpur",
+   "country": "Malaysia",
+   "laps": 55,
+   "score": 95,
+   "tier": "Must Watch",
+   "front_pct": 82,
+   "pack_pct": 82,
+   "action_meter": 5,
+   "suspense_meter": 5,
+   "chaos_meter": 5,
+   "advice": {
+    "kind": "full",
+    "text": "Watch the whole thing"
+   },
+   "intensity_profile": [
+    7.0,
+    34.0,
+    8.5,
+    4.0,
+    3.0,
+    0.0,
+    25.5,
+    4.5,
+    0.0,
+    3.0,
+    4.0,
+    4.0,
+    1.0,
+    2.0,
+    3.0,
+    1.0,
+    1.0,
+    2.0,
+    4.0,
+    2.0,
+    1.0,
+    3.0,
+    3.0,
+    0.0,
+    0.0,
+    2.0,
+    5.0,
+    1.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 2.5,
+      "pts": 0.4,
+      "stat": "2.64 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": 0.37,
+      "pts": 0.037,
+      "stat": "3.3 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -0.12,
+      "pts": -0.012,
+      "stat": "0.43 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 0.63,
+      "pts": 0.101,
+      "stat": "1 lead change on track, 9 passes for podium places, top three nose to tail (under a second) on about 21% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": 0.73,
+      "pts": 0.131,
+      "stat": "Closest gap at the front late on: 1.3s. Winning margin: 2.3s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": 1.3,
+      "pts": 0.156,
+      "stat": "2 safety cars, 1 VSC, 3 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.57,
+      "pts": -0.04,
+      "stat": "Biggest climb by a top-six finisher: 3 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": 2.39,
+      "pts": 0.12,
+      "stat": "7 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -1.78,
+      "pts": -0.107,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": 0.785,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "17",
+   "session_key": 11388,
+   "name": "Singapore Grand Prix",
+   "date": "2026-10-11",
+   "locality": "Marina Bay",
+   "country": "Singapore",
+   "laps": 62,
+   "score": 7,
+   "tier": "Snoozer",
+   "front_pct": 27,
+   "pack_pct": 7,
+   "action_meter": 2,
+   "suspense_meter": 2,
+   "chaos_meter": 3,
+   "advice": {
+    "kind": "recap",
+    "text": "Recap is enough"
+   },
+   "intensity_profile": [
+    4.5,
+    6.0,
+    6.0,
+    7.5,
+    0.0,
+    2.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.0,
+    0.0,
+    0.0,
+    3.0,
+    1.0,
+    0.0,
+    0.0,
+    5.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": -0.58,
+      "pts": -0.093,
+      "stat": "0.47 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -0.96,
+      "pts": -0.096,
+      "stat": "1.9 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -0.1,
+      "pts": -0.01,
+      "stat": "0.44 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": -0.45,
+      "pts": -0.072,
+      "stat": "0 lead changes on track, 3 passes for podium places, top three nose to tail (under a second) on about 15% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": -0.48,
+      "pts": -0.086,
+      "stat": "Closest gap at the front late on: 7.3s. Winning margin: 7.3s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": -0.33,
+      "pts": -0.04,
+      "stat": "0 safety cars, 2 VSCs, 4 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.94,
+      "pts": -0.066,
+      "stat": "Biggest climb by a top-six finisher: 1 place"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -0.13,
+      "pts": -0.007,
+      "stat": "3 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -1.78,
+      "pts": -0.107,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": -0.576,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "18",
+   "session_key": 11396,
+   "name": "United States Grand Prix",
+   "date": "2026-10-25",
+   "locality": "Austin",
+   "country": "USA",
+   "laps": 56,
+   "score": 20,
+   "tier": "Snoozer",
+   "front_pct": 25,
+   "pack_pct": 20,
+   "action_meter": 3,
+   "suspense_meter": 2,
+   "chaos_meter": 4,
+   "advice": {
+    "kind": "recap",
+    "text": "Recap is enough"
+   },
+   "intensity_profile": [
+    3.0,
+    2.0,
+    3.0,
+    4.0,
+    0.0,
+    4.0,
+    1.0,
+    0.0,
+    4.0,
+    4.0,
+    3.0,
+    2.0,
+    3.0,
+    0.0,
+    0.5,
+    3.5,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    2.0,
+    7.0,
+    3.0,
+    3.0,
+    1.0,
+    0.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 0.27,
+      "pts": 0.043,
+      "stat": "0.84 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -1.56,
+      "pts": -0.156,
+      "stat": "1.3 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": 0.68,
+      "pts": 0.068,
+      "stat": "0.71 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 0.02,
+      "pts": 0.003,
+      "stat": "0 lead changes on track, 6 passes for podium places, top three nose to tail (under a second) on about 18% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": -1.11,
+      "pts": -0.2,
+      "stat": "Closest gap at the front late on: 13.1s. Winning margin: 13.1s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": 0.05,
+      "pts": 0.006,
+      "stat": "0 safety cars, 2 VSCs, 3 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.57,
+      "pts": -0.04,
+      "stat": "Biggest climb by a top-six finisher: 3 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": 0.5,
+      "pts": 0.025,
+      "stat": "4 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -1.78,
+      "pts": -0.107,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": -0.358,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "19",
+   "session_key": 11404,
+   "name": "Mexico City Grand Prix",
+   "date": "2026-11-01",
+   "locality": "Mexico City",
+   "country": "Mexico",
+   "laps": 71,
+   "score": 75,
+   "tier": "Worth It",
+   "front_pct": 91,
+   "pack_pct": 55,
+   "action_meter": 3,
+   "suspense_meter": 5,
+   "chaos_meter": 5,
+   "advice": {
+    "kind": "skip",
+    "from": 46,
+    "to": 61,
+    "text": "Skip laps 46 to 61"
+   },
+   "intensity_profile": [
+    0.5,
+    1.0,
+    4.5,
+    3.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    1.0,
+    2.0,
+    1.0,
+    1.0,
+    2.0,
+    1.0,
+    4.0,
+    0.0,
+    1.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    3.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    3.5,
+    3.0,
+    4.0,
+    4.0,
+    1.5
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": -0.49,
+      "pts": -0.078,
+      "stat": "0.51 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": 0.5,
+      "pts": 0.05,
+      "stat": "3.4 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": -0.7,
+      "pts": -0.07,
+      "stat": "0.22 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": -0.04,
+      "pts": -0.006,
+      "stat": "0 lead changes on track, 0 passes for podium places, top three nose to tail (under a second) on about 32% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": 1.7,
+      "pts": 0.306,
+      "stat": "Closest gap at the front late on: 0.7s. Winning margin: 0.8s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": 1.05,
+      "pts": 0.126,
+      "stat": "1 safety car, 1 VSC, 1 red flag, 5 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": -0.38,
+      "pts": -0.027,
+      "stat": "Biggest climb by a top-six finisher: 4 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -0.76,
+      "pts": -0.038,
+      "stat": "2 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -1.78,
+      "pts": -0.107,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": 0.156,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  },
+  {
+   "round": "20",
+   "session_key": 11412,
+   "name": "Brazilian Grand Prix",
+   "date": "2026-11-08",
+   "locality": "S\u00e3o Paulo",
+   "country": "Brazil",
+   "laps": 71,
+   "score": 39,
+   "tier": "Worth It",
+   "front_pct": 36,
+   "pack_pct": 84,
+   "action_meter": 4,
+   "suspense_meter": 2,
+   "chaos_meter": 1,
+   "advice": {
+    "kind": "full",
+    "text": "Watch the whole thing"
+   },
+   "intensity_profile": [
+    6.5,
+    6.5,
+    4.0,
+    10.0,
+    6.0,
+    3.0,
+    1.0,
+    0.0,
+    0.0,
+    3.0,
+    2.0,
+    6.0,
+    2.0,
+    0.0,
+    5.0,
+    0.0,
+    1.0,
+    2.0,
+    3.0,
+    1.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    2.0,
+    1.0,
+    3.0,
+    1.0,
+    3.0,
+    1.0,
+    0.0,
+    0.0,
+    2.0,
+    0.0,
+    1.0,
+    0.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 0.59,
+      "pts": 0.094,
+      "stat": "0.97 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.1,
+      "z": -0.61,
+      "pts": -0.061,
+      "stat": "2.3 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": 0.08,
+      "pts": 0.008,
+      "stat": "0.50 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.16,
+      "z": 0.44,
+      "pts": 0.07,
+      "stat": "1 lead change on track, 8 passes for podium places, top three nose to tail (under a second) on about 19% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.18,
+      "z": -1.11,
+      "pts": -0.2,
+      "stat": "Closest gap at the front late on: 11.0s. Winning margin: 14.6s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.12,
+      "z": -1.2,
+      "pts": -0.144,
+      "stat": "0 safety cars, 0 VSCs, 1 retirement"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": 2.43,
+      "pts": 0.17,
+      "stat": "Biggest climb by a top-six finisher: 19 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -1.39,
+      "pts": -0.069,
+      "stat": "Everyone in the top ten ran the same tyre strategy"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -1.78,
+      "pts": -0.107,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": -0.239,
+    "raw_range": [
+     -0.615,
+     1.413
+    ]
+   }
+  }
+ ],
+ "baseline_races": 44,
+ "baseline_years": [
+  2025,
+  2026
+ ],
+ "season_year": 2026
+}

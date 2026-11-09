@@ -1,0 +1,55 @@
+name: Race refresh
+
+# Race weekends only. Times are UTC: roughly 12:41, 18:41 and 22:41 Detroit time on Saturday and Sunday,
+# matching the schedule that ran inside Claude. Run it by hand from the Actions tab any time.
+on:
+  schedule:
+    - cron: "41 17,23 * * 0,6"
+    - cron: "41 3 * * 0,1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Score new races and rebuild the page
+        working-directory: pipeline
+        run: |
+          set +e
+          bash run.sh | tee run.log
+          code=${PIPESTATUS[0]}
+          if [ "$code" = "3" ]; then echo "OpenF1 is locked while a session is live. Nothing to do."; exit 0; fi
+          exit $code
+      - name: Spoiler check
+        run: |
+          # The page must never print a race winner. Fail the run if a driver name lands in the visible text.
+          python3 - <<'PY'
+          import re, json, html
+          page = open("pipeline/out/replay-worthy.html").read()
+          text = re.sub(r"<script.*?</script>|<style.*?</style>|<[^>]+>", " ", page, flags=re.S)
+          names = ["Verstappen","Norris","Piastri","Leclerc","Hamilton","Russell","Antonelli","Alonso","Stroll","Sainz","Albon","Gasly","Ocon","Hulkenberg","Bortoleto","Lawson","Hadjar","Bearman","Colapinto","Perez","Bottas","Lindblad"]
+          hits = [n for n in names if re.search(rf"\b{n}\b", text)]
+          if hits: raise SystemExit(f"Spoiler check failed: {hits}")
+          print("Spoiler check passed")
+          PY
+      - name: Publish the page
+        run: |
+          cp pipeline/out/replay-worthy.html site/index.html
+          git config user.name "undercut-replay-bot"
+          git config user.email "undercut-replay-bot@users.noreply.github.com"
+          git add site/index.html pipeline/out/*.json
+          if git diff --cached --quiet; then echo "No changes."; exit 0; fi
+          git commit -m "Race refresh $(date -u +%Y-%m-%d)"
+          git push

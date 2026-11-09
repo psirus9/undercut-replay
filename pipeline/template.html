@@ -1,0 +1,780 @@
+<title>Undercut Replay</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..900;1,62..125,400..900&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a masthead in the navy and sky livery, then a hero that pairs the circuit (drawn from real car positions)
+   with the verdict, then a timing tower ranking the season. */
+:root {
+  /* Navy and sky are the brand. Purple, green and amber are only ever verdicts. --tN fills and strokes, --tN-ink text. */
+  --bg: #EEF1F5; --screen: #FFFFFF; --row: #F5F7FA; --fg: #0B1F4D; --muted: #4A5A78; --grid: #DCE3EE; --off: #E6EBF2;
+  --navy: #0B1F4D; --sky: #3FA9F5; --sky-ink: #1F6FB8; --stripe-a: #0B1F4D;
+  --t0: #D18A00; --t0-ink: #8F5400;
+  --t1: #3FA9F5; --t1-ink: #1F6FB8;
+  --t2: #16A34A; --t2-ink: #0F7A37;
+  --t3: #6D28D9; --t3-ink: #5B0FB8;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", sans-serif;
+  --f-body: "Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --f-mono: "DM Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #071330; --screen: #0E1E45; --row: #12244F; --fg: #F2F5FA; --muted: #A9B6D0; --grid: #22335E; --off: #1B2C55;
+    --navy: #0B1F4D; --sky: #3FA9F5; --sky-ink: #7CC4FF; --stripe-a: #F2F5FA;
+    --t0: #FFC24A; --t0-ink: #FFC24A; --t1: #3FA9F5; --t1-ink: #7CC4FF; --t2: #3DDC84; --t2-ink: #3DDC84; --t3: #C69BFF; --t3-ink: #C69BFF;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #071330; --screen: #0E1E45; --row: #12244F; --fg: #F2F5FA; --muted: #A9B6D0; --grid: #22335E; --off: #1B2C55;
+  --navy: #0B1F4D; --sky: #3FA9F5; --sky-ink: #7CC4FF; --stripe-a: #F2F5FA;
+  --t0: #FFC24A; --t0-ink: #FFC24A; --t1: #3FA9F5; --t1-ink: #7CC4FF; --t2: #3DDC84; --t2-ink: #3DDC84; --t3: #C69BFF; --t3-ink: #C69BFF;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--fg); font-family: var(--f-body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 20px 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 28px; }
+.mono { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+.label { font-family: var(--f-mono); font-size: 11px; font-weight: 500; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 800; font-stretch: 110%; margin: 0; text-wrap: balance; text-transform: uppercase; }
+
+/* masthead: stripes live in their own column so type never crosses them */
+.masthead { display: flex; background: var(--screen); border: 1px solid var(--grid); border-radius: 6px; overflow: hidden; min-height: 150px; }
+.brand { flex: 1 1 auto; min-width: 0; display: flex; align-items: center; gap: clamp(14px, 2.4vw, 24px); padding: 22px clamp(16px, 3.4vw, 36px); --wm: clamp(38px, 7.2vw, 64px); }
+.brand .mark { width: calc(var(--wm) * 1.1); height: calc(var(--wm) * 1.1); flex: none; }
+.brand h1 { margin: 0; display: flex; flex-direction: column; gap: calc(var(--wm) * .11); font-stretch: 125%; }
+.brand h1 .r { font-family: var(--f-mono); font-size: calc(var(--wm) * .185); font-weight: 500; font-style: normal; letter-spacing: .36em; line-height: 1; color: var(--sky-ink); }
+.brand h1 .w { font-size: var(--wm); font-weight: 900; font-style: italic; line-height: .86; letter-spacing: -.02em; white-space: nowrap; margin-left: -.092em; }
+.tagline { font-weight: 600; font-stretch: 125%; font-size: calc(var(--wm) * .284); line-height: 1.1; color: var(--muted); white-space: nowrap; margin-top: calc(var(--wm) * .11); }
+.livery { position: relative; width: clamp(150px, 24vw, 280px); flex: none; overflow: hidden; }
+.livery i { position: absolute; top: -20px; bottom: -20px; transform: skewX(-24deg); }
+.livery i:nth-child(1) { right: 12%; width: 30%; background: var(--stripe-a); }
+.livery i:nth-child(2) { right: 52%; width: 11%; background: var(--sky); }
+.livery i:nth-child(3) { right: 71%; width: 4%; background: var(--stripe-a); }
+@media (max-width: 640px) { .livery { width: 72px; } .livery i:nth-child(1) { right: 14%; width: 34%; } .livery i:nth-child(2) { right: 60%; width: 14%; } .livery i:nth-child(3) { display: none; } }
+@media (max-width: 400px) { .brand { --wm: 34px; } }
+.status { display: flex; justify-content: space-between; align-items: center; gap: 10px 20px; flex-wrap: wrap; margin-top: -14px; }
+.ticker { display: flex; gap: 6px 18px; flex-wrap: wrap; align-items: center; font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.ticker b { color: var(--fg); font-weight: 500; }
+.lamp { display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: var(--sky); margin-right: 7px; vertical-align: 0; box-shadow: 0 0 0 3px color-mix(in srgb, var(--sky) 25%, transparent); }
+.theme { font: 500 11px var(--f-mono); letter-spacing: .1em; text-transform: uppercase; background: var(--screen); color: var(--fg); border: 1px solid var(--grid); border-radius: 4px; padding: 6px 10px; cursor: pointer; }
+.theme:hover { border-color: var(--fg); }
+.theme:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
+
+/* screen panels */
+.screen { background: var(--screen); border: 1px solid var(--grid); border-radius: 6px; overflow: hidden; }
+#hero { border-top: 0; }
+#hero::before { content: ""; display: block; height: 6px; background: linear-gradient(90deg, var(--sky) 0 30%, var(--screen) 30% 32%, var(--navy) 32% 100%); }
+:root[data-theme="dark"] #hero::before { background: linear-gradient(90deg, var(--sky) 0 30%, var(--screen) 30% 32%, var(--fg) 32% 100%); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #hero::before { background: linear-gradient(90deg, var(--sky) 0 30%, var(--screen) 30% 32%, var(--fg) 32% 100%); } }
+.screen-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 9px 16px; border-bottom: 1px solid var(--grid); background: var(--row); }
+
+/* hero */
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr); }
+.hero-grid > div { padding: 22px 24px; min-width: 0; }
+.hero-grid > div + div { border-left: 1px solid var(--grid); }
+@media (max-width: 760px) { .hero-grid { grid-template-columns: 1fr; } .hero-grid > div + div { border-left: 0; border-top: 1px solid var(--grid); } }
+.circuit { display: flex; flex-direction: column; gap: 14px; }
+.circuit h2 { font-size: clamp(24px, 3.6vw, 34px); line-height: 1; }
+.circuit-sub { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); letter-spacing: .04em; }
+.track-box { aspect-ratio: 4 / 3; max-width: 100%; display: grid; place-items: center; background:
+  linear-gradient(var(--grid) 1px, transparent 1px) 0 0 / 24px 24px, linear-gradient(90deg, var(--grid) 1px, transparent 1px) 0 0 / 24px 24px;
+  border-radius: 4px; border: 1px solid var(--grid); }
+.track-box { position: relative; }
+.track-box svg { position: absolute; inset: 7%; width: 86%; height: 86%; overflow: visible; }
+.track-none { font-family: var(--f-mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; }
+
+.verdict { display: flex; flex-direction: column; gap: 18px; }
+.verdict-top { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+.verdict-tier { font-family: var(--f-display); font-style: italic; font-weight: 700; font-weight: 900; font-stretch: 125%; font-size: clamp(46px, 7.4vw, 76px); line-height: .88; text-transform: uppercase; color: var(--tier-ink); letter-spacing: -.02em; }
+.score { text-align: right; flex: none; }
+.score b { display: block; font-family: var(--f-mono); font-size: 30px; font-weight: 600; line-height: 1; color: var(--fg); font-variant-numeric: tabular-nums; }
+.ladder { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px; }
+.ladder div { display: flex; flex-direction: column; gap: 5px; }
+.ladder i { height: 6px; background: var(--off); }
+.ladder span { font-family: var(--f-mono); font-size: 10px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.ladder div.on span { color: var(--fg); font-weight: 600; }
+.radio { border-left: 3px solid var(--tier); background: var(--row); padding: 11px 14px; }
+.radio .label { color: var(--tier-ink); }
+.radio strong { display: block; font-family: var(--f-display); font-stretch: 110%; font-size: 21px; font-weight: 800; text-transform: uppercase; line-height: 1.1; margin-top: 2px; }
+.radio small { color: var(--muted); font-size: 13px; }
+
+/* sector meters */
+.sectors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.sector { display: flex; flex-direction: column; gap: 6px; }
+.sector .segs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 2px; }
+.sector .segs i { height: 12px; background: var(--off); }
+.sector .segs i.on { background: var(--tier); }
+.sector small { font-size: 12px; color: var(--muted); line-height: 1.3; }
+.split { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--grid); }
+.split div { padding: 9px 12px; }
+.split div + div { border-left: 1px solid var(--grid); }
+.split b { display: block; font-family: var(--f-display); font-stretch: 110%; font-size: 17px; font-weight: 800; text-transform: uppercase; }
+
+.lapchart { padding: 14px 24px 18px; border-top: 1px solid var(--grid); }
+.lapchart-head { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 8px; }
+.lapchart svg { display: block; width: 100%; height: 56px; }
+.lapchart-axis { display: flex; justify-content: space-between; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .08em; color: var(--muted); margin-top: 5px; text-transform: uppercase; }
+
+[hidden] { display: none !important; }
+/* provisional + fans */
+.verdict-tier.outline { color: transparent; -webkit-text-stroke: 2px var(--tier-ink); }
+@supports not (-webkit-text-stroke: 1px black) { .verdict-tier.outline { color: var(--tier-ink); opacity: .55; } }
+.pill { display: inline-flex; align-items: center; gap: 7px; font-family: var(--f-mono); font-size: 11px; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--t1-ink); }
+.pill::before { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--t1); }
+@media (prefers-reduced-motion: no-preference) { .pill::before { animation: blink 1.6s ease-in-out infinite; } @keyframes blink { 50% { opacity: .25; } } }
+.basis { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+.basis li { font-size: 14px; padding-left: 14px; position: relative; }
+.basis li::before { content: ""; position: absolute; left: 0; top: .6em; width: 6px; height: 2px; background: var(--muted); }
+.track-wait { font-family: var(--f-mono); font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .1em; text-align: center; padding: 0 16px; }
+.fans { border-top: 1px solid var(--grid); padding: 16px 24px 20px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px 28px; align-items: start; }
+@media (max-width: 760px) { .fans { grid-template-columns: 1fr; } }
+.fans h3 { font-size: 22px; font-style: italic; margin: 2px 0 6px; }
+.fan-tier { font-family: var(--f-display); font-weight: 900; font-style: italic; font-stretch: 125%; font-size: 28px; text-transform: uppercase; line-height: 1; color: var(--fan-ink, var(--muted)); }
+.fan-bars { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; }
+.fan-bar { display: grid; grid-template-columns: 92px 1fr 34px; gap: 10px; align-items: center; font-family: var(--f-mono); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.fan-bar .track { height: 8px; background: var(--off); }
+.fan-bar .track i { display: block; height: 100%; background: var(--c); }
+.fan-bar b { text-align: right; color: var(--fg); font-variant-numeric: tabular-nums; }
+.vote { display: flex; flex-direction: column; gap: 10px; }
+.vote-btns { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.vote-btns button { font: 600 13px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; padding: 12px 6px; background: var(--screen); color: var(--fg); border: 1px solid var(--grid); border-bottom: 3px solid var(--c); border-radius: 4px; cursor: pointer; }
+.vote-btns button:hover:not(:disabled) { background: var(--row); }
+.vote-btns button[aria-pressed="true"] { background: var(--c-ink); color: var(--screen); border-color: var(--c-ink); }
+.vote-btns button:disabled { cursor: default; opacity: .5; }
+.vote-btns button:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
+.vote small { color: var(--muted); font-size: 13px; }
+.next { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline; padding: 11px 24px; border-top: 1px solid var(--grid); background: var(--row); font-size: 14px; }
+.next b { font-family: var(--f-display); font-stretch: 110%; font-size: 16px; text-transform: uppercase; font-weight: 800; }
+.row .fan { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: .04em; color: var(--muted); margin-top: 2px; }
+
+/* score breakdown dialog */
+.row { cursor: pointer; }
+.row:hover { background: color-mix(in srgb, var(--tier) 7%, var(--screen)); }
+.row:focus-visible { outline: 2px solid var(--sky); outline-offset: -2px; }
+.how { font: 600 12px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; background: transparent; color: var(--fg); border: 1px solid var(--grid); border-radius: 4px; padding: 8px 12px; cursor: pointer; align-self: flex-start; }
+.how:hover { border-color: var(--fg); }
+.how:focus-visible, .dlg-close:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
+dialog.dlg { width: min(760px, calc(100vw - 24px)); max-height: calc(100vh - 32px); padding: 0; border: 1px solid var(--grid); border-radius: 8px; background: var(--screen); color: var(--fg); }
+dialog.dlg::backdrop { background: rgba(5, 6, 8, .62); }
+.dlg-head { position: sticky; top: 0; z-index: 1; display: flex; justify-content: space-between; align-items: start; gap: 12px; padding: 18px 22px 14px; background: var(--screen); border-bottom: 1px solid var(--grid); }
+.dlg-head h2 { font-size: clamp(24px, 4vw, 32px); line-height: 1; }
+.dlg-head .meta { font-family: var(--f-mono); font-size: 12px; color: var(--muted); margin-top: 5px; }
+.dlg-close { font: 600 12px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; background: var(--row); color: var(--fg); border: 1px solid var(--grid); border-radius: 4px; padding: 7px 10px; cursor: pointer; flex: none; }
+.dlg-body { padding: 18px 22px 24px; display: flex; flex-direction: column; gap: 22px; }
+.dlg-verdict { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
+.dlg-verdict .t { font-family: var(--f-display); font-style: italic; font-weight: 900; font-stretch: 125%; font-size: 40px; line-height: .9; letter-spacing: -.02em; text-transform: uppercase; color: var(--tier-ink); }
+.dlg-verdict .s { font-family: var(--f-mono); font-size: 14px; color: var(--muted); }
+.dlg-verdict .s b { color: var(--fg); font-size: 20px; }
+.dlg-summary { margin: 0; font-size: 15px; max-width: 62ch; }
+.scale { position: relative; height: 34px; }
+.scale .band { position: absolute; top: 10px; height: 10px; }
+.scale .mark { position: absolute; top: 4px; width: 3px; height: 22px; background: var(--fg); transform: translateX(-1px); }
+.scale-labels { display: flex; justify-content: space-between; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.factors { display: flex; flex-direction: column; }
+.factor { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) 52px; gap: 6px 14px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--grid); }
+.factor:last-child { border-bottom: 0; }
+.factor .name { font-weight: 600; font-size: 14.5px; }
+.factor .name small { font-family: var(--f-mono); font-weight: 400; font-size: 11px; color: var(--muted); margin-left: 6px; }
+.factor .stat { grid-column: 1 / 2; font-size: 12.5px; color: var(--muted); line-height: 1.35; }
+.factor .div { grid-column: 2; grid-row: 1 / span 2; position: relative; height: 14px; background: linear-gradient(90deg, transparent calc(50% - .5px), var(--grid) calc(50% - .5px), var(--grid) calc(50% + .5px), transparent calc(50% + .5px)); }
+.factor .div i { position: absolute; top: 2px; height: 10px; }
+.factor .div i.up { left: 50%; background: var(--t2); }
+.factor .div i.down { right: 50%; background: var(--t0); }
+.factor .pts { grid-column: 3; grid-row: 1 / span 2; font-family: var(--f-mono); font-size: 13px; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+.factor-key { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr) 52px; gap: 14px; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); padding-bottom: 6px; border-bottom: 1px solid var(--grid); }
+.factor-key span:nth-child(2) { display: flex; justify-content: space-between; }
+.dlg-chart svg { display: block; width: 100%; height: 56px; }
+.dlg-note { font-size: 13px; color: var(--muted); margin: 0; max-width: 64ch; }
+@media (max-width: 560px) {
+  .scale-labels .rng { display: none; }
+  .factor, .factor-key { grid-template-columns: minmax(0, 1fr) 46px; }
+  .factor .div { grid-column: 1 / -1; grid-row: auto; }
+  .factor .pts { grid-column: 2; grid-row: 1; }
+  .factor-key span:nth-child(2) { display: none; }
+}
+
+/* timing tower */
+.tower-head { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.tower-head h2 { font-size: 30px; font-weight: 900; font-style: italic; font-stretch: 125%; letter-spacing: -.01em; line-height: 1; }
+.toggle { display: inline-flex; border: 1px solid var(--grid); border-radius: 4px; overflow: hidden; background: var(--screen); }
+.toggle button { font: 500 12px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; background: transparent; color: var(--muted); border: 0; padding: 7px 12px; cursor: pointer; }
+.toggle button[aria-pressed="true"] { background: var(--fg); color: var(--screen); }
+.toggle button:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
+.cols, .row { display: grid; grid-template-columns: 46px 52px minmax(0, 1fr) 148px 56px 170px; gap: 14px; align-items: center; }
+.cols { padding: 8px 14px; border-bottom: 1px solid var(--grid); }
+.row { padding: 9px 14px; border-bottom: 1px solid var(--grid); position: relative; }
+.row:last-child { border-bottom: 0; }
+.row::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--tier); }
+.row:nth-child(even) { background: var(--row); }
+.row .pos { font-family: var(--f-mono); font-size: 17px; font-weight: 600; text-align: center; font-variant-numeric: tabular-nums; }
+.row .mini { width: 52px; height: 36px; display: grid; place-items: center; }
+.row .mini svg { width: 100%; height: 100%; overflow: visible; }
+.row .name { font-family: var(--f-display); font-stretch: 110%; font-size: 17px; font-weight: 800; text-transform: uppercase; line-height: 1.1; }
+.row .meta { font-family: var(--f-mono); font-size: 11.5px; color: var(--muted); letter-spacing: .03em; }
+.tier { display: flex; flex-direction: column; gap: 5px; }
+.tier span { font-family: var(--f-display); font-size: 12.5px; font-weight: 900; font-style: italic; font-stretch: 125%; letter-spacing: .01em; text-transform: uppercase; color: var(--tier-ink); }
+.tier .bar { height: 4px; background: var(--off); }
+.tier .bar i { display: block; height: 100%; background: var(--tier); }
+.row .sc { font-family: var(--f-mono); font-size: 16px; font-weight: 600; text-align: right; font-variant-numeric: tabular-nums; }
+.row .tip { font-size: 13px; color: var(--muted); }
+.latest { font-family: var(--f-mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; background: var(--fg); color: var(--screen); padding: 1px 5px; margin-left: 8px; vertical-align: 3px; font-weight: 600; }
+@media (max-width: 720px) {
+  .cols { display: none; }
+  .row { grid-template-columns: 30px 40px minmax(0, 1fr) auto; gap: 10px; }
+  .row .mini { width: 40px; height: 28px; }
+  .row .tier { grid-column: 3; }
+  .row .sc { grid-column: 4; grid-row: 1; }
+  .row .tip { grid-column: 3 / -1; }
+  .row .name { font-size: 16px; }
+}
+
+
+/* classics */
+.classics-head { display: flex; justify-content: space-between; align-items: end; gap: 12px; flex-wrap: wrap; margin-bottom: 12px; }
+.classics-head h2 { font-size: 30px; font-weight: 900; font-style: italic; font-stretch: 125%; letter-spacing: -.01em; line-height: 1; }
+.classics-head p { margin: 6px 0 0; color: var(--muted); font-size: 14px; max-width: 60ch; }
+.eras { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.eras button { font: 500 12px var(--f-mono); letter-spacing: .06em; text-transform: uppercase; background: var(--screen); color: var(--muted); border: 1px solid var(--grid); border-radius: 4px; padding: 6px 10px; cursor: pointer; }
+.eras button[aria-pressed="true"] { background: var(--fg); color: var(--screen); border-color: var(--fg); }
+.eras button:focus-visible, .more:focus-visible { outline: 2px solid var(--sky); outline-offset: 2px; }
+.crow { display: grid; grid-template-columns: 46px 64px minmax(0, 1fr) auto 170px; gap: 14px; align-items: center; padding: 10px 14px; border-bottom: 1px solid var(--grid); position: relative; }
+.crow::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--sky); }
+.crow:nth-child(even) { background: var(--row); }
+.crow .pos { font-family: var(--f-mono); font-size: 17px; font-weight: 600; text-align: center; font-variant-numeric: tabular-nums; }
+.crow .spark { width: 64px; height: 28px; }
+.crow .spark svg { width: 100%; height: 100%; display: block; }
+.crow .yr { font-family: var(--f-mono); font-weight: 500; color: var(--sky-ink); margin-right: 8px; }
+.crow .name { font-family: var(--f-display); font-stretch: 110%; font-size: 17px; font-weight: 800; text-transform: uppercase; line-height: 1.1; }
+.crow .meta { font-family: var(--f-mono); font-size: 11.5px; color: var(--muted); letter-spacing: .03em; }
+.flags { display: flex; gap: 5px; flex-wrap: wrap; justify-content: flex-end; }
+.flags:empty { display: none; }
+.flagchip { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: .08em; text-transform: uppercase; border: 1px solid var(--grid); border-radius: 3px; padding: 1px 6px; color: var(--muted); white-space: nowrap; }
+.crow .tip { font-size: 13px; color: var(--muted); }
+.more { display: block; width: 100%; font: 500 12px var(--f-mono); letter-spacing: .08em; text-transform: uppercase; background: var(--row); color: var(--fg); border: 0; border-top: 1px solid var(--grid); padding: 10px; cursor: pointer; }
+@media (max-width: 720px) {
+  .crow { grid-template-columns: 30px minmax(0, 1fr) auto; gap: 10px; }
+  .crow .spark { display: none; }
+  .crow .flags { grid-column: 2 / -1; justify-content: flex-start; }
+  .crow .tip { grid-column: 2 / -1; }
+  .crow .name { font-size: 16px; }
+}
+
+/* notes */
+.notes { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 22px; padding-top: 6px; }
+.notes h3 { font-size: 17px; margin-bottom: 6px; letter-spacing: .02em; }
+.notes p { margin: 0; color: var(--muted); font-size: 14px; max-width: 62ch; }
+.legend { display: flex; flex-direction: column; gap: 7px; }
+.legend div { display: flex; gap: 10px; align-items: baseline; font-size: 13.5px; color: var(--muted); }
+.legend b { font-family: var(--f-display); font-size: 13px; font-weight: 900; font-style: italic; font-stretch: 125%; text-transform: uppercase; color: var(--tier-ink); min-width: 112px; }
+.fine { font-family: var(--f-mono); font-size: 11px; color: var(--muted); letter-spacing: .03em; border-top: 1px solid var(--grid); padding-top: 14px; }
+@media (prefers-reduced-motion: no-preference) {
+}
+</style>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 22 H38" stroke="var(--sky)" stroke-width="6" stroke-linecap="round" fill="none"/><circle cx="40" cy="22" r="5.5" fill="var(--sky)"/><path d="M6 22 C18 22 20 46 32 46 S46 22 56 22" stroke="var(--fg)" stroke-width="6" stroke-linecap="round" fill="none"/><circle cx="57" cy="22" r="6" fill="var(--fg)"/></svg><div><h1><span class="r">Replay</span><span class="w">Undercut</span></h1><div class="tagline">Spoiler-free ratings for every Grand Prix</div></div></div>
+    <div class="livery" aria-hidden="true"><i></i><i></i><i></i></div>
+  </header>
+  <div class="status">
+    <div class="ticker">
+      <span id="tk-season">—</span>
+      <span><span class="lamp" aria-hidden="true"></span><b>Spoiler shield on</b></span>
+    </div>
+    <button class="theme" id="theme-btn" type="button" aria-label="Switch colour theme">Theme: Auto</button>
+  </div>
+
+  <section aria-labelledby="last-h">
+    <article class="screen" id="hero">
+      <div class="screen-bar"><span class="label" id="hero-label">Last race</span><span class="label" id="last-date">—</span></div>
+      <div class="hero-grid">
+        <div class="circuit">
+          <div>
+            <h2 id="last-h">—</h2>
+            <div class="circuit-sub" id="last-sub">—</div>
+          </div>
+          <div class="track-box" id="last-track"></div>
+        </div>
+        <div class="verdict">
+          <div class="verdict-top">
+            <div>
+              <div class="label" id="verdict-label">Verdict</div>
+              <div class="verdict-tier" id="last-tier">—</div>
+            </div>
+            <div class="score"><span class="label" id="score-label">Score</span><b id="last-score">—</b></div>
+          </div>
+          <div class="ladder" id="ladder"></div>
+          <div class="radio">
+            <div class="label" id="radio-label">Message</div>
+            <strong id="last-advice">—</strong>
+            <small id="last-advice-sub">—</small>
+          </div>
+          <button class="how" id="how-btn" type="button">How this score was built</button>
+          <div class="sectors" id="sectors"></div>
+          <div class="split" id="split"></div>
+          <ul class="basis" id="basis" hidden></ul>
+        </div>
+      </div>
+      <div class="lapchart" id="lapchart">
+        <div class="lapchart-head"><span class="label">Action by lap</span><span class="label" id="lap-note"></span></div>
+        <svg id="strip" viewBox="0 0 600 56" preserveAspectRatio="none" role="img" aria-label="Action intensity across the race"></svg>
+        <div class="lapchart-axis"><span>Lap 1</span><span>Halfway</span><span id="lap-last">Flag</span></div>
+      </div>
+      <div class="fans" id="fans">
+        <div>
+          <div class="label" id="fan-count">Fan verdict</div>
+          <h3 class="fan-tier" id="fan-tier">—</h3>
+          <div class="fan-bars" id="fan-bars"></div>
+        </div>
+        <div class="vote">
+          <div class="label">Your call</div>
+          <div class="vote-btns" id="vote-btns" role="group" aria-label="Rate this race"></div>
+          <small id="vote-note">Seen it? Rate it. Your vote sits beside ours.</small>
+        </div>
+      </div>
+      <div class="next" id="next" hidden></div>
+    </article>
+  </section>
+
+  <section aria-labelledby="best-h">
+    <div class="tower-head">
+      <div>
+        <div class="label" id="season-count">—</div>
+        <h2 id="best-h">Best races this season</h2>
+      </div>
+      <div class="toggle" role="group" aria-label="Order races">
+        <button id="sort-rank" aria-pressed="true">Ranked</button>
+        <button id="sort-cal" aria-pressed="false">Calendar</button>
+      </div>
+    </div>
+    <div class="screen">
+      <div class="cols label" aria-hidden="true"><span style="text-align:center">Pos</span><span></span><span>Race</span><span>Verdict</span><span style="text-align:right">Score</span><span>Message</span></div>
+      <div id="board"></div>
+    </div>
+  </section>
+
+
+  <section aria-labelledby="classics-h" id="classics-sec">
+    <div class="classics-head">
+      <div>
+        <div class="label" id="classics-sub">—</div>
+        <h2 id="classics-h">Classics</h2>
+        <p>The best races since lap-by-lap timing began. Each race is ranked against its own era, so a refuelling-era thriller competes on its own terms.</p>
+      </div>
+    </div>
+    <div class="eras" id="eras" role="group" aria-label="Filter by era"></div>
+    <div class="screen">
+      <div id="classics"></div>
+      <button class="more" id="more" aria-expanded="false">Show top 25</button>
+    </div>
+  </section>
+
+  <dialog class="dlg" id="dlg" aria-labelledby="dlg-title">
+    <div class="dlg-head">
+      <div><div class="label">How it was scored</div><h2 id="dlg-title">—</h2><div class="meta" id="dlg-meta">—</div></div>
+      <button class="dlg-close" id="dlg-close" type="button">Close</button>
+    </div>
+    <div class="dlg-body" id="dlg-body"></div>
+  </dialog>
+
+  <section class="notes" aria-label="How it works">
+    <div>
+      <h3>How a race is scored</h3>
+      <p>On-track passes, wheel-to-wheel running, the fight for the lead, how close the finish was, safety cars and other disruptions, strategy variety and title stakes. Late-race action counts for more.</p>
+    </div>
+    <div>
+      <h3>Tiers</h3>
+      <div class="legend" id="legend"></div>
+    </div>
+    <div>
+      <h3>Compared against</h3>
+      <p id="baseline">—</p>
+    </div>
+  </section>
+  <p class="fine">Not affiliated with, endorsed by or connected to Formula 1, the FIA or any team. Race names are used only to identify events. Circuit outlines are drawn from published car position data. Timing data from OpenF1 and Jolpica-F1.</p>
+</div>
+
+<script>
+const DATA = /*DATA*/null;
+const TIERS = ["Snoozer", "Worth It", "Must Watch"];
+const TIER_VAR = ["--t0", "--t2", "--t3"];
+const TIER_HELP = ["Watch the recap.", "Watch the good stretch.", "Clear the evening."];
+const SVGNS = "http://www.w3.org/2000/svg";
+(function themeToggle() {
+  const order = ["auto", "light", "dark"], names = { auto: "Auto", light: "Light", dark: "Dark" };
+  let mode = "auto";
+  try { mode = localStorage.getItem("ur-theme") || "auto"; } catch (e) {}
+  if (!order.includes(mode)) mode = "auto";
+  const apply = () => {
+    if (mode === "auto") document.documentElement.removeAttribute("data-theme"); else document.documentElement.setAttribute("data-theme", mode);
+    const b = document.getElementById("theme-btn"); if (b) b.textContent = "Theme: " + names[mode];
+  };
+  apply();
+  document.getElementById("theme-btn").addEventListener("click", () => {
+    mode = order[(order.indexOf(mode) + 1) % order.length];
+    try { localStorage.setItem("ur-theme", mode); } catch (e) {}
+    apply();
+  });
+})();
+const races = DATA.season.slice().sort((a, b) => +a.round - +b.round);
+const last = races[races.length - 1];
+const tierIdx = r => TIERS.indexOf(r.tier);
+const tierColor = r => `var(${TIER_VAR[tierIdx(r)]})`;
+const ink = v => v.replace(/\)$/, "-ink)");
+function paint(node, name, v) { node.style.setProperty(name, v); node.style.setProperty(name + "-ink", ink(v)); }
+const $ = id => document.getElementById(id);
+const fmtDate = d => new Date(d + "T12:00:00Z").toLocaleDateString("en-US", { month: "short", day: "numeric", timeZone: "UTC" });
+const level = p => p >= 75 ? "High" : p >= 50 ? "Above avg" : p >= 25 ? "Below avg" : "Low";
+function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+function svgEl(tag, attrs) { const e = document.createElementNS(SVGNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; }
+
+function trackSvg(r, big) {
+  const t = r.track;
+  if (!t) {
+    if (big) return el("div", "track-none", "No position data for this circuit");
+    const s = svgEl("svg", { viewBox: "0 0 40 28", "aria-hidden": "true" });
+    s.appendChild(svgEl("rect", { x: 8, y: 6, width: 24, height: 16, fill: "none", stroke: "var(--muted)", "stroke-width": 1.2, "stroke-dasharray": "2 2" }));
+    return s;
+  }
+  const pad = big ? 6 : 4;
+  const s = svgEl("svg", { viewBox: `${-pad} ${-pad} ${t.w + pad * 2} ${t.h + pad * 2}`, role: "img", "aria-label": `${r.locality} circuit outline` });
+  if (big) s.appendChild(svgEl("path", { d: t.d, fill: "none", stroke: "var(--grid)", "stroke-width": 7, "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }));
+  const p = svgEl("path", { d: t.d, fill: "none", stroke: tierColor(r), "stroke-width": big ? 3 : 1.6, "stroke-linejoin": "round", "stroke-linecap": "round", "vector-effect": "non-scaling-stroke" });
+  if (big) { p.setAttribute("class", "hero-track"); p.setAttribute("pathLength", "1"); }
+  s.appendChild(p);
+  if (big) {
+    const m = t.d.match(/^M([\d.]+) ([\d.]+)/);
+    if (m) {
+      const g = svgEl("g", { transform: `translate(${m[1]} ${m[2]})` });
+      g.appendChild(svgEl("circle", { r: 2.6, fill: "var(--screen)", stroke: "var(--fg)", "stroke-width": 1.2, "vector-effect": "non-scaling-stroke" }));
+      s.appendChild(g);
+    }
+  }
+  return s;
+}
+
+function adviceSub(r) {
+  if (r.advice.kind === "from") return "Most of the action is packed into the closing stretch.";
+  if (r.advice.kind === "skip") return "There's a long quiet stretch in the middle. Everything else is worth seeing.";
+  if (r.advice.kind === "full") return "Action is spread across the race. Skipping ahead misses some of it.";
+  return "The highlights package covers what matters.";
+}
+const shortAdvice = r => r.advice.kind === "from" ? `From lap ${r.advice.lap}` : r.advice.kind === "skip" ? `Skip laps ${r.advice.from} to ${r.advice.to}` : r.advice.kind === "full" ? "Watch it all" : "Recap only";
+
+const PROV = DATA.provisional;
+const provActive = !!(PROV && Date.now() >= Date.parse(PROV.start));
+const heroKey = provActive ? PROV.key : `${DATA.season_year}-${last.round}`;
+const fmtStart = iso => new Date(iso).toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
+
+function renderProvisional() {
+  const tv = PROV.expected_tier === "Snoozer" ? "--t0" : "--t2";
+  paint($("hero"), "--tier", `var(${tv})`);
+  $("hero-label").replaceChildren(el("span", "pill", "Official rating pending"));
+  $("last-date").textContent = fmtDate(PROV.date);
+  $("last-h").textContent = PROV.name;
+  $("last-sub").textContent = `Round ${PROV.round} · ${PROV.locality}`;
+  $("last-track").replaceChildren(el("div", "track-wait", "Circuit map arrives with the official rating"));
+  $("verdict-label").textContent = "Pre-race guess";
+  const vt = $("last-tier"); vt.textContent = PROV.expected_tier; vt.classList.add("outline");
+  $("score-label").textContent = "Official";
+  $("last-score").textContent = "TBD";
+  $("ladder").hidden = true;
+  $("radio-label").textContent = "Status";
+  $("last-advice").textContent = "Timing data isn't in yet";
+  $("last-advice-sub").textContent = "This page swaps in the official rating once the data lands, usually the same evening. Until then, the fan vote below is the best read.";
+  $("sectors").hidden = true; $("split").hidden = true; $("lapchart").hidden = true; $("how-btn").hidden = true;
+  const b = $("basis"); b.hidden = false; b.replaceChildren(...PROV.basis.map(x => el("li", null, x)),
+    el("li", null, "Pre-race guesses miss often, so treat this as a lean, not a verdict."));
+}
+
+function renderNext() {
+  if (!PROV || provActive) return;
+  const n = $("next"); n.hidden = false;
+  n.append(el("span", "label", "Next race"), el("b", null, PROV.name.replace(" Grand Prix", " GP")),
+    el("span", null, fmtStart(PROV.start)), el("span", "label", `Pre-race guess: ${PROV.expected_tier}`));
+}
+
+function renderHero() {
+  if (provActive) { renderProvisional(); return; }
+  paint($("hero"), "--tier", tierColor(last));
+  $("last-h").textContent = last.name;
+  $("last-sub").textContent = `Round ${last.round} · ${last.locality} · ${last.laps} laps`;
+  $("last-date").textContent = fmtDate(last.date);
+  const tb = $("last-track"); tb.replaceChildren(trackSvg(last, true));
+  $("last-tier").textContent = last.tier;
+  $("last-score").textContent = last.score;
+  const i = tierIdx(last), lad = $("ladder"); lad.replaceChildren();
+  TIERS.forEach((t, k) => { const d = el("div", k === i ? "on" : ""); const bar = el("i"); if (k <= i) bar.style.background = `var(${TIER_VAR[i]})`; d.append(bar, el("span", null, t)); lad.appendChild(d); });
+  $("last-advice").textContent = last.advice.text;
+  $("last-advice-sub").textContent = adviceSub(last);
+
+  const sec = $("sectors"); sec.replaceChildren();
+  [["Action", "Passing and close running", last.action_meter], ["Suspense", "Fight for the win", last.suspense_meter], ["Chaos", "Safety cars and surprises", last.chaos_meter]].forEach(([n, h, v]) => {
+    const d = el("div", "sector");
+    const segs = el("div", "segs"); segs.setAttribute("aria-label", `${n}: ${v} of 5`);
+    for (let k = 1; k <= 5; k++) segs.appendChild(el("i", k <= v ? "on" : ""));
+    d.append(el("span", "label", n), segs, el("small", null, h)); sec.appendChild(d);
+  });
+  const sp = $("split"); sp.replaceChildren();
+  [["At the front", last.front_pct], ["In the pack", last.pack_pct]].forEach(([k, v]) => { const d = el("div"); d.append(el("span", "label", k), el("b", null, level(v))); sp.appendChild(d); });
+
+  const prof = last.intensity_profile, svg = $("strip"), W = 600, H = 56, max = Math.max(...prof, 1), bw = W / prof.length;
+  svg.replaceChildren();
+  for (let k = 1; k < 4; k++) svg.appendChild(svgEl("line", { x1: 0, x2: W, y1: (H / 4) * k, y2: (H / 4) * k, stroke: "var(--grid)", "stroke-width": 1, "vector-effect": "non-scaling-stroke" }));
+  if (last.advice.kind === "skip") {
+    const x1 = ((last.advice.from - 1) / last.laps) * W, x2 = (last.advice.to / last.laps) * W;
+    svg.appendChild(svgEl("rect", { x: x1, width: x2 - x1, y: 0, height: H, fill: "var(--muted)", opacity: ".16" }));
+    $("lap-note").textContent = `Skippable: laps ${last.advice.from} to ${last.advice.to}`;
+  }
+  prof.forEach((v, k) => {
+    const h = Math.max(2, (v / max) * (H - 4));
+    svg.appendChild(svgEl("rect", { x: (k * bw + 1).toFixed(1), width: Math.max(1, bw - 2).toFixed(1), y: (H - h).toFixed(1), height: h.toFixed(1), fill: tierColor(last), opacity: (0.35 + 0.65 * v / max).toFixed(2) }));
+  });
+  if (last.advice.kind === "from") {
+    const x = ((last.advice.lap - 1) / last.laps) * W;
+    svg.appendChild(svgEl("line", { x1: x, x2: x, y1: 0, y2: H, stroke: "var(--fg)", "stroke-dasharray": "3 3", "vector-effect": "non-scaling-stroke" }));
+    $("lap-note").textContent = `Start here: lap ${last.advice.lap}`;
+  }
+  $("lap-last").textContent = `Lap ${last.laps}`;
+}
+
+let mode = "rank";
+function renderBoard() {
+  const list = mode === "rank" ? races.slice().sort((a, b) => b.score - a.score) : races;
+  const b = $("board"); b.replaceChildren();
+  list.forEach((r, k) => {
+    const row = el("div", "row"); paint(row, "--tier", tierColor(r));
+    row.tabIndex = 0; row.setAttribute("role", "button"); row.setAttribute("aria-label", `${r.name}: ${r.tier}, score ${r.score}. Show how it was scored`);
+    row.addEventListener("click", () => openDetail(r));
+    row.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openDetail(r); } });
+    const mini = el("div", "mini"); mini.appendChild(trackSvg(r, false));
+    const nm = el("div"); const n = el("div", "name", r.name.replace(" Grand Prix", " GP"));
+    if (r === last) n.appendChild(el("span", "latest", "Latest"));
+    nm.append(n, el("div", "meta", `R${r.round} · ${fmtDate(r.date)} · ${r.locality}`));
+    const t = el("div", "tier"); const bar = el("div", "bar"); const fill = el("i"); fill.style.width = r.score + "%"; bar.appendChild(fill); t.append(el("span", null, r.tier), bar);
+    const tip = el("div", "tip", shortAdvice(r));
+    const ft = fanSummary(`${DATA.season_year}-${r.round}`);
+    if (ft) tip.appendChild(el("span", "fan", `Fans: ${ft.tier} (${ft.n})`));
+    row.append(el("div", "pos", mode === "rank" ? String(k + 1) : "R" + r.round), mini, nm, t, el("div", "sc", String(r.score)), tip);
+    b.appendChild(row);
+  });
+}
+function setMode(m) {
+  mode = m;
+  $("sort-rank").setAttribute("aria-pressed", m === "rank");
+  $("sort-cal").setAttribute("aria-pressed", m === "cal");
+  $("best-h").textContent = m === "rank" ? "Best races this season" : "Season so far";
+  renderBoard();
+}
+$("sort-rank").addEventListener("click", () => setMode("rank"));
+$("sort-cal").addEventListener("click", () => setMode("cal"));
+
+$("tk-season").innerHTML = "";
+$("tk-season").append(document.createTextNode(`${DATA.season_year} · `), el("b", null, `${races.length} races scored`));
+$("season-count").textContent = `${DATA.season_year} season · Round 1 to ${last.round}`;
+$("baseline").textContent = `Scores are percentiles against ${DATA.baseline_races} Grands Prix from ${DATA.baseline_years.join(" and ")}, so 50 is a typical race.`;
+const lg = $("legend");
+TIERS.forEach((t, k) => { const d = el("div"); paint(d, "--tier", `var(${TIER_VAR[k]})`); d.append(el("b", null, t), document.createTextNode(TIER_HELP[k])); lg.appendChild(d); });
+
+// ---- score breakdown
+function lapStrip(r, H = 56) {
+  const prof = r.intensity_profile, W = 600, max = Math.max(...prof, 1), bw = W / prof.length;
+  const svg = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, preserveAspectRatio: "none", role: "img", "aria-label": "Action intensity across the race" });
+  for (let k = 1; k < 4; k++) svg.appendChild(svgEl("line", { x1: 0, x2: W, y1: (H / 4) * k, y2: (H / 4) * k, stroke: "var(--grid)", "stroke-width": 1, "vector-effect": "non-scaling-stroke" }));
+  if (r.advice.kind === "skip") {
+    const x1 = ((r.advice.from - 1) / r.laps) * W, x2 = (r.advice.to / r.laps) * W;
+    svg.appendChild(svgEl("rect", { x: x1, width: x2 - x1, y: 0, height: H, fill: "var(--muted)", opacity: ".16" }));
+  }
+  prof.forEach((v, k) => {
+    const h = Math.max(2, (v / max) * (H - 4));
+    svg.appendChild(svgEl("rect", { x: (k * bw + 1).toFixed(1), width: Math.max(1, bw - 2).toFixed(1), y: (H - h).toFixed(1), height: h.toFixed(1), fill: tierColor(r), opacity: (0.35 + 0.65 * v / max).toFixed(2) }));
+  });
+  if (r.advice.kind === "from") {
+    const x = ((r.advice.lap - 1) / r.laps) * W;
+    svg.appendChild(svgEl("line", { x1: x, x2: x, y1: 0, y2: H, stroke: "var(--fg)", "stroke-dasharray": "3 3", "vector-effect": "non-scaling-stroke" }));
+  }
+  return svg;
+}
+function joinLabels(xs) { return xs.length < 2 ? xs.join("") : xs.slice(0, -1).join(", ") + " and " + xs[xs.length - 1]; }
+function openDetail(r) {
+  const d = r.detail; if (!d) return;
+  const dlg = $("dlg"); paint(dlg, "--tier", tierColor(r));
+  $("dlg-title").textContent = r.name;
+  $("dlg-meta").textContent = `Round ${r.round} · ${r.locality} · ${fmtDate(r.date)} · ${r.laps} laps`;
+  const body = $("dlg-body"); body.replaceChildren();
+  const fs = d.factors.slice().sort((a, b) => b.pts - a.pts);
+  const ups = fs.filter(f => f.pts > 0.02).slice(0, 2).map(f => f.label.toLowerCase());
+  const downs = fs.filter(f => f.pts < -0.02).slice(-2).reverse().map(f => f.label.toLowerCase());
+
+  const v = el("div", "dlg-verdict");
+  const s = el("span", "s"); s.append(document.createTextNode("Score "), el("b", null, String(r.score)), document.createTextNode(" / 100"));
+  v.append(el("span", "t", r.tier), s);
+  const n = DATA.baseline_races, below = Math.max(0, Math.round(r.score * n / 100) - 1);
+  let sum = `Scores higher than ${below} of the other ${n - 1} races it's compared with.`;
+  if (ups.length) sum += ` Lifted most by ${joinLabels(ups)}.`;
+  if (downs.length) sum += ` Held back by ${joinLabels(downs)}.`;
+  body.append(v, el("p", "dlg-summary", sum));
+
+  // where it sits on the tier scale
+  const scaleWrap = el("div");
+  const sc = el("div", "scale");
+  [[0, 30, "--t0"], [30, 80, "--t2"], [80, 100, "--t3"]].forEach(([a, b, c]) => { const band = el("div", "band"); band.style.left = a + "%"; band.style.width = (b - a) + "%"; band.style.background = `var(${c})`; band.style.opacity = ".85"; sc.appendChild(band); });
+  const mk = el("div", "mark"); mk.style.left = Math.min(99.5, Math.max(.5, r.score)) + "%"; sc.appendChild(mk);
+  const sl = el("div", "scale-labels"); [["Snoozer", "0 to 30"], ["Worth It", "31 to 80"], ["Must Watch", "81+"]].forEach(([a, b]) => { const sp = el("span", null, a); sp.appendChild(el("span", "rng", ` · ${b}`)); sl.appendChild(sp); });
+  scaleWrap.append(el("div", "label", "Where it lands"), sc, sl);
+  body.appendChild(scaleWrap);
+
+  // factor bars
+  const maxAbs = Math.max(...fs.map(f => Math.abs(f.pts)), 0.05);
+  const fw = el("div");
+  const key = el("div", "factor-key"); const mid = el("span"); mid.append(el("span", null, "Hurt"), el("span", null, "Helped"));
+  key.append(el("span", null, "Factor and weight"), mid, el("span", null, ""));
+  const list = el("div", "factors");
+  fs.forEach(f => {
+    const row = el("div", "factor");
+    const nm = el("div", "name", f.label); nm.appendChild(el("small", null, `${Math.round(f.weight * 100)}%`));
+    const dv = el("div", "div"); const bar = el("i", f.pts >= 0 ? "up" : "down"); bar.style.width = (50 * Math.abs(f.pts) / maxAbs).toFixed(1) + "%"; dv.appendChild(bar);
+    dv.setAttribute("aria-label", `${f.pts >= 0 ? "helped" : "hurt"} by ${Math.abs(f.pts * 100).toFixed(0)} points of weight`);
+    row.append(nm, dv, el("div", "pts", (f.pts >= 0 ? "+" : "−") + Math.abs(f.pts * 100).toFixed(0)), el("div", "stat", f.stat));
+    list.appendChild(row);
+  });
+  fw.append(el("div", "label", "What moved the score"), key, list);
+  body.appendChild(fw);
+
+  const ch = el("div", "dlg-chart"); ch.append(el("div", "label", `Action by lap · ${r.advice.text}`), lapStrip(r));
+  body.appendChild(ch);
+  body.appendChild(el("p", "dlg-note", `Each factor is compared with every race since ${DATA.baseline_years[0]}. A bar shows how far this race was above or below a typical one, scaled by that factor's weight; the numbers are those weighted amounts. They add up to an overall reading, which is then ranked against the other ${DATA.baseline_races - 1} races to give the score. Late-race action counts extra, and laps behind the safety car are left out of the passing counts.`));
+
+  if (typeof dlg.showModal === "function") { dlg.showModal(); } else { dlg.setAttribute("open", ""); }
+  $("dlg-close").focus();
+}
+$("dlg-close").addEventListener("click", () => $("dlg").close ? $("dlg").close() : $("dlg").removeAttribute("open"));
+$("dlg").addEventListener("click", e => { if (e.target === $("dlg")) $("dlg").close(); });
+$("how-btn").addEventListener("click", () => openDetail(last));
+
+// ---- fan vote (shared store: votes/<viewer id> = {v: {raceKey: 0|1|2}})
+let db = null, uid = null, myVotes = {}, tallies = {}, canVote = false, votesLoaded = false;
+function fanSummary(key) {
+  const c = tallies[key]; if (!c) return null;
+  const n = c[0] + c[1] + c[2]; if (!n) return null;
+  const top = c.indexOf(Math.max(...c));
+  return { tier: TIERS[top], idx: top, n, c };
+}
+function renderFans() {
+  const s = fanSummary(heroKey);
+  const ft = $("fan-tier");
+  $("fan-count").textContent = s ? `Fan verdict · ${s.n} vote${s.n === 1 ? "" : "s"}` : "Fan verdict";
+  ft.textContent = s ? s.tier : (votesLoaded ? "No votes yet" : "—");
+  if (s) paint(ft, "--fan", `var(${TIER_VAR[s.idx]})`); else { ft.style.setProperty("--fan", "var(--muted)"); ft.style.setProperty("--fan-ink", "var(--muted)"); }
+  const bars = $("fan-bars"); bars.replaceChildren();
+  TIERS.forEach((t, k) => {
+    const n = s ? s.c[k] : 0, pct = s ? Math.round(100 * n / s.n) : 0;
+    const row = el("div", "fan-bar"); paint(row, "--c", `var(${TIER_VAR[k]})`);
+    const tr = el("div", "track"); const f = el("i"); f.style.width = pct + "%"; tr.appendChild(f);
+    row.append(el("span", null, t), tr, el("b", null, s ? `${pct}%` : "–"));
+    bars.appendChild(row);
+  });
+  const box = $("vote-btns"); box.replaceChildren();
+  TIERS.forEach((t, k) => {
+    const b = el("button", null, t); b.type = "button"; paint(b, "--c", `var(${TIER_VAR[k]})`);
+    b.setAttribute("aria-pressed", String(myVotes[heroKey] === k));
+    b.disabled = !canVote;
+    b.addEventListener("click", () => castVote(k));
+    box.appendChild(b);
+  });
+}
+async function castVote(k) {
+  if (!db || !uid) return;
+  const prev = myVotes[heroKey];
+  const next = { ...myVotes };
+  if (prev === k) delete next[heroKey]; else next[heroKey] = k;
+  myVotes = next; renderFans();
+  try {
+    await db.doc("votes/" + uid).set({ v: next });
+    $("vote-note").textContent = prev === k ? "Vote cleared." : `Saved: ${TIERS[k]}. Tap again to clear it.`;
+  } catch (e) {
+    myVotes = { ...next }; if (prev === undefined) delete myVotes[heroKey]; else myVotes[heroKey] = prev;
+    if (e && e.code === "invalid_argument") { canVote = false; $("vote-note").textContent = "You can see the fan vote, but voting needs Contributor access to this page."; }
+    else $("vote-note").textContent = "Couldn't save your vote. Try again in a moment.";
+    renderFans();
+  }
+}
+async function startFans() {
+  try {
+    db = window.claude && window.claude.use ? await window.claude.use("db") : null;
+    const user = window.claude && window.claude.use ? await window.claude.use("user") : null;
+    uid = user ? await user.id() : null;
+    if (user && uid) { const w = await user.can("data.write"); canVote = w !== false; }
+  } catch (e) { db = null; }
+  if (!db) { $("vote-note").textContent = "Fan voting works when you open this page in Claude while signed in."; renderFans(); return; }
+  if (!uid) $("vote-note").textContent = "Sign in to Claude to add your vote.";
+  else if (!canVote) $("vote-note").textContent = "You can see the fan vote, but voting needs Contributor access to this page.";
+  renderFans();
+  const timer = setTimeout(() => { if (!votesLoaded) $("vote-note").textContent = "Fan votes can't be reached right now. They'll appear when the connection returns."; }, 10000);
+  db.collection("votes").onSnapshot(snap => {
+    const t = {}; let mine = {};
+    snap.docs.forEach(d => {
+      const v = (d.data() || {}).v || {};
+      for (const key in v) { const k = v[key]; if (k === 0 || k === 1 || k === 2) (t[key] = t[key] || [0, 0, 0])[k]++; }
+      if (d.id === uid) mine = { ...v };
+    });
+    tallies = t; myVotes = mine;
+    if (!snap.metadata.fromCache) { votesLoaded = true; clearTimeout(timer); }
+    renderFans(); renderBoard();
+  }, () => { clearTimeout(timer); votesLoaded = true; $("vote-note").textContent = "Fan votes aren't available on this view."; renderFans(); });
+}
+
+renderHero();
+renderNext();
+setMode("rank");
+renderFans();
+startFans();
+
+// ---- classics
+const CL = DATA.classics;
+let era = "all", showAll = false;
+function sparkSvg(profile) {
+  const W = 64, H = 28, max = Math.max(...profile, 1), bw = W / profile.length;
+  const s = svgEl("svg", { viewBox: `0 0 ${W} ${H}`, preserveAspectRatio: "none", "aria-hidden": "true" });
+  profile.forEach((v, k) => {
+    const h = Math.max(1.5, (v / max) * (H - 2));
+    s.appendChild(svgEl("rect", { x: (k * bw + .5).toFixed(1), width: Math.max(.8, bw - 1).toFixed(1), y: (H - h).toFixed(1), height: h.toFixed(1), fill: "var(--sky)", opacity: (0.3 + 0.7 * v / max).toFixed(2) }));
+  });
+  return s;
+}
+function renderClassics() {
+  if (!CL) { $("classics-sec").hidden = true; return; }
+  const list = (era === "all" ? CL.races.filter(r => r.rank <= 25).sort((a, b) => a.rank - b.rank)
+                              : CL.races.filter(r => r.era === era).sort((a, b) => a.era_rank - b.era_rank).slice(0, 10));
+  const shown = era === "all" && !showAll ? list.slice(0, 10) : list;
+  const box = $("classics"); box.replaceChildren();
+  shown.forEach((r, i) => {
+    const row = el("div", "crow");
+    const sp = el("div", "spark"); sp.appendChild(sparkSvg(r.profile));
+    const nm = el("div"); const n = el("div", "name"); n.append(el("span", "yr", String(r.year)), document.createTextNode(r.name.replace(" Grand Prix", " GP")));
+    nm.append(n, el("div", "meta", `${r.locality} · ${r.era} · #${r.era_rank} of ${r.era_size} in its era`));
+    const fl = el("div", "flags");
+    if (r.wet) fl.appendChild(el("span", "flagchip", "Wet"));
+    if (r.title_live) fl.appendChild(el("span", "flagchip", "Title finale"));
+    row.append(el("div", "pos", String(era === "all" ? r.rank : r.era_rank)), sp, nm, fl, el("div", "tip", r.advice.text.replace("Watch the whole thing", "Watch it all").replace(/Start at lap (\d+) of \d+/, "From lap $1")));
+    box.appendChild(row);
+  });
+  const more = $("more");
+  more.hidden = era !== "all";
+  more.textContent = showAll ? "Show top 10" : "Show top 25";
+  more.setAttribute("aria-expanded", String(showAll));
+}
+if (CL) {
+  $("classics-sub").textContent = `${CL.first_year} to ${CL.last_year} · ${CL.total} races ranked`;
+  const eb = $("eras");
+  [{ label: "All eras", key: "all" }, ...CL.eras.map(e => ({ label: `${e.label.replace(" era", "")} ${e.from}–${String(e.to).slice(2)}`.replace("–", " to "), key: e.label }))].forEach(e => {
+    const b = el("button", null, e.label); b.setAttribute("aria-pressed", String(e.key === era));
+    b.addEventListener("click", () => { era = e.key; [...eb.children].forEach(x => x.setAttribute("aria-pressed", String(x === b))); renderClassics(); });
+    eb.appendChild(b);
+  });
+  $("more").addEventListener("click", () => { showAll = !showAll; renderClassics(); });
+}
+renderClassics();
+
+</script>
