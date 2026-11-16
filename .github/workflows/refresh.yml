@@ -49,7 +49,7 @@ jobs:
           cp pipeline/out/site.html site/index.html
           git config user.name "undercut-replay-bot"
           git config user.email "undercut-replay-bot@users.noreply.github.com"
-          git add site/index.html pipeline/out/*.json
+          git add site pipeline/out   # whole folders: skips the files .gitignore excludes (debug.json) instead of erroring
           if git diff --cached --quiet; then echo "No changes."; exit 0; fi
           git commit -m "Race refresh $(date -u +%Y-%m-%d)"
           git push
