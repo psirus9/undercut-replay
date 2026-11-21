@@ -7,11 +7,11 @@
  "locality": "Las Vegas",
  "country": "USA",
  "expected_tier": "Worth It",
- "expected_pct": 51,
+ "expected_pct": 50,
  "basis": [
   "Track history: about average across 3 races since 1996",
   "Title fight: not much at stake",
-  "Grid: not set yet, qualifying still to come"
+  "Grid: factored in"
  ],
- "grid_known": false
+ "grid_known": true
 }
