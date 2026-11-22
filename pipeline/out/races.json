@@ -8,10 +8,10 @@
    "locality": "Melbourne",
    "country": "Australia",
    "laps": 58,
-   "score": 73,
+   "score": 71,
    "tier": "Worth It",
-   "front_pct": 77,
-   "pack_pct": 77,
+   "front_pct": 73,
+   "pack_pct": 78,
    "action_meter": 2,
    "suspense_meter": 4,
    "chaos_meter": 3,
@@ -58,79 +58,79 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.1,
-      "pts": 0.016,
+      "z": -0.02,
+      "pts": -0.003,
       "stat": "0.77 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -0.08,
-      "pts": -0.009,
+      "z": -0.15,
+      "pts": -0.017,
       "stat": "2.9 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -1.32,
-      "pts": -0.132,
+      "z": -0.89,
+      "pts": -0.089,
       "stat": "0.00 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.58,
-      "pts": 0.128,
+      "z": 0.17,
+      "pts": 0.037,
       "stat": "2 lead changes on track, 2 passes for podium places, top three nose to tail (under a second) on about 32% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": 0.47,
-      "pts": 0.033,
+      "z": 0.42,
+      "pts": 0.029,
       "stat": "Closest gap at the front late on: 3.0s. Winning margin: 3.0s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": -0.24,
-      "pts": -0.038,
+      "z": -0.23,
+      "pts": -0.037,
       "stat": "0 safety cars, 3 VSCs, 3 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": 1.49,
-      "pts": 0.104,
+      "z": 1.44,
+      "pts": 0.101,
       "stat": "Biggest climb by a top-six finisher: 14 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": -0.13,
-      "pts": -0.007,
+      "z": -0.11,
+      "pts": -0.006,
       "stat": "3 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": 0.91,
-      "pts": 0.055,
+      "z": 0.93,
+      "pts": 0.056,
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.151,
+    "raw": 0.072,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -142,12 +142,12 @@
    "locality": "Shanghai",
    "country": "China",
    "laps": 56,
-   "score": 93,
+   "score": 87,
    "tier": "Must Watch",
-   "front_pct": 89,
-   "pack_pct": 86,
+   "front_pct": 76,
+   "pack_pct": 80,
    "action_meter": 5,
-   "suspense_meter": 5,
+   "suspense_meter": 4,
    "chaos_meter": 3,
    "advice": {
     "kind": "full",
@@ -189,79 +189,79 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 2.06,
-      "pts": 0.33,
+      "z": 1.43,
+      "pts": 0.229,
       "stat": "1.60 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": 0.67,
-      "pts": 0.074,
+      "z": 0.44,
+      "pts": 0.048,
       "stat": "3.6 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 0.48,
-      "pts": 0.048,
+      "z": 0.15,
+      "pts": 0.015,
       "stat": "0.64 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 1.81,
-      "pts": 0.398,
+      "z": 0.82,
+      "pts": 0.18,
       "stat": "1 lead change on track, 15 passes for podium places, top three nose to tail (under a second) on about 34% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": -0.17,
-      "pts": -0.012,
+      "z": -0.21,
+      "pts": -0.015,
       "stat": "Closest gap at the front late on: 5.5s. Winning margin: 5.5s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": -0.54,
-      "pts": -0.086,
+      "z": -0.53,
+      "pts": -0.085,
       "stat": "1 safety car, 0 VSCs, 3 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.19,
-      "pts": -0.013,
+      "z": -0.22,
+      "pts": -0.015,
       "stat": "Biggest climb by a top-six finisher: 5 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": -0.13,
-      "pts": -0.007,
+      "z": -0.11,
+      "pts": -0.006,
       "stat": "3 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": 1.03,
-      "pts": 0.062,
+      "z": 1.05,
+      "pts": 0.063,
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.792,
+    "raw": 0.413,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -273,12 +273,12 @@
    "locality": "Suzuka",
    "country": "Japan",
    "laps": 53,
-   "score": 84,
-   "tier": "Must Watch",
-   "front_pct": 59,
-   "pack_pct": 80,
+   "score": 78,
+   "tier": "Worth It",
+   "front_pct": 38,
+   "pack_pct": 73,
    "action_meter": 5,
-   "suspense_meter": 3,
+   "suspense_meter": 2,
    "chaos_meter": 3,
    "advice": {
     "kind": "full",
@@ -319,63 +319,63 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.55,
-      "pts": 0.088,
+      "z": 0.31,
+      "pts": 0.05,
       "stat": "0.96 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": 2.18,
-      "pts": 0.24,
+      "z": 1.63,
+      "pts": 0.179,
       "stat": "5.2 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 0.68,
-      "pts": 0.068,
+      "z": 0.27,
+      "pts": 0.027,
       "stat": "0.71 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 1.38,
-      "pts": 0.304,
+      "z": 0.59,
+      "pts": 0.13,
       "stat": "2 lead changes on track, 10 passes for podium places, top three nose to tail (under a second) on about 31% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": -1.17,
-      "pts": -0.082,
+      "z": -1.18,
+      "pts": -0.083,
       "stat": "Closest gap at the front late on: 11.9s. Winning margin: 13.7s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": -0.54,
-      "pts": -0.086,
+      "z": -0.53,
+      "pts": -0.085,
       "stat": "1 safety car, 0 VSCs, 2 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.94,
-      "pts": -0.066,
+      "z": -0.96,
+      "pts": -0.067,
       "stat": "Biggest climb by a top-six finisher: 1 place"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": -1.39,
+      "z": -1.38,
       "pts": -0.069,
       "stat": "Everyone in the top ten ran the same tyre strategy"
      },
@@ -383,15 +383,15 @@
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": 0.83,
-      "pts": 0.05,
+      "z": 0.85,
+      "pts": 0.051,
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.445,
+    "raw": 0.132,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -403,10 +403,10 @@
    "locality": "Miami",
    "country": "USA",
    "laps": 57,
-   "score": 80,
+   "score": 69,
    "tier": "Worth It",
-   "front_pct": 93,
-   "pack_pct": 64,
+   "front_pct": 87,
+   "pack_pct": 58,
    "action_meter": 4,
    "suspense_meter": 5,
    "chaos_meter": 3,
@@ -451,63 +451,63 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 1.08,
-      "pts": 0.173,
+      "z": 0.7,
+      "pts": 0.112,
       "stat": "1.18 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -0.67,
-      "pts": -0.074,
+      "z": -0.62,
+      "pts": -0.068,
       "stat": "2.2 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 0.17,
-      "pts": 0.017,
+      "z": -0.02,
+      "pts": -0.002,
       "stat": "0.53 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 1.63,
-      "pts": 0.359,
+      "z": 0.72,
+      "pts": 0.158,
       "stat": "4 lead changes on track, 7 passes for podium places, top three nose to tail (under a second) on about 35% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": 0.38,
-      "pts": 0.027,
+      "z": 0.33,
+      "pts": 0.023,
       "stat": "Closest gap at the front late on: 1.7s. Winning margin: 3.3s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": -0.54,
-      "pts": -0.086,
+      "z": -0.53,
+      "pts": -0.085,
       "stat": "1 safety car, 0 VSCs, 4 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.38,
-      "pts": -0.027,
+      "z": -0.41,
+      "pts": -0.029,
       "stat": "Biggest climb by a top-six finisher: 4 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": -1.39,
+      "z": -1.38,
       "pts": -0.069,
       "stat": "Everyone in the top ten ran the same tyre strategy"
      },
@@ -515,15 +515,15 @@
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": 0.4,
-      "pts": 0.024,
+      "z": 0.43,
+      "pts": 0.026,
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.344,
+    "raw": 0.067,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -535,12 +535,12 @@
    "locality": "Montreal",
    "country": "Canada",
    "laps": 68,
-   "score": 77,
+   "score": 73,
    "tier": "Worth It",
-   "front_pct": 86,
-   "pack_pct": 30,
-   "action_meter": 2,
-   "suspense_meter": 5,
+   "front_pct": 69,
+   "pack_pct": 29,
+   "action_meter": 1,
+   "suspense_meter": 4,
    "chaos_meter": 4,
    "advice": {
     "kind": "full",
@@ -588,79 +588,79 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.3,
-      "pts": -0.048,
+      "z": -0.33,
+      "pts": -0.053,
       "stat": "0.59 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -0.8,
-      "pts": -0.088,
+      "z": -0.73,
+      "pts": -0.08,
       "stat": "2.1 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.83,
-      "pts": -0.083,
+      "z": -0.6,
+      "pts": -0.06,
       "stat": "0.18 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 2.5,
-      "pts": 0.55,
+      "z": 1.33,
+      "pts": 0.293,
       "stat": "4 lead changes on track, 5 passes for podium places, top three nose to tail (under a second) on about 68% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": -0.9,
-      "pts": -0.063,
+      "z": -0.92,
+      "pts": -0.064,
       "stat": "Closest gap at the front late on: 8.8s. Winning margin: 10.8s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": 0.35,
-      "pts": 0.056,
+      "z": 0.37,
+      "pts": 0.059,
       "stat": "0 safety cars, 3 VSCs, 5 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.38,
-      "pts": -0.027,
+      "z": -0.41,
+      "pts": -0.029,
       "stat": "Biggest climb by a top-six finisher: 4 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": 1.13,
-      "pts": 0.056,
+      "z": 1.15,
+      "pts": 0.057,
       "stat": "5 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -0.51,
-      "pts": -0.031,
+      "z": -0.46,
+      "pts": -0.028,
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": 0.323,
+    "raw": 0.097,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -672,16 +672,17 @@
    "locality": "Monte Carlo",
    "country": "Monaco",
    "laps": 78,
-   "score": 16,
-   "tier": "Snoozer",
-   "front_pct": 9,
-   "pack_pct": 34,
+   "score": 40,
+   "tier": "Worth It",
+   "front_pct": 13,
+   "pack_pct": 36,
    "action_meter": 1,
    "suspense_meter": 1,
    "chaos_meter": 5,
    "advice": {
-    "kind": "recap",
-    "text": "Recap is enough"
+    "kind": "from",
+    "lap": 60,
+    "text": "Start at lap 60 of 78"
    },
    "intensity_profile": [
     0.0,
@@ -717,79 +718,79 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -1.61,
-      "pts": -0.258,
+      "z": -1.3,
+      "pts": -0.208,
       "stat": "0.03 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -0.27,
-      "pts": -0.03,
+      "z": -0.31,
+      "pts": -0.034,
       "stat": "2.7 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -1.32,
-      "pts": -0.132,
+      "z": -0.89,
+      "pts": -0.089,
       "stat": "0.00 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -1.3,
-      "pts": -0.286,
+      "z": -0.81,
+      "pts": -0.178,
       "stat": "0 lead changes on track, 0 passes for podium places, top three nose to tail (under a second) on about 2% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": -0.82,
-      "pts": -0.057,
+      "z": -0.84,
+      "pts": -0.059,
       "stat": "Closest gap at the front late on: 10.0s. Winning margin: 10.0s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": 2.44,
-      "pts": 0.39,
+      "z": 2.47,
+      "pts": 0.395,
       "stat": "2 safety cars, 0 VSCs, 1 red flag, 7 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": 0.56,
-      "pts": 0.039,
+      "z": 0.52,
+      "pts": 0.036,
       "stat": "Biggest climb by a top-six finisher: 9 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": -0.76,
-      "pts": -0.038,
+      "z": -0.74,
+      "pts": -0.037,
       "stat": "2 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -1.42,
-      "pts": -0.085,
+      "z": -1.35,
+      "pts": -0.081,
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.456,
+    "raw": -0.253,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -803,8 +804,8 @@
    "laps": 66,
    "score": 11,
    "tier": "Snoozer",
-   "front_pct": 14,
-   "pack_pct": 5,
+   "front_pct": 11,
+   "pack_pct": 4,
    "action_meter": 1,
    "suspense_meter": 1,
    "chaos_meter": 4,
@@ -853,32 +854,32 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.48,
-      "pts": -0.077,
+      "z": -0.46,
+      "pts": -0.074,
       "stat": "0.52 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -1.41,
-      "pts": -0.155,
+      "z": -1.21,
+      "pts": -0.133,
       "stat": "1.5 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.5,
-      "pts": -0.05,
+      "z": -0.41,
+      "pts": -0.041,
       "stat": "0.29 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.48,
-      "pts": -0.106,
+      "z": -0.38,
+      "pts": -0.084,
       "stat": "0 lead changes on track, 1 pass for podium places, top three nose to tail (under a second) on about 19% of laps"
      },
      {
@@ -893,39 +894,39 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": 0.05,
-      "pts": 0.008,
+      "z": 0.07,
+      "pts": 0.011,
       "stat": "0 safety cars, 2 VSCs, 7 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.75,
-      "pts": -0.053,
+      "z": -0.78,
+      "pts": -0.055,
       "stat": "Biggest climb by a top-six finisher: 2 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": 1.13,
-      "pts": 0.056,
+      "z": 1.15,
+      "pts": 0.057,
       "stat": "5 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -0.43,
-      "pts": -0.026,
+      "z": -0.39,
+      "pts": -0.023,
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": -0.488,
+    "raw": -0.429,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -937,10 +938,10 @@
    "locality": "Spielberg",
    "country": "Austria",
    "laps": 71,
-   "score": 20,
+   "score": 18,
    "tier": "Snoozer",
-   "front_pct": 73,
-   "pack_pct": 11,
+   "front_pct": 78,
+   "pack_pct": 13,
    "action_meter": 1,
    "suspense_meter": 4,
    "chaos_meter": 3,
@@ -1000,71 +1001,71 @@
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -1.13,
-      "pts": -0.124,
+      "z": -0.99,
+      "pts": -0.109,
       "stat": "1.8 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -1.01,
-      "pts": -0.101,
+      "z": -0.71,
+      "pts": -0.071,
       "stat": "0.11 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.37,
-      "pts": -0.081,
+      "z": -0.32,
+      "pts": -0.07,
       "stat": "0 lead changes on track, 4 passes for podium places, top three nose to tail (under a second) on about 14% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": 1.08,
-      "pts": 0.076,
+      "z": 1.01,
+      "pts": 0.071,
       "stat": "Closest gap at the front late on: 1.6s. Winning margin: 1.6s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": -0.54,
-      "pts": -0.086,
+      "z": -0.53,
+      "pts": -0.085,
       "stat": "0 safety cars, 2 VSCs, 4 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.57,
-      "pts": -0.04,
+      "z": -0.59,
+      "pts": -0.041,
       "stat": "Biggest climb by a top-six finisher: 3 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": 0.5,
-      "pts": 0.025,
+      "z": 0.52,
+      "pts": 0.026,
       "stat": "4 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -0.4,
-      "pts": -0.024,
+      "z": -0.35,
+      "pts": -0.021,
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": -0.422,
+    "raw": -0.366,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -1076,10 +1077,10 @@
    "locality": "Silverstone",
    "country": "UK",
    "laps": 52,
-   "score": 59,
+   "score": 62,
    "tier": "Worth It",
-   "front_pct": 11,
-   "pack_pct": 41,
+   "front_pct": 7,
+   "pack_pct": 38,
    "action_meter": 2,
    "suspense_meter": 1,
    "chaos_meter": 5,
@@ -1121,32 +1122,32 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.32,
-      "pts": 0.051,
+      "z": 0.13,
+      "pts": 0.021,
       "stat": "0.86 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -0.74,
-      "pts": -0.081,
+      "z": -0.68,
+      "pts": -0.075,
       "stat": "2.2 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.89,
-      "pts": -0.089,
+      "z": -0.64,
+      "pts": -0.064,
       "stat": "0.15 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.28,
-      "pts": -0.062,
+      "z": -0.27,
+      "pts": -0.059,
       "stat": "0 lead changes on track, 1 pass for podium places, top three nose to tail (under a second) on about 24% of laps"
      },
      {
@@ -1161,39 +1162,39 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": 1.84,
-      "pts": 0.294,
+      "z": 1.87,
+      "pts": 0.299,
       "stat": "2 safety cars, 2 VSCs, 3 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.38,
-      "pts": -0.027,
+      "z": -0.41,
+      "pts": -0.029,
       "stat": "Biggest climb by a top-six finisher: 4 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": -0.13,
-      "pts": -0.007,
+      "z": -0.11,
+      "pts": -0.006,
       "stat": "3 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": 0.2,
-      "pts": 0.012,
+      "z": 0.23,
+      "pts": 0.014,
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": -0.018,
+    "raw": -0.01,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -1205,10 +1206,10 @@
    "locality": "Spa",
    "country": "Belgium",
    "laps": 44,
-   "score": 98,
+   "score": 91,
    "tier": "Must Watch",
-   "front_pct": 98,
-   "pack_pct": 100,
+   "front_pct": 93,
+   "pack_pct": 98,
    "action_meter": 5,
    "suspense_meter": 5,
    "chaos_meter": 4,
@@ -1268,79 +1269,79 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 1.48,
-      "pts": 0.237,
+      "z": 1.0,
+      "pts": 0.16,
       "stat": "1.35 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": 1.1,
-      "pts": 0.121,
+      "z": 0.77,
+      "pts": 0.085,
       "stat": "4.1 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.81,
-      "pts": -0.081,
+      "z": -0.59,
+      "pts": -0.059,
       "stat": "0.18 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 1.99,
-      "pts": 0.438,
+      "z": 0.91,
+      "pts": 0.2,
       "stat": "2 lead changes on track, 6 passes for podium places, top three nose to tail (under a second) on about 56% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": 0.89,
-      "pts": 0.062,
+      "z": 0.83,
+      "pts": 0.058,
       "stat": "Closest gap at the front late on: 0.8s. Winning margin: 2.0s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": 0.05,
-      "pts": 0.008,
+      "z": 0.07,
+      "pts": 0.011,
       "stat": "1 safety car, 2 VSCs, 3 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": 1.68,
-      "pts": 0.118,
+      "z": 1.63,
+      "pts": 0.114,
       "stat": "Biggest climb by a top-six finisher: 15 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": 0.5,
-      "pts": 0.025,
+      "z": 0.52,
+      "pts": 0.026,
       "stat": "4 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -0.59,
-      "pts": -0.035,
+      "z": -0.54,
+      "pts": -0.032,
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": 0.893,
+    "raw": 0.562,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -1352,10 +1353,10 @@
    "locality": "Budapest",
    "country": "Hungary",
    "laps": 70,
-   "score": 23,
+   "score": 13,
    "tier": "Snoozer",
-   "front_pct": 34,
-   "pack_pct": 16,
+   "front_pct": 29,
+   "pack_pct": 18,
    "action_meter": 1,
    "suspense_meter": 2,
    "chaos_meter": 3,
@@ -1406,79 +1407,79 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.48,
-      "pts": -0.077,
+      "z": -0.46,
+      "pts": -0.074,
       "stat": "0.52 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -1.2,
-      "pts": -0.132,
+      "z": -1.04,
+      "pts": -0.114,
       "stat": "1.7 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.39,
-      "pts": -0.039,
+      "z": -0.35,
+      "pts": -0.035,
       "stat": "0.33 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.08,
-      "pts": 0.018,
+      "z": -0.09,
+      "pts": -0.02,
       "stat": "1 lead change on track, 1 pass for podium places, top three nose to tail (under a second) on about 27% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": -0.81,
-      "pts": -0.057,
+      "z": -0.83,
+      "pts": -0.058,
       "stat": "Closest gap at the front late on: 7.9s. Winning margin: 15.1s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": -0.24,
-      "pts": -0.038,
+      "z": -0.23,
+      "pts": -0.037,
       "stat": "0 safety cars, 1 VSC, 3 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.38,
-      "pts": -0.027,
+      "z": -0.41,
+      "pts": -0.029,
       "stat": "Biggest climb by a top-six finisher: 4 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": -0.13,
-      "pts": -0.007,
+      "z": -0.11,
+      "pts": -0.006,
       "stat": "3 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -0.79,
-      "pts": -0.047,
+      "z": -0.73,
+      "pts": -0.044,
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.407,
+    "raw": -0.416,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -1492,10 +1493,10 @@
    "laps": 72,
    "score": 82,
    "tier": "Must Watch",
-   "front_pct": 55,
+   "front_pct": 36,
    "pack_pct": 27,
    "action_meter": 2,
-   "suspense_meter": 3,
+   "suspense_meter": 2,
    "chaos_meter": 5,
    "advice": {
     "kind": "full",
@@ -1533,39 +1534,39 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.28,
-      "pts": -0.045,
+      "z": -0.31,
+      "pts": -0.05,
       "stat": "0.60 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -0.31,
-      "pts": -0.034,
+      "z": -0.34,
+      "pts": -0.037,
       "stat": "2.6 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -1.01,
-      "pts": -0.101,
+      "z": -0.71,
+      "pts": -0.071,
       "stat": "0.11 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.95,
-      "pts": 0.209,
+      "z": 0.37,
+      "pts": 0.081,
       "stat": "2 lead changes on track, 6 passes for podium places, top three nose to tail (under a second) on about 31% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": -0.98,
+      "z": -0.99,
       "pts": -0.069,
       "stat": "Closest gap at the front late on: 10.7s. Winning margin: 11.5s"
      },
@@ -1581,8 +1582,8 @@
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.94,
-      "pts": -0.066,
+      "z": -0.96,
+      "pts": -0.067,
       "stat": "Biggest climb by a top-six finisher: 1 place"
      },
      {
@@ -1597,15 +1598,15 @@
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -1.15,
-      "pts": -0.069,
+      "z": -1.08,
+      "pts": -0.065,
       "stat": "Little title pressure"
      }
     ],
-    "raw": 0.35,
+    "raw": 0.246,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -1617,7 +1618,7 @@
    "locality": "Monza",
    "country": "Italy",
    "laps": 53,
-   "score": 86,
+   "score": 84,
    "tier": "Must Watch",
    "front_pct": 84,
    "pack_pct": 89,
@@ -1664,79 +1665,79 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 1.04,
-      "pts": 0.166,
+      "z": 0.67,
+      "pts": 0.107,
       "stat": "1.17 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -0.74,
-      "pts": -0.081,
+      "z": -0.68,
+      "pts": -0.075,
       "stat": "2.2 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 1.08,
-      "pts": 0.108,
+      "z": 0.5,
+      "pts": 0.05,
       "stat": "0.86 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.81,
-      "pts": 0.178,
+      "z": 0.3,
+      "pts": 0.066,
       "stat": "2 lead changes on track, 7 passes for podium places, top three nose to tail (under a second) on about 25% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": 0.75,
-      "pts": 0.053,
+      "z": 0.69,
+      "pts": 0.048,
       "stat": "Closest gap at the front late on: 0.3s. Winning margin: 3.9s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": 0.65,
-      "pts": 0.104,
+      "z": 0.67,
+      "pts": 0.107,
       "stat": "1 safety car, 0 VSCs, 1 red flag, 3 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": 2.24,
-      "pts": 0.157,
+      "z": 2.18,
+      "pts": 0.153,
       "stat": "Biggest climb by a top-six finisher: 18 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": 0.5,
-      "pts": 0.025,
+      "z": 0.52,
+      "pts": 0.026,
       "stat": "4 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -1.42,
-      "pts": -0.085,
+      "z": -1.35,
+      "pts": -0.081,
       "stat": "Little title pressure"
      }
     ],
-    "raw": 0.625,
+    "raw": 0.4,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -1748,13 +1749,13 @@
    "locality": "Madrid",
    "country": "Spain",
    "laps": 57,
-   "score": 14,
+   "score": 9,
    "tier": "Snoozer",
-   "front_pct": 68,
-   "pack_pct": 18,
+   "front_pct": 64,
+   "pack_pct": 16,
    "action_meter": 1,
    "suspense_meter": 4,
-   "chaos_meter": 2,
+   "chaos_meter": 1,
    "advice": {
     "kind": "recap",
     "text": "Recap is enough"
@@ -1796,40 +1797,40 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.36,
-      "pts": -0.058,
+      "z": -0.37,
+      "pts": -0.059,
       "stat": "0.57 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -0.85,
-      "pts": -0.093,
+      "z": -0.76,
+      "pts": -0.084,
       "stat": "2.1 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -1.14,
-      "pts": -0.114,
+      "z": -0.78,
+      "pts": -0.078,
       "stat": "0.07 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.04,
-      "pts": -0.009,
+      "z": -0.15,
+      "pts": -0.033,
       "stat": "0 lead changes on track, 3 passes for podium places, top three nose to tail (under a second) on about 25% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": 0.46,
-      "pts": 0.032,
+      "z": 0.4,
+      "pts": 0.028,
       "stat": "Closest gap at the front late on: 1.0s. Winning margin: 4.4s"
      },
      {
@@ -1844,31 +1845,31 @@
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.75,
-      "pts": -0.053,
+      "z": -0.78,
+      "pts": -0.055,
       "stat": "Biggest climb by a top-six finisher: 2 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": 1.13,
-      "pts": 0.056,
+      "z": 1.15,
+      "pts": 0.057,
       "stat": "5 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -1.78,
-      "pts": -0.107,
+      "z": -1.7,
+      "pts": -0.102,
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.479,
+    "raw": -0.459,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -1880,10 +1881,10 @@
    "locality": "Baku",
    "country": "Azerbaijan",
    "laps": 51,
-   "score": 100,
+   "score": 98,
    "tier": "Must Watch",
-   "front_pct": 100,
-   "pack_pct": 95,
+   "front_pct": 98,
+   "pack_pct": 93,
    "action_meter": 5,
    "suspense_meter": 5,
    "chaos_meter": 4,
@@ -1926,79 +1927,79 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.82,
-      "pts": 0.131,
+      "z": 0.51,
+      "pts": 0.082,
       "stat": "1.07 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": 1.75,
-      "pts": 0.193,
+      "z": 1.29,
+      "pts": 0.142,
       "stat": "4.7 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 2.5,
-      "pts": 0.25,
+      "z": 1.72,
+      "pts": 0.172,
       "stat": "1.62 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 2.49,
-      "pts": 0.548,
+      "z": 1.17,
+      "pts": 0.257,
       "stat": "0 lead changes on track, 3 passes for podium places, top three nose to tail (under a second) on about 85% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": 2.5,
-      "pts": 0.175,
+      "z": 2.49,
+      "pts": 0.174,
       "stat": "Closest gap at the front late on: 0.2s. Winning margin: 0.2s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": 0.05,
-      "pts": 0.008,
+      "z": 0.07,
+      "pts": 0.011,
       "stat": "2 safety cars, 0 VSCs, 7 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": 0.93,
-      "pts": 0.065,
+      "z": 0.89,
+      "pts": 0.062,
       "stat": "Biggest climb by a top-six finisher: 11 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": -0.76,
-      "pts": -0.038,
+      "z": -0.74,
+      "pts": -0.037,
       "stat": "2 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -1.42,
-      "pts": -0.085,
+      "z": -1.35,
+      "pts": -0.081,
       "stat": "Little title pressure"
      }
     ],
-    "raw": 1.248,
+    "raw": 0.783,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -2010,12 +2011,12 @@
    "locality": "Kuala Lumpur",
    "country": "Malaysia",
    "laps": 55,
-   "score": 95,
+   "score": 96,
    "tier": "Must Watch",
-   "front_pct": 82,
-   "pack_pct": 82,
+   "front_pct": 80,
+   "pack_pct": 84,
    "action_meter": 5,
-   "suspense_meter": 5,
+   "suspense_meter": 4,
    "chaos_meter": 5,
    "advice": {
     "kind": "full",
@@ -2065,71 +2066,71 @@
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": 0.37,
-      "pts": 0.041,
+      "z": 0.2,
+      "pts": 0.022,
       "stat": "3.3 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.12,
-      "pts": -0.012,
+      "z": -0.19,
+      "pts": -0.019,
       "stat": "0.43 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.63,
-      "pts": 0.139,
+      "z": 0.2,
+      "pts": 0.044,
       "stat": "1 lead change on track, 9 passes for podium places, top three nose to tail (under a second) on about 21% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": 0.73,
-      "pts": 0.051,
+      "z": 0.67,
+      "pts": 0.047,
       "stat": "Closest gap at the front late on: 1.3s. Winning margin: 2.3s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": 1.55,
-      "pts": 0.248,
+      "z": 1.57,
+      "pts": 0.251,
       "stat": "2 safety cars, 1 VSC, 3 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.57,
-      "pts": -0.04,
+      "z": -0.59,
+      "pts": -0.041,
       "stat": "Biggest climb by a top-six finisher: 3 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": 2.39,
-      "pts": 0.12,
+      "z": 2.42,
+      "pts": 0.121,
       "stat": "7 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -1.78,
-      "pts": -0.107,
+      "z": -1.7,
+      "pts": -0.102,
       "stat": "Little title pressure"
      }
     ],
-    "raw": 0.837,
+    "raw": 0.721,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -2143,7 +2144,7 @@
    "laps": 62,
    "score": 2,
    "tier": "Snoozer",
-   "front_pct": 27,
+   "front_pct": 31,
    "pack_pct": 7,
    "action_meter": 2,
    "suspense_meter": 2,
@@ -2191,79 +2192,79 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.58,
-      "pts": -0.093,
+      "z": -0.53,
+      "pts": -0.085,
       "stat": "0.47 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -0.96,
-      "pts": -0.106,
+      "z": -0.85,
+      "pts": -0.093,
       "stat": "1.9 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.1,
-      "pts": -0.01,
+      "z": -0.18,
+      "pts": -0.018,
       "stat": "0.44 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.45,
-      "pts": -0.099,
+      "z": -0.37,
+      "pts": -0.081,
       "stat": "0 lead changes on track, 3 passes for podium places, top three nose to tail (under a second) on about 15% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": -0.48,
-      "pts": -0.034,
+      "z": -0.51,
+      "pts": -0.036,
       "stat": "Closest gap at the front late on: 7.3s. Winning margin: 7.3s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": -0.54,
-      "pts": -0.086,
+      "z": -0.53,
+      "pts": -0.085,
       "stat": "0 safety cars, 2 VSCs, 4 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.94,
-      "pts": -0.066,
+      "z": -0.96,
+      "pts": -0.067,
       "stat": "Biggest climb by a top-six finisher: 1 place"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": -0.13,
-      "pts": -0.007,
+      "z": -0.11,
+      "pts": -0.006,
       "stat": "3 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -1.78,
-      "pts": -0.107,
+      "z": -1.7,
+      "pts": -0.102,
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.607,
+    "raw": -0.574,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -2275,16 +2276,16 @@
    "locality": "Austin",
    "country": "USA",
    "laps": 56,
-   "score": 41,
-   "tier": "Worth It",
-   "front_pct": 25,
-   "pack_pct": 20,
+   "score": 29,
+   "tier": "Snoozer",
+   "front_pct": 20,
+   "pack_pct": 24,
    "action_meter": 3,
-   "suspense_meter": 2,
+   "suspense_meter": 1,
    "chaos_meter": 4,
    "advice": {
-    "kind": "full",
-    "text": "Watch the whole thing"
+    "kind": "recap",
+    "text": "Recap is enough"
    },
    "intensity_profile": [
     3.0,
@@ -2322,79 +2323,79 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.27,
-      "pts": 0.043,
+      "z": 0.1,
+      "pts": 0.016,
       "stat": "0.84 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -1.56,
-      "pts": -0.172,
+      "z": -1.33,
+      "pts": -0.146,
       "stat": "1.3 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 0.68,
-      "pts": 0.068,
+      "z": 0.27,
+      "pts": 0.027,
       "stat": "0.71 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.02,
-      "pts": 0.004,
+      "z": -0.12,
+      "pts": -0.026,
       "stat": "0 lead changes on track, 6 passes for podium places, top three nose to tail (under a second) on about 18% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": -1.11,
-      "pts": -0.078,
+      "z": -1.13,
+      "pts": -0.079,
       "stat": "Closest gap at the front late on: 13.1s. Winning margin: 13.1s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": 0.05,
-      "pts": 0.008,
+      "z": 0.07,
+      "pts": 0.011,
       "stat": "0 safety cars, 2 VSCs, 3 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.57,
-      "pts": -0.04,
+      "z": -0.59,
+      "pts": -0.041,
       "stat": "Biggest climb by a top-six finisher: 3 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": 0.5,
-      "pts": 0.025,
+      "z": 0.52,
+      "pts": 0.026,
       "stat": "4 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -1.78,
-      "pts": -0.107,
+      "z": -1.7,
+      "pts": -0.102,
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.247,
+    "raw": -0.315,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -2406,10 +2407,10 @@
    "locality": "Mexico City",
    "country": "Mexico",
    "laps": 71,
-   "score": 61,
+   "score": 60,
    "tier": "Worth It",
    "front_pct": 91,
-   "pack_pct": 55,
+   "pack_pct": 56,
    "action_meter": 3,
    "suspense_meter": 5,
    "chaos_meter": 5,
@@ -2463,79 +2464,79 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.49,
-      "pts": -0.078,
+      "z": -0.47,
+      "pts": -0.075,
       "stat": "0.51 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": 0.5,
-      "pts": 0.055,
+      "z": 0.3,
+      "pts": 0.033,
       "stat": "3.4 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.7,
-      "pts": -0.07,
+      "z": -0.53,
+      "pts": -0.053,
       "stat": "0.22 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.04,
-      "pts": -0.009,
+      "z": -0.15,
+      "pts": -0.033,
       "stat": "0 lead changes on track, 0 passes for podium places, top three nose to tail (under a second) on about 32% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": 1.7,
-      "pts": 0.119,
+      "z": 1.62,
+      "pts": 0.113,
       "stat": "Closest gap at the front late on: 0.7s. Winning margin: 0.8s"
      },
      {
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": 0.95,
-      "pts": 0.152,
+      "z": 0.97,
+      "pts": 0.155,
       "stat": "1 safety car, 1 VSC, 1 red flag, 5 retirements"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": -0.38,
-      "pts": -0.027,
+      "z": -0.41,
+      "pts": -0.029,
       "stat": "Biggest climb by a top-six finisher: 4 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": -0.76,
-      "pts": -0.038,
+      "z": -0.74,
+      "pts": -0.037,
       "stat": "2 different tyre strategies in the top ten"
      },
      {
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -1.78,
-      "pts": -0.107,
+      "z": -1.7,
+      "pts": -0.102,
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.003,
+    "raw": -0.027,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
     ]
    }
   },
@@ -2547,11 +2548,11 @@
    "locality": "S\u00e3o Paulo",
    "country": "Brazil",
    "laps": 71,
-   "score": 64,
+   "score": 53,
    "tier": "Worth It",
-   "front_pct": 36,
-   "pack_pct": 84,
-   "action_meter": 4,
+   "front_pct": 27,
+   "pack_pct": 87,
+   "action_meter": 3,
    "suspense_meter": 2,
    "chaos_meter": 3,
    "advice": {
@@ -2602,39 +2603,39 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.59,
-      "pts": 0.094,
+      "z": 0.33,
+      "pts": 0.053,
       "stat": "0.97 passes per green-flag lap"
      },
      {
       "key": "battles",
       "label": "Wheel-to-wheel running",
       "weight": 0.11,
-      "z": -0.61,
-      "pts": -0.067,
+      "z": -0.58,
+      "pts": -0.064,
       "stat": "2.3 cars within a second of the car ahead, per lap"
      },
      {
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 0.08,
-      "pts": 0.008,
+      "z": -0.08,
+      "pts": -0.008,
       "stat": "0.50 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.44,
-      "pts": 0.097,
+      "z": 0.1,
+      "pts": 0.022,
       "stat": "1 lead change on track, 8 passes for podium places, top three nose to tail (under a second) on about 19% of laps"
      },
      {
       "key": "finish",
       "label": "Closeness of the finish",
       "weight": 0.07,
-      "z": -1.11,
+      "z": -1.12,
       "pts": -0.078,
       "stat": "Closest gap at the front late on: 11.0s. Winning margin: 14.6s"
      },
@@ -2642,23 +2643,23 @@
       "key": "chaos",
       "label": "Chaos",
       "weight": 0.16,
-      "z": -0.24,
-      "pts": -0.038,
+      "z": -0.23,
+      "pts": -0.037,
       "stat": "0 safety cars, 0 VSCs, 1 retirement, rain"
      },
      {
       "key": "comeback",
       "label": "Comeback drives",
       "weight": 0.07,
-      "z": 2.43,
-      "pts": 0.17,
+      "z": 2.37,
+      "pts": 0.166,
       "stat": "Biggest climb by a top-six finisher: 19 places"
      },
      {
       "key": "strategy",
       "label": "Strategy variety",
       "weight": 0.05,
-      "z": -1.39,
+      "z": -1.38,
       "pts": -0.069,
       "stat": "Everyone in the top ten ran the same tyre strategy"
      },
@@ -2666,20 +2667,149 @@
       "key": "stakes",
       "label": "Title stakes",
       "weight": 0.06,
-      "z": -1.78,
-      "pts": -0.107,
+      "z": -1.7,
+      "pts": -0.102,
       "stat": "Little title pressure"
      }
     ],
-    "raw": 0.009,
+    "raw": -0.117,
     "raw_range": [
-     -0.607,
-     1.248
+     -0.574,
+     1.476
+    ]
+   }
+  },
+  {
+   "round": "21",
+   "session_key": 11420,
+   "name": "Las Vegas Grand Prix",
+   "date": "2026-11-22",
+   "locality": "Las Vegas",
+   "country": "USA",
+   "laps": 50,
+   "score": 100,
+   "tier": "Must Watch",
+   "front_pct": 100,
+   "pack_pct": 100,
+   "action_meter": 5,
+   "suspense_meter": 5,
+   "chaos_meter": 3,
+   "advice": {
+    "kind": "from",
+    "lap": 29,
+    "text": "Start at lap 29 of 50"
+   },
+   "intensity_profile": [
+    4.5,
+    11.0,
+    10.0,
+    5.0,
+    10.0,
+    11.0,
+    6.0,
+    10.0,
+    8.0,
+    3.0,
+    0.0,
+    0.0,
+    8.0,
+    11.0,
+    9.0,
+    15.0,
+    11.0,
+    13.0,
+    18.0,
+    5.0,
+    12.0,
+    10.0,
+    8.0,
+    17.0,
+    13.0
+   ],
+   "detail": {
+    "factors": [
+     {
+      "key": "action",
+      "label": "On-track passing",
+      "weight": 0.16,
+      "z": 2.5,
+      "pts": 0.4,
+      "stat": "3.37 passes per green-flag lap"
+     },
+     {
+      "key": "battles",
+      "label": "Wheel-to-wheel running",
+      "weight": 0.11,
+      "z": 2.5,
+      "pts": 0.275,
+      "stat": "8.4 cars within a second of the car ahead, per lap"
+     },
+     {
+      "key": "late_action",
+      "label": "Late-race passing",
+      "weight": 0.1,
+      "z": 2.5,
+      "pts": 0.25,
+      "stat": "3.92 passes per lap in the final quarter"
+     },
+     {
+      "key": "front_fight",
+      "label": "Fight at the front",
+      "weight": 0.22,
+      "z": 2.5,
+      "pts": 0.55,
+      "stat": "8 lead changes on track, 26 passes for podium places, top three nose to tail (under a second) on about 100% of laps"
+     },
+     {
+      "key": "finish",
+      "label": "Closeness of the finish",
+      "weight": 0.07,
+      "z": 1.79,
+      "pts": 0.125,
+      "stat": "Closest gap at the front late on: 0.0s. Winning margin: 0.6s"
+     },
+     {
+      "key": "chaos",
+      "label": "Chaos",
+      "weight": 0.16,
+      "z": -0.53,
+      "pts": -0.085,
+      "stat": "1 safety car, 0 VSCs, 3 retirements"
+     },
+     {
+      "key": "comeback",
+      "label": "Comeback drives",
+      "weight": 0.07,
+      "z": 1.44,
+      "pts": 0.101,
+      "stat": "Biggest climb by a top-six finisher: 14 places"
+     },
+     {
+      "key": "strategy",
+      "label": "Strategy variety",
+      "weight": 0.05,
+      "z": -0.74,
+      "pts": -0.037,
+      "stat": "2 different tyre strategies in the top ten"
+     },
+     {
+      "key": "stakes",
+      "label": "Title stakes",
+      "weight": 0.06,
+      "z": -1.7,
+      "pts": -0.102,
+      "stat": "Little title pressure"
+     }
+    ],
+    "raw": 1.476,
+    "raw_range": [
+     -0.574,
+     1.476
     ]
    }
   }
  ],
- "baseline_races": 44,
+ "baseline_races": 45,
  "baseline_years": [
   2025,
   2026

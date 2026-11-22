@@ -1,17 +1,17 @@
 {
- "key": "2026-21",
- "round": "21",
- "name": "Las Vegas Grand Prix",
- "date": "2026-11-22",
- "start": "2026-11-22T04:00:00Z",
- "locality": "Las Vegas",
- "country": "USA",
- "expected_tier": "Worth It",
- "expected_pct": 50,
+ "key": "2026-22",
+ "round": "22",
+ "name": "Qatar Grand Prix",
+ "date": "2026-11-29",
+ "start": "2026-11-29T16:00:00Z",
+ "locality": "Lusail",
+ "country": "Qatar",
+ "expected_tier": "Snoozer",
+ "expected_pct": 38,
  "basis": [
-  "Track history: about average across 3 races since 1996",
+  "Track history: about average across 4 races since 1996",
   "Title fight: not much at stake",
-  "Grid: factored in"
+  "Grid: not set yet, qualifying still to come"
  ],
- "grid_known": true
+ "grid_known": false
 }
