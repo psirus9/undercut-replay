@@ -502,12 +502,14 @@ function trackSvg(r, big) {
 }
 
 function adviceSub(r) {
-  if (r.advice.kind === "from") return "Most of the action is packed into the closing stretch.";
+  if (r.advice.kind === "from") return r.tier === "Must Watch"
+    ? "Worth seeing start to finish. The closing stretch is where most of the action is."
+    : "Most of the action is packed into the closing stretch.";
   if (r.advice.kind === "skip") return "There's a long quiet stretch in the middle. Everything else is worth seeing.";
   if (r.advice.kind === "full") return "Action is spread across the race. Skipping ahead misses some of it.";
   return "The highlights package covers what matters.";
 }
-const shortAdvice = r => r.advice.kind === "from" ? `From lap ${r.advice.lap}` : r.advice.kind === "skip" ? `Skip laps ${r.advice.from} to ${r.advice.to}` : r.advice.kind === "full" ? "Watch it all" : "Recap only";
+const shortAdvice = r => r.advice.kind === "from" ? (r.tier === "Must Watch" ? `All, or from lap ${r.advice.lap}` : `From lap ${r.advice.lap}`) : r.advice.kind === "skip" ? `Skip laps ${r.advice.from} to ${r.advice.to}` : r.advice.kind === "full" ? "Watch it all" : "Recap only";
 
 const PROV = DATA.provisional;
 const provActive = !!(PROV && Date.now() >= Date.parse(PROV.start));
@@ -581,7 +583,7 @@ function renderHero() {
   if (last.advice.kind === "from") {
     const x = ((last.advice.lap - 1) / last.laps) * W;
     svg.appendChild(svgEl("line", { x1: x, x2: x, y1: 0, y2: H, stroke: "var(--fg)", "stroke-dasharray": "3 3", "vector-effect": "non-scaling-stroke" }));
-    $("lap-note").textContent = `Start here: lap ${last.advice.lap}`;
+    $("lap-note").textContent = last.tier === "Must Watch" ? `Short on time? Start here: lap ${last.advice.lap}` : `Start here: lap ${last.advice.lap}`;
   }
   $("lap-last").textContent = `Lap ${last.laps}`;
 }

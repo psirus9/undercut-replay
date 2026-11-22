@@ -300,7 +300,7 @@ def main():
             vals = [x[k] for x in pool]
             r[k.replace("_raw", "").replace("_m", "") + ("_pct" if k.endswith("_raw") else "_meter")] = (
                 round(100 * pct(vals, r[k])) if k.endswith("_raw") else max(1, min(5, 1 + int(pct(vals, r[k]) * 5 - 1e-9))))
-        # watch-from pointer: smallest suffix (after lap 3) holding >=65% of race intensity
+        # watch-from pointer: smallest suffix (after lap 3) holding >=60% of race intensity
         it = r["intensity"]; tot = sum(it[3:]) or 1
         acc = 0; start = None
         for i in range(len(it) - 1, 2, -1):
@@ -311,7 +311,10 @@ def main():
         if r["tier"] == "Snoozer":
             r["advice"] = {"kind": "recap", "text": "Recap is enough"}
         elif start and share <= .5:
-            r["advice"] = {"kind": "from", "lap": start, "text": f"Start at lap {start} of {len(it)}"}
+            # Must Watch: the whole race is the recommendation; the lap is a shortcut, not a verdict
+            txt = (f"Short on time? Start at lap {start} of {len(it)}" if r["tier"] == "Must Watch"
+                   else f"Start at lap {start} of {len(it)}")
+            r["advice"] = {"kind": "from", "lap": start, "text": txt}
         else:
             # longest quiet stretch in the middle: every 3-lap window holds under 1 point of action
             n = len(it); best = (0, 0); run_start = None

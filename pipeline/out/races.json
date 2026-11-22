@@ -1628,7 +1628,7 @@
    "advice": {
     "kind": "from",
     "lap": 41,
-    "text": "Start at lap 41 of 53"
+    "text": "Short on time? Start at lap 41 of 53"
    },
    "intensity_profile": [
     10.5,
@@ -1891,7 +1891,7 @@
    "advice": {
     "kind": "from",
     "lap": 39,
-    "text": "Start at lap 39 of 51"
+    "text": "Short on time? Start at lap 39 of 51"
    },
    "intensity_profile": [
     3.5,
@@ -2697,7 +2697,7 @@
    "advice": {
     "kind": "from",
     "lap": 29,
-    "text": "Start at lap 29 of 50"
+    "text": "Short on time? Start at lap 29 of 50"
    },
    "intensity_profile": [
     4.5,
