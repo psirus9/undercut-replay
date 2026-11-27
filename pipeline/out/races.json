@@ -8,41 +8,41 @@
    "locality": "Melbourne",
    "country": "Australia",
    "laps": 58,
-   "score": 71,
+   "score": 76,
    "tier": "Worth It",
-   "front_pct": 73,
-   "pack_pct": 78,
-   "action_meter": 2,
-   "suspense_meter": 4,
+   "front_pct": 82,
+   "pack_pct": 73,
+   "action_meter": 3,
+   "suspense_meter": 5,
    "chaos_meter": 3,
    "advice": {
     "kind": "skip",
-    "from": 42,
+    "from": 44,
     "to": 56,
-    "text": "Skip laps 42 to 56"
+    "text": "Skip laps 44 to 56"
    },
    "intensity_profile": [
-    7.5,
+    17.0,
     11.0,
     11.0,
-    5.0,
-    4.0,
-    3.5,
+    9.0,
+    13.0,
+    5.5,
     0.0,
     3.5,
     3.5,
     0.0,
-    1.5,
+    2.0,
     0.5,
     0.5,
-    1.5,
+    3.5,
     1.0,
     0.0,
     3.0,
     0.0,
-    4.0,
-    4.0,
-    0.0,
+    6.0,
+    8.0,
+    1.0,
     0.0,
     0.0,
     0.0,
@@ -58,9 +58,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.02,
-      "pts": -0.003,
-      "stat": "0.77 passes per green-flag lap"
+      "z": -0.05,
+      "pts": -0.008,
+      "stat": "1.32 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -74,17 +74,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.89,
-      "pts": -0.089,
+      "z": -0.81,
+      "pts": -0.081,
       "stat": "0.00 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.17,
-      "pts": 0.037,
-      "stat": "2 lead changes on track, 2 passes for podium places, top three nose to tail (under a second) on about 32% of laps"
+      "z": 0.44,
+      "pts": 0.097,
+      "stat": "7 lead changes on track, 7 passes for podium places, top three nose to tail (under a second) on about 32% of laps"
      },
      {
       "key": "finish",
@@ -127,9 +127,9 @@
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.072,
+    "raw": 0.134,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -142,11 +142,11 @@
    "locality": "Shanghai",
    "country": "China",
    "laps": 56,
-   "score": 87,
-   "tier": "Must Watch",
-   "front_pct": 76,
-   "pack_pct": 80,
-   "action_meter": 5,
+   "score": 71,
+   "tier": "Worth It",
+   "front_pct": 62,
+   "pack_pct": 71,
+   "action_meter": 4,
    "suspense_meter": 4,
    "chaos_meter": 3,
    "advice": {
@@ -154,30 +154,30 @@
     "text": "Watch the whole thing"
    },
    "intensity_profile": [
-    9.5,
+    11.0,
     7.0,
-    4.0,
+    6.0,
     2.0,
-    3.5,
+    5.5,
     0.0,
-    15.0,
+    14.5,
     14.0,
     7.0,
-    4.0,
-    7.0,
+    8.0,
+    11.0,
     3.0,
+    9.0,
+    11.0,
+    5.0,
+    1.0,
     3.0,
-    7.0,
-    2.0,
-    0.0,
-    3.0,
-    3.0,
+    5.0,
     2.0,
     4.0,
     1.0,
     1.0,
-    7.0,
-    0.0,
+    1.0,
+    1.0,
     0.0,
     1.0,
     0.0,
@@ -189,9 +189,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 1.43,
-      "pts": 0.229,
-      "stat": "1.60 passes per green-flag lap"
+      "z": 0.5,
+      "pts": 0.08,
+      "stat": "1.98 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -205,17 +205,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 0.15,
-      "pts": 0.015,
-      "stat": "0.64 passes per lap in the final quarter"
+      "z": -0.53,
+      "pts": -0.053,
+      "stat": "0.29 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.82,
-      "pts": 0.18,
-      "stat": "1 lead change on track, 15 passes for podium places, top three nose to tail (under a second) on about 34% of laps"
+      "z": 0.43,
+      "pts": 0.095,
+      "stat": "1 lead change on track, 18 passes for podium places, top three nose to tail (under a second) on about 34% of laps"
      },
      {
       "key": "finish",
@@ -258,9 +258,9 @@
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.413,
+    "raw": 0.112,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -273,10 +273,10 @@
    "locality": "Suzuka",
    "country": "Japan",
    "laps": 53,
-   "score": 78,
+   "score": 80,
    "tier": "Worth It",
-   "front_pct": 38,
-   "pack_pct": 73,
+   "front_pct": 29,
+   "pack_pct": 80,
    "action_meter": 5,
    "suspense_meter": 2,
    "chaos_meter": 3,
@@ -285,32 +285,32 @@
     "text": "Watch the whole thing"
    },
    "intensity_profile": [
-    5.5,
+    10.0,
     10.0,
     4.0,
     7.0,
-    5.0,
     4.0,
-    1.0,
-    6.0,
-    0.5,
-    1.0,
     4.0,
-    0.0,
-    0.0,
+    15.0,
+    20.0,
     2.0,
+    1.0,
+    5.5,
+    0.0,
+    0.0,
     4.5,
+    11.5,
     1.0,
     0.0,
-    1.0,
+    14.0,
     2.0,
     0.0,
     2.0,
     1.0,
-    0.0,
+    15.0,
     4.0,
     4.0,
-    2.0,
+    4.0,
     0.0
    ],
    "detail": {
@@ -319,9 +319,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.31,
-      "pts": 0.05,
-      "stat": "0.96 passes per green-flag lap"
+      "z": 0.96,
+      "pts": 0.154,
+      "stat": "2.53 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -335,16 +335,16 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 0.27,
-      "pts": 0.027,
-      "stat": "0.71 passes per lap in the final quarter"
+      "z": 1.1,
+      "pts": 0.11,
+      "stat": "1.93 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.59,
-      "pts": 0.13,
+      "z": 0.2,
+      "pts": 0.044,
       "stat": "2 lead changes on track, 10 passes for podium places, top three nose to tail (under a second) on about 31% of laps"
      },
      {
@@ -388,9 +388,9 @@
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.132,
+    "raw": 0.233,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -406,7 +406,7 @@
    "score": 69,
    "tier": "Worth It",
    "front_pct": 87,
-   "pack_pct": 58,
+   "pack_pct": 53,
    "action_meter": 4,
    "suspense_meter": 5,
    "chaos_meter": 3,
@@ -415,35 +415,35 @@
     "text": "Watch the whole thing"
    },
    "intensity_profile": [
-    4.5,
-    8.0,
-    18.5,
+    18.0,
+    7.0,
+    17.5,
     0.0,
     0.0,
-    3.0,
-    8.0,
     6.5,
+    14.0,
+    6.5,
+    6.0,
     2.0,
     2.0,
-    1.0,
+    5.0,
     3.0,
-    3.0,
-    0.0,
-    2.5,
+    1.5,
+    9.0,
     2.0,
     2.0,
-    4.0,
+    6.0,
     3.0,
     3.0,
-    1.0,
-    1.0,
-    1.0,
-    4.0,
+    2.0,
     0.5,
-    1.0,
+    5.5,
+    10.0,
+    0.5,
+    1.5,
     0.0,
-    3.0,
-    2.0
+    7.0,
+    0.0
    ],
    "detail": {
     "factors": [
@@ -451,9 +451,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.7,
-      "pts": 0.112,
-      "stat": "1.18 passes per green-flag lap"
+      "z": 0.47,
+      "pts": 0.075,
+      "stat": "1.94 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -467,17 +467,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.02,
-      "pts": -0.002,
-      "stat": "0.53 passes per lap in the final quarter"
+      "z": 0.38,
+      "pts": 0.038,
+      "stat": "1.20 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.72,
-      "pts": 0.158,
-      "stat": "4 lead changes on track, 7 passes for podium places, top three nose to tail (under a second) on about 35% of laps"
+      "z": 0.57,
+      "pts": 0.125,
+      "stat": "4 lead changes on track, 16 passes for podium places, top three nose to tail (under a second) on about 35% of laps"
      },
      {
       "key": "finish",
@@ -520,9 +520,9 @@
       "stat": "Championship very close afterwards"
      }
     ],
-    "raw": 0.067,
+    "raw": 0.036,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -537,9 +537,9 @@
    "laps": 68,
    "score": 73,
    "tier": "Worth It",
-   "front_pct": 69,
+   "front_pct": 71,
    "pack_pct": 29,
-   "action_meter": 1,
+   "action_meter": 2,
    "suspense_meter": 4,
    "chaos_meter": 4,
    "advice": {
@@ -547,18 +547,18 @@
     "text": "Watch the whole thing"
    },
    "intensity_profile": [
-    3.5,
-    4.0,
+    10.0,
     8.0,
-    7.0,
-    5.0,
+    8.0,
+    10.0,
     6.0,
-    5.0,
+    13.0,
+    7.0,
     4.0,
-    5.0,
+    13.0,
     3.0,
     5.0,
-    2.0,
+    6.0,
     5.0,
     4.0,
     1.5,
@@ -566,7 +566,7 @@
     0.0,
     1.0,
     1.0,
-    2.0,
+    1.0,
     0.0,
     0.0,
     3.0,
@@ -579,7 +579,7 @@
     0.0,
     2.0,
     2.0,
-    0.0,
+    2.0,
     0.0
    ],
    "detail": {
@@ -588,9 +588,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.33,
-      "pts": -0.053,
-      "stat": "0.59 passes per green-flag lap"
+      "z": -0.28,
+      "pts": -0.045,
+      "stat": "1.03 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -604,17 +604,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.6,
-      "pts": -0.06,
-      "stat": "0.18 passes per lap in the final quarter"
+      "z": -0.52,
+      "pts": -0.052,
+      "stat": "0.29 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 1.33,
-      "pts": 0.293,
-      "stat": "4 lead changes on track, 5 passes for podium places, top three nose to tail (under a second) on about 68% of laps"
+      "z": 1.37,
+      "pts": 0.301,
+      "stat": "11 lead changes on track, 13 passes for podium places, top three nose to tail (under a second) on about 68% of laps"
      },
      {
       "key": "finish",
@@ -657,9 +657,9 @@
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": 0.097,
+    "raw": 0.12,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -672,10 +672,10 @@
    "locality": "Monte Carlo",
    "country": "Monaco",
    "laps": 78,
-   "score": 40,
+   "score": 49,
    "tier": "Worth It",
    "front_pct": 13,
-   "pack_pct": 36,
+   "pack_pct": 40,
    "action_meter": 1,
    "suspense_meter": 1,
    "chaos_meter": 5,
@@ -685,6 +685,7 @@
     "text": "Start at lap 60 of 78"
    },
    "intensity_profile": [
+    0.5,
     0.0,
     0.0,
     0.0,
@@ -698,8 +699,7 @@
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
+    1.0,
     1.0,
     0.0,
     0.0,
@@ -718,9 +718,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -1.3,
-      "pts": -0.208,
-      "stat": "0.03 passes per green-flag lap"
+      "z": -1.09,
+      "pts": -0.174,
+      "stat": "0.05 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -734,16 +734,16 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.89,
-      "pts": -0.089,
+      "z": -0.81,
+      "pts": -0.081,
       "stat": "0.00 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.81,
-      "pts": -0.178,
+      "z": -0.65,
+      "pts": -0.143,
       "stat": "0 lead changes on track, 0 passes for podium places, top three nose to tail (under a second) on about 2% of laps"
      },
      {
@@ -787,9 +787,9 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.253,
+    "raw": -0.178,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -802,9 +802,9 @@
    "locality": "Barcelona",
    "country": "Spain",
    "laps": 66,
-   "score": 11,
+   "score": 7,
    "tier": "Snoozer",
-   "front_pct": 11,
+   "front_pct": 9,
    "pack_pct": 4,
    "action_meter": 1,
    "suspense_meter": 1,
@@ -814,26 +814,26 @@
     "text": "Recap is enough"
    },
    "intensity_profile": [
-    2.5,
+    3.0,
     1.0,
+    3.0,
     2.0,
-    2.0,
-    1.0,
-    1.0,
-    0.0,
-    1.0,
-    2.0,
-    3.5,
-    1.0,
-    2.0,
-    1.0,
-    0.0,
-    3.5,
-    5.0,
     3.0,
     1.5,
+    1.0,
+    2.5,
+    5.5,
+    5.5,
+    1.0,
+    2.0,
+    1.0,
     0.0,
-    0.0,
+    2.5,
+    5.0,
+    3.0,
+    3.5,
+    1.5,
+    2.0,
     3.0,
     0.0,
     1.0,
@@ -842,8 +842,8 @@
     0.0,
     0.0,
     1.0,
+    1.0,
     0.0,
-    2.0,
     3.0,
     3.0,
     0.0
@@ -854,9 +854,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.46,
-      "pts": -0.074,
-      "stat": "0.52 passes per green-flag lap"
+      "z": -0.54,
+      "pts": -0.086,
+      "stat": "0.72 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -870,17 +870,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.41,
-      "pts": -0.041,
-      "stat": "0.29 passes per lap in the final quarter"
+      "z": -0.58,
+      "pts": -0.058,
+      "stat": "0.24 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.38,
-      "pts": -0.084,
-      "stat": "0 lead changes on track, 1 pass for podium places, top three nose to tail (under a second) on about 19% of laps"
+      "z": -0.36,
+      "pts": -0.079,
+      "stat": "0 lead changes on track, 2 passes for podium places, top three nose to tail (under a second) on about 19% of laps"
      },
      {
       "key": "finish",
@@ -923,9 +923,9 @@
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": -0.429,
+    "raw": -0.453,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -938,54 +938,54 @@
    "locality": "Spielberg",
    "country": "Austria",
    "laps": 71,
-   "score": 18,
-   "tier": "Snoozer",
-   "front_pct": 78,
-   "pack_pct": 13,
+   "score": 31,
+   "tier": "Worth It",
+   "front_pct": 84,
+   "pack_pct": 20,
    "action_meter": 1,
-   "suspense_meter": 4,
+   "suspense_meter": 5,
    "chaos_meter": 3,
    "advice": {
-    "kind": "recap",
-    "text": "Recap is enough"
+    "kind": "full",
+    "text": "Watch the whole thing"
    },
    "intensity_profile": [
-    8.5,
-    6.0,
+    17.0,
+    3.0,
     1.0,
-    2.0,
+    8.0,
     0.0,
+    10.0,
     0.0,
-    0.0,
-    3.0,
-    2.0,
-    2.0,
     5.0,
-    3.0,
+    2.0,
+    6.5,
+    11.0,
+    4.5,
     3.0,
     0.0,
     4.0,
     0.0,
     0.0,
     0.0,
-    1.5,
+    5.5,
     1.0,
     1.0,
     1.0,
-    1.0,
-    1.5,
+    0.0,
+    3.5,
     1.0,
     3.0,
     1.0,
     1.0,
     0.0,
+    1.0,
     0.0,
     0.0,
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.5
+    0.0
    ],
    "detail": {
     "factors": [
@@ -993,9 +993,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.41,
-      "pts": -0.066,
-      "stat": "0.55 passes per green-flag lap"
+      "z": -0.27,
+      "pts": -0.043,
+      "stat": "1.05 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -1009,17 +1009,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.71,
-      "pts": -0.071,
-      "stat": "0.11 passes per lap in the final quarter"
+      "z": -0.65,
+      "pts": -0.065,
+      "stat": "0.17 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.32,
-      "pts": -0.07,
-      "stat": "0 lead changes on track, 4 passes for podium places, top three nose to tail (under a second) on about 14% of laps"
+      "z": -0.13,
+      "pts": -0.029,
+      "stat": "0 lead changes on track, 11 passes for podium places, top three nose to tail (under a second) on about 14% of laps"
      },
      {
       "key": "finish",
@@ -1062,9 +1062,9 @@
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": -0.366,
+    "raw": -0.295,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -1077,11 +1077,11 @@
    "locality": "Silverstone",
    "country": "UK",
    "laps": 52,
-   "score": 62,
+   "score": 64,
    "tier": "Worth It",
    "front_pct": 7,
-   "pack_pct": 38,
-   "action_meter": 2,
+   "pack_pct": 42,
+   "action_meter": 3,
    "suspense_meter": 1,
    "chaos_meter": 5,
    "advice": {
@@ -1089,28 +1089,28 @@
     "text": "Watch the whole thing"
    },
    "intensity_profile": [
-    9.5,
+    21.0,
     4.0,
-    4.5,
-    1.0,
+    6.5,
+    5.0,
     2.0,
     3.0,
     0.0,
     2.0,
-    0.0,
+    2.0,
     1.0,
+    5.0,
+    2.0,
+    5.0,
+    4.0,
+    4.0,
     3.0,
+    8.0,
     1.0,
+    2.0,
     4.0,
-    4.0,
-    0.0,
     0.0,
     2.0,
-    0.0,
-    0.0,
-    4.0,
-    0.0,
-    1.0,
     0.0,
     3.0,
     0.0,
@@ -1122,9 +1122,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.13,
-      "pts": 0.021,
-      "stat": "0.86 passes per green-flag lap"
+      "z": 0.3,
+      "pts": 0.048,
+      "stat": "1.74 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -1138,17 +1138,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.64,
-      "pts": -0.064,
-      "stat": "0.15 passes per lap in the final quarter"
+      "z": -0.58,
+      "pts": -0.058,
+      "stat": "0.23 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.27,
-      "pts": -0.059,
-      "stat": "0 lead changes on track, 1 pass for podium places, top three nose to tail (under a second) on about 24% of laps"
+      "z": -0.23,
+      "pts": -0.051,
+      "stat": "0 lead changes on track, 4 passes for podium places, top three nose to tail (under a second) on about 24% of laps"
      },
      {
       "key": "finish",
@@ -1191,9 +1191,9 @@
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": -0.01,
+    "raw": 0.033,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -1206,10 +1206,10 @@
    "locality": "Spa",
    "country": "Belgium",
    "laps": 44,
-   "score": 91,
+   "score": 87,
    "tier": "Must Watch",
-   "front_pct": 93,
-   "pack_pct": 98,
+   "front_pct": 89,
+   "pack_pct": 96,
    "action_meter": 5,
    "suspense_meter": 5,
    "chaos_meter": 4,
@@ -1222,15 +1222,15 @@
     0.0,
     0.0,
     0.0,
-    10.0,
-    7.5,
+    13.5,
+    9.5,
+    4.5,
     5.5,
-    2.5,
     3.5,
     1.5,
     1.5,
-    5.5,
-    1.5,
+    6.5,
+    3.5,
     0.0,
     1.0,
     0.0,
@@ -1239,29 +1239,29 @@
     2.0,
     3.0,
     0.0,
-    0.0,
+    1.5,
     2.5,
     1.0,
     0.0,
-    3.0,
+    5.0,
     1.0,
     1.0,
     2.0,
+    3.5,
+    0.5,
     2.5,
-    0.5,
-    0.5,
     2.5,
     3.5,
     1.5,
     1.5,
-    1.5,
+    3.5,
     0.5,
     0.5,
     1.5,
     0.5,
     0.0,
     0.0,
-    0.5
+    0.0
    ],
    "detail": {
     "factors": [
@@ -1269,9 +1269,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 1.0,
-      "pts": 0.16,
-      "stat": "1.35 passes per green-flag lap"
+      "z": 0.37,
+      "pts": 0.059,
+      "stat": "1.82 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -1285,16 +1285,16 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.59,
-      "pts": -0.059,
-      "stat": "0.18 passes per lap in the final quarter"
+      "z": -0.45,
+      "pts": -0.045,
+      "stat": "0.36 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.91,
-      "pts": 0.2,
+      "z": 0.39,
+      "pts": 0.086,
       "stat": "2 lead changes on track, 6 passes for podium places, top three nose to tail (under a second) on about 56% of laps"
      },
      {
@@ -1338,9 +1338,9 @@
       "stat": "Championship fairly close afterwards"
      }
     ],
-    "raw": 0.562,
+    "raw": 0.362,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -1353,9 +1353,9 @@
    "locality": "Budapest",
    "country": "Hungary",
    "laps": 70,
-   "score": 13,
+   "score": 11,
    "tier": "Snoozer",
-   "front_pct": 29,
+   "front_pct": 31,
    "pack_pct": 18,
    "action_meter": 1,
    "suspense_meter": 2,
@@ -1365,27 +1365,27 @@
     "text": "Recap is enough"
    },
    "intensity_profile": [
+    6.0,
+    4.0,
+    4.0,
+    2.0,
+    2.0,
+    3.0,
+    3.0,
+    5.0,
+    3.0,
+    8.0,
+    2.0,
+    3.0,
+    8.0,
+    3.0,
+    2.0,
+    4.0,
+    1.5,
+    3.0,
+    3.0,
+    2.0,
     3.5,
-    4.0,
-    4.0,
-    2.0,
-    2.0,
-    2.0,
-    3.0,
-    2.5,
-    2.0,
-    1.0,
-    0.0,
-    4.0,
-    7.0,
-    3.0,
-    2.0,
-    3.0,
-    1.0,
-    0.0,
-    2.0,
-    1.0,
-    2.0,
     2.0,
     3.5,
     0.0,
@@ -1407,9 +1407,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.46,
-      "pts": -0.074,
-      "stat": "0.52 passes per green-flag lap"
+      "z": -0.45,
+      "pts": -0.072,
+      "stat": "0.83 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -1423,17 +1423,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.35,
-      "pts": -0.035,
+      "z": -0.48,
+      "pts": -0.048,
       "stat": "0.33 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.09,
-      "pts": -0.02,
-      "stat": "1 lead change on track, 1 pass for podium places, top three nose to tail (under a second) on about 27% of laps"
+      "z": -0.15,
+      "pts": -0.033,
+      "stat": "1 lead change on track, 3 passes for podium places, top three nose to tail (under a second) on about 27% of laps"
      },
      {
       "key": "finish",
@@ -1476,9 +1476,9 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.416,
+    "raw": -0.44,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -1491,10 +1491,10 @@
    "locality": "Zandvoort",
    "country": "Netherlands",
    "laps": 72,
-   "score": 82,
-   "tier": "Must Watch",
-   "front_pct": 36,
-   "pack_pct": 27,
+   "score": 78,
+   "tier": "Worth It",
+   "front_pct": 24,
+   "pack_pct": 22,
    "action_meter": 2,
    "suspense_meter": 2,
    "chaos_meter": 5,
@@ -1503,29 +1503,29 @@
     "text": "Watch the whole thing"
    },
    "intensity_profile": [
-    0.0,
-    14.0,
-    4.5,
+    23.0,
+    2.0,
+    3.5,
     1.5,
-    3.0,
-    3.0,
     1.0,
+    1.5,
+    1.0,
+    4.0,
+    8.5,
+    6.5,
+    3.5,
+    7.5,
+    3.5,
+    2.5,
+    2.0,
+    2.0,
+    2.0,
+    7.5,
     3.0,
+    0.0,
+    0.0,
     5.0,
-    7.5,
-    3.5,
-    5.5,
-    3.5,
     2.0,
-    3.0,
-    1.0,
-    2.0,
-    7.5,
-    3.0,
-    0.0,
-    0.0,
-    3.0,
-    0.0,
     3.0
    ],
    "detail": {
@@ -1534,9 +1534,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.31,
-      "pts": -0.05,
-      "stat": "0.60 passes per green-flag lap"
+      "z": -0.41,
+      "pts": -0.066,
+      "stat": "0.88 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -1550,17 +1550,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.71,
-      "pts": -0.071,
-      "stat": "0.11 passes per lap in the final quarter"
+      "z": -0.48,
+      "pts": -0.048,
+      "stat": "0.33 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.37,
-      "pts": 0.081,
-      "stat": "2 lead changes on track, 6 passes for podium places, top three nose to tail (under a second) on about 31% of laps"
+      "z": -0.1,
+      "pts": -0.022,
+      "stat": "1 lead change on track, 3 passes for podium places, top three nose to tail (under a second) on about 31% of laps"
      },
      {
       "key": "finish",
@@ -1603,9 +1603,9 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": 0.246,
+    "raw": 0.15,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -1618,20 +1618,20 @@
    "locality": "Monza",
    "country": "Italy",
    "laps": 53,
-   "score": 84,
+   "score": 82,
    "tier": "Must Watch",
-   "front_pct": 84,
-   "pack_pct": 89,
+   "front_pct": 78,
+   "pack_pct": 84,
    "action_meter": 4,
-   "suspense_meter": 5,
+   "suspense_meter": 4,
    "chaos_meter": 5,
    "advice": {
     "kind": "from",
-    "lap": 41,
-    "text": "Short on time? Start at lap 41 of 53"
+    "lap": 42,
+    "text": "Short on time? Start at lap 42 of 53"
    },
    "intensity_profile": [
-    10.5,
+    25.0,
     3.0,
     0.0,
     0.0,
@@ -1645,15 +1645,15 @@
     0.0,
     0.0,
     0.0,
-    0.0,
+    1.0,
     2.0,
     1.0,
     3.0,
     3.0,
     2.0,
-    4.0,
+    8.0,
     3.0,
-    0.5,
+    1.5,
     5.0,
     6.0,
     2.0,
@@ -1665,9 +1665,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.67,
-      "pts": 0.107,
-      "stat": "1.17 passes per green-flag lap"
+      "z": 0.38,
+      "pts": 0.061,
+      "stat": "1.83 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -1681,17 +1681,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 0.5,
-      "pts": 0.05,
-      "stat": "0.86 passes per lap in the final quarter"
+      "z": 0.25,
+      "pts": 0.025,
+      "stat": "1.07 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.3,
-      "pts": 0.066,
-      "stat": "2 lead changes on track, 7 passes for podium places, top three nose to tail (under a second) on about 25% of laps"
+      "z": 0.12,
+      "pts": 0.026,
+      "stat": "2 lead changes on track, 10 passes for podium places, top three nose to tail (under a second) on about 25% of laps"
      },
      {
       "key": "finish",
@@ -1734,9 +1734,9 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": 0.4,
+    "raw": 0.289,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -1749,11 +1749,11 @@
    "locality": "Madrid",
    "country": "Spain",
    "laps": 57,
-   "score": 9,
+   "score": 18,
    "tier": "Snoozer",
-   "front_pct": 64,
-   "pack_pct": 16,
-   "action_meter": 1,
+   "front_pct": 67,
+   "pack_pct": 11,
+   "action_meter": 2,
    "suspense_meter": 4,
    "chaos_meter": 1,
    "advice": {
@@ -1761,34 +1761,34 @@
     "text": "Recap is enough"
    },
    "intensity_profile": [
-    2.0,
+    4.5,
     5.0,
-    20.0,
+    6.0,
     1.0,
     1.0,
     0.0,
     3.0,
+    1.5,
+    1.0,
+    2.0,
+    0.0,
+    4.0,
+    0.0,
+    1.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
     0.0,
     2.0,
-    2.0,
-    0.0,
     1.0,
-    0.0,
-    0.5,
-    1.0,
-    0.0,
-    0.0,
-    1.0,
-    0.0,
-    0.0,
-    0.0,
-    1.0,
-    1.0,
-    1.0,
+    11.0,
     1.0,
     0.0,
     1.0,
-    0.0,
+    4.0,
     0.0
    ],
    "detail": {
@@ -1797,9 +1797,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.37,
-      "pts": -0.059,
-      "stat": "0.57 passes per green-flag lap"
+      "z": -0.59,
+      "pts": -0.094,
+      "stat": "0.66 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -1813,17 +1813,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.78,
-      "pts": -0.078,
-      "stat": "0.07 passes per lap in the final quarter"
+      "z": 0.05,
+      "pts": 0.005,
+      "stat": "0.87 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.15,
-      "pts": -0.033,
-      "stat": "0 lead changes on track, 3 passes for podium places, top three nose to tail (under a second) on about 25% of laps"
+      "z": -0.09,
+      "pts": -0.02,
+      "stat": "1 lead change on track, 6 passes for podium places, top three nose to tail (under a second) on about 25% of laps"
      },
      {
       "key": "finish",
@@ -1866,9 +1866,9 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.459,
+    "raw": -0.397,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -1881,45 +1881,45 @@
    "locality": "Baku",
    "country": "Azerbaijan",
    "laps": 51,
-   "score": 98,
+   "score": 91,
    "tier": "Must Watch",
    "front_pct": 98,
-   "pack_pct": 93,
+   "pack_pct": 91,
    "action_meter": 5,
    "suspense_meter": 5,
    "chaos_meter": 4,
    "advice": {
     "kind": "from",
-    "lap": 39,
-    "text": "Short on time? Start at lap 39 of 51"
+    "lap": 28,
+    "text": "Short on time? Start at lap 28 of 51"
    },
    "intensity_profile": [
-    3.5,
-    6.0,
+    10.0,
+    10.0,
     3.0,
     2.0,
     2.0,
-    2.0,
-    2.0,
-    1.0,
-    2.0,
-    0.0,
-    1.0,
-    0.0,
-    0.0,
-    1.0,
-    0.0,
-    3.0,
-    0.0,
-    3.0,
-    0.0,
-    17.5,
+    4.0,
     4.0,
     3.0,
+    4.0,
+    2.0,
+    1.0,
+    0.0,
+    0.0,
+    3.0,
+    2.0,
+    3.0,
+    0.0,
+    3.0,
+    0.0,
+    19.0,
     4.0,
     5.0,
     4.0,
-    2.5
+    5.0,
+    4.0,
+    0.0
    ],
    "detail": {
     "factors": [
@@ -1927,9 +1927,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.51,
-      "pts": 0.082,
-      "stat": "1.07 passes per green-flag lap"
+      "z": 0.21,
+      "pts": 0.034,
+      "stat": "1.63 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -1943,17 +1943,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 1.72,
-      "pts": 0.172,
-      "stat": "1.62 passes per lap in the final quarter"
+      "z": 0.87,
+      "pts": 0.087,
+      "stat": "1.69 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 1.17,
-      "pts": 0.257,
-      "stat": "0 lead changes on track, 3 passes for podium places, top three nose to tail (under a second) on about 85% of laps"
+      "z": 0.61,
+      "pts": 0.134,
+      "stat": "0 lead changes on track, 5 passes for podium places, top three nose to tail (under a second) on about 85% of laps"
      },
      {
       "key": "finish",
@@ -1996,9 +1996,9 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": 0.783,
+    "raw": 0.527,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -2011,10 +2011,10 @@
    "locality": "Kuala Lumpur",
    "country": "Malaysia",
    "laps": 55,
-   "score": 96,
+   "score": 98,
    "tier": "Must Watch",
-   "front_pct": 80,
-   "pack_pct": 84,
+   "front_pct": 76,
+   "pack_pct": 87,
    "action_meter": 5,
    "suspense_meter": 4,
    "chaos_meter": 5,
@@ -2023,33 +2023,33 @@
     "text": "Watch the whole thing"
    },
    "intensity_profile": [
-    7.0,
-    34.0,
-    8.5,
+    74.0,
+    53.0,
+    13.0,
     4.0,
     3.0,
     0.0,
-    25.5,
-    4.5,
-    0.0,
+    27.0,
+    13.0,
+    1.0,
     3.0,
     4.0,
-    4.0,
+    6.0,
     1.0,
-    2.0,
-    3.0,
-    1.0,
-    1.0,
-    2.0,
-    4.0,
-    2.0,
-    1.0,
-    3.0,
-    3.0,
-    0.0,
-    0.0,
-    2.0,
     5.0,
+    7.0,
+    1.0,
+    1.0,
+    4.0,
+    5.0,
+    2.0,
+    2.0,
+    3.0,
+    3.0,
+    0.0,
+    0.0,
+    11.5,
+    7.0,
     1.0
    ],
    "detail": {
@@ -2060,7 +2060,7 @@
       "weight": 0.16,
       "z": 2.5,
       "pts": 0.4,
-      "stat": "2.64 passes per green-flag lap"
+      "stat": "5.74 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -2074,17 +2074,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.19,
-      "pts": -0.019,
-      "stat": "0.43 passes per lap in the final quarter"
+      "z": 0.32,
+      "pts": 0.032,
+      "stat": "1.14 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.2,
-      "pts": 0.044,
-      "stat": "1 lead change on track, 9 passes for podium places, top three nose to tail (under a second) on about 21% of laps"
+      "z": 0.09,
+      "pts": 0.02,
+      "stat": "2 lead changes on track, 11 passes for podium places, top three nose to tail (under a second) on about 21% of laps"
      },
      {
       "key": "finish",
@@ -2127,9 +2127,9 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": 0.721,
+    "raw": 0.749,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -2144,9 +2144,9 @@
    "laps": 62,
    "score": 2,
    "tier": "Snoozer",
-   "front_pct": 31,
+   "front_pct": 36,
    "pack_pct": 7,
-   "action_meter": 2,
+   "action_meter": 1,
    "suspense_meter": 2,
    "chaos_meter": 3,
    "advice": {
@@ -2154,24 +2154,24 @@
     "text": "Recap is enough"
    },
    "intensity_profile": [
+    8.0,
+    5.0,
+    6.0,
     4.5,
-    6.0,
-    6.0,
-    7.5,
-    0.0,
+    0.5,
     2.0,
     1.0,
     1.0,
     0.0,
-    0.0,
+    1.0,
     1.0,
     0.0,
     0.0,
     0.0,
     0.0,
     0.0,
-    0.0,
-    0.0,
+    1.0,
+    1.0,
     0.0,
     3.0,
     0.0,
@@ -2180,7 +2180,7 @@
     1.0,
     0.0,
     0.0,
-    5.0,
+    10.0,
     1.0,
     1.0,
     0.0,
@@ -2192,9 +2192,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.53,
-      "pts": -0.085,
-      "stat": "0.47 passes per green-flag lap"
+      "z": -0.66,
+      "pts": -0.106,
+      "stat": "0.58 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -2208,17 +2208,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.18,
-      "pts": -0.018,
-      "stat": "0.44 passes per lap in the final quarter"
+      "z": -0.13,
+      "pts": -0.013,
+      "stat": "0.69 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.37,
-      "pts": -0.081,
-      "stat": "0 lead changes on track, 3 passes for podium places, top three nose to tail (under a second) on about 15% of laps"
+      "z": -0.35,
+      "pts": -0.077,
+      "stat": "0 lead changes on track, 4 passes for podium places, top three nose to tail (under a second) on about 15% of laps"
      },
      {
       "key": "finish",
@@ -2261,9 +2261,9 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.574,
+    "raw": -0.585,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -2276,11 +2276,11 @@
    "locality": "Austin",
    "country": "USA",
    "laps": 56,
-   "score": 29,
+   "score": 16,
    "tier": "Snoozer",
-   "front_pct": 20,
-   "pack_pct": 24,
-   "action_meter": 3,
+   "front_pct": 16,
+   "pack_pct": 9,
+   "action_meter": 1,
    "suspense_meter": 1,
    "chaos_meter": 4,
    "advice": {
@@ -2288,28 +2288,28 @@
     "text": "Recap is enough"
    },
    "intensity_profile": [
+    4.0,
+    1.0,
+    3.0,
+    4.0,
+    2.0,
+    4.0,
+    1.0,
+    1.0,
+    4.0,
+    4.0,
+    3.0,
+    3.0,
     3.0,
     2.0,
-    3.0,
-    4.0,
-    0.0,
-    4.0,
+    2.5,
+    5.0,
+    1.0,
     1.0,
     0.0,
-    4.0,
-    4.0,
-    3.0,
+    1.0,
     2.0,
-    3.0,
-    0.0,
-    0.5,
-    3.5,
     1.0,
-    1.0,
-    0.0,
-    0.0,
-    1.0,
-    0.0,
     2.0,
     7.0,
     3.0,
@@ -2323,9 +2323,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.1,
-      "pts": 0.016,
-      "stat": "0.84 passes per green-flag lap"
+      "z": -0.26,
+      "pts": -0.042,
+      "stat": "1.06 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -2339,17 +2339,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": 0.27,
-      "pts": 0.027,
-      "stat": "0.71 passes per lap in the final quarter"
+      "z": -0.03,
+      "pts": -0.003,
+      "stat": "0.79 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.12,
-      "pts": -0.026,
-      "stat": "0 lead changes on track, 6 passes for podium places, top three nose to tail (under a second) on about 18% of laps"
+      "z": -0.17,
+      "pts": -0.037,
+      "stat": "1 lead change on track, 6 passes for podium places, top three nose to tail (under a second) on about 18% of laps"
      },
      {
       "key": "finish",
@@ -2392,9 +2392,9 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.315,
+    "raw": -0.413,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -2409,9 +2409,9 @@
    "laps": 71,
    "score": 60,
    "tier": "Worth It",
-   "front_pct": 91,
-   "pack_pct": 56,
-   "action_meter": 3,
+   "front_pct": 93,
+   "pack_pct": 44,
+   "action_meter": 2,
    "suspense_meter": 5,
    "chaos_meter": 5,
    "advice": {
@@ -2421,8 +2421,8 @@
     "text": "Skip laps 46 to 61"
    },
    "intensity_profile": [
-    0.5,
-    1.0,
+    2.0,
+    3.0,
     4.5,
     3.0,
     0.0,
@@ -2430,14 +2430,14 @@
     1.0,
     0.0,
     1.0,
-    2.0,
+    4.0,
     1.0,
     1.0,
     2.0,
-    1.0,
+    1.5,
     4.0,
     0.0,
-    1.0,
+    3.0,
     0.0,
     1.0,
     0.0,
@@ -2452,11 +2452,11 @@
     0.0,
     0.0,
     0.0,
-    3.5,
+    3.0,
+    3.0,
     3.0,
     4.0,
-    4.0,
-    1.5
+    0.0
    ],
    "detail": {
     "factors": [
@@ -2464,9 +2464,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": -0.47,
-      "pts": -0.075,
-      "stat": "0.51 passes per green-flag lap"
+      "z": -0.68,
+      "pts": -0.109,
+      "stat": "0.55 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -2480,17 +2480,17 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.53,
-      "pts": -0.053,
-      "stat": "0.22 passes per lap in the final quarter"
+      "z": -0.76,
+      "pts": -0.076,
+      "stat": "0.06 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": -0.15,
-      "pts": -0.033,
-      "stat": "0 lead changes on track, 0 passes for podium places, top three nose to tail (under a second) on about 32% of laps"
+      "z": -0.22,
+      "pts": -0.048,
+      "stat": "0 lead changes on track, 1 pass for podium places, top three nose to tail (under a second) on about 32% of laps"
      },
      {
       "key": "finish",
@@ -2533,9 +2533,9 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.027,
+    "raw": -0.099,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -2548,50 +2548,50 @@
    "locality": "S\u00e3o Paulo",
    "country": "Brazil",
    "laps": 71,
-   "score": 53,
+   "score": 40,
    "tier": "Worth It",
-   "front_pct": 27,
-   "pack_pct": 87,
+   "front_pct": 20,
+   "pack_pct": 82,
    "action_meter": 3,
-   "suspense_meter": 2,
+   "suspense_meter": 1,
    "chaos_meter": 3,
    "advice": {
     "kind": "full",
     "text": "Watch the whole thing"
    },
    "intensity_profile": [
-    6.5,
-    6.5,
+    9.0,
+    9.5,
     4.0,
     10.0,
     6.0,
     3.0,
     1.0,
-    0.0,
-    0.0,
-    3.0,
+    1.0,
+    3.5,
+    5.5,
     2.0,
     6.0,
     2.0,
     0.0,
-    5.0,
+    3.0,
     0.0,
+    4.0,
+    4.0,
+    3.0,
     1.0,
     2.0,
-    3.0,
     1.0,
-    0.0,
-    1.0,
-    1.0,
-    0.0,
     2.0,
+    2.0,
+    2.0,
+    3.0,
+    6.5,
     1.0,
     3.0,
     1.0,
-    3.0,
     1.0,
-    0.0,
-    0.0,
+    1.0,
     2.0,
     0.0,
     1.0,
@@ -2603,9 +2603,9 @@
       "key": "action",
       "label": "On-track passing",
       "weight": 0.16,
-      "z": 0.33,
-      "pts": 0.053,
-      "stat": "0.97 passes per green-flag lap"
+      "z": -0.06,
+      "pts": -0.01,
+      "stat": "1.30 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -2619,16 +2619,16 @@
       "key": "late_action",
       "label": "Late-race passing",
       "weight": 0.1,
-      "z": -0.08,
-      "pts": -0.008,
-      "stat": "0.50 passes per lap in the final quarter"
+      "z": -0.21,
+      "pts": -0.021,
+      "stat": "0.61 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
       "label": "Fight at the front",
       "weight": 0.22,
-      "z": 0.1,
-      "pts": 0.022,
+      "z": -0.1,
+      "pts": -0.022,
       "stat": "1 lead change on track, 8 passes for podium places, top three nose to tail (under a second) on about 19% of laps"
      },
      {
@@ -2672,9 +2672,9 @@
       "stat": "Little title pressure"
      }
     ],
-    "raw": -0.117,
+    "raw": -0.237,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }
@@ -2696,35 +2696,35 @@
    "chaos_meter": 3,
    "advice": {
     "kind": "from",
-    "lap": 29,
-    "text": "Short on time? Start at lap 29 of 50"
+    "lap": 27,
+    "text": "Short on time? Start at lap 27 of 50"
    },
    "intensity_profile": [
-    4.5,
+    12.0,
+    17.0,
+    22.0,
     11.0,
+    15.0,
+    15.0,
+    12.0,
     10.0,
-    5.0,
-    10.0,
-    11.0,
-    6.0,
-    10.0,
-    8.0,
+    19.0,
     3.0,
     0.0,
     0.0,
-    8.0,
-    11.0,
-    9.0,
-    15.0,
-    11.0,
-    13.0,
-    18.0,
-    5.0,
-    12.0,
-    10.0,
-    8.0,
+    25.5,
     17.0,
-    13.0
+    13.0,
+    15.0,
+    17.0,
+    19.0,
+    24.0,
+    19.0,
+    16.0,
+    12.0,
+    14.0,
+    25.0,
+    19.5
    ],
    "detail": {
     "factors": [
@@ -2734,7 +2734,7 @@
       "weight": 0.16,
       "z": 2.5,
       "pts": 0.4,
-      "stat": "3.37 passes per green-flag lap"
+      "stat": "5.98 passes per green-flag lap"
      },
      {
       "key": "battles",
@@ -2750,7 +2750,7 @@
       "weight": 0.1,
       "z": 2.5,
       "pts": 0.25,
-      "stat": "3.92 passes per lap in the final quarter"
+      "stat": "6.38 passes per lap in the final quarter"
      },
      {
       "key": "front_fight",
@@ -2758,7 +2758,7 @@
       "weight": 0.22,
       "z": 2.5,
       "pts": 0.55,
-      "stat": "8 lead changes on track, 26 passes for podium places, top three nose to tail (under a second) on about 100% of laps"
+      "stat": "33 lead changes on track, 61 passes for podium places, top three nose to tail (under a second) on about 100% of laps"
      },
      {
       "key": "finish",
@@ -2803,7 +2803,7 @@
     ],
     "raw": 1.476,
     "raw_range": [
-     -0.574,
+     -0.585,
      1.476
     ]
    }

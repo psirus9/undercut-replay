@@ -71,7 +71,7 @@ def main():
     for r, s in held:
         rnd, sk = r["round"], s["session_key"]
         print("round", rnd, r["raceName"], sk, file=sys.stderr)
-        for ep in ["laps", "race_control", "stints", "weather", "pit", "position"]:
+        for ep in ["laps", "race_control", "stints", "weather", "pit", "position", "overtakes"]:
             get(f"https://api.openf1.org/v1/{ep}?session_key={sk}", os.path.join(RAW, f"o_{ep}_{sk}.json"))
         # Jolpica if it has posted; otherwise build the same files from OpenF1 so we don't wait
         # (lap data is what Jolpica posts last, so check for it specifically)

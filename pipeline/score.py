@@ -6,6 +6,8 @@ import json, glob, os, statistics as st
 from collections import defaultdict
 
 HERE = os.path.dirname(os.path.abspath(__file__))
+import sys
+sys.path.insert(0, HERE)
 
 def tsec(t):
     if not t:
@@ -102,6 +104,13 @@ def race_signals(rawdir, meta):
             for b in ds:
                 if prev[a] > prev[b] and cur[a] < cur[b]:
                     passes.append((L, cur[a]))
+    # Prefer OpenF1's timestamped overtakes: end-of-lap positions miss passes undone within a lap.
+    import overtakes as _ov
+    ov = _ov.passes(lambda name: load(rawdir, f"o_{name}_{sk}.json"), sk, total_laps)
+    pass_source = "lap-end"
+    if ov is not None:
+        passes = [(L, p) for L, p in ov if L not in neutral]
+        pass_source = "openf1-overtakes"
     n_pass = len(passes)
     front_pass = sum(1 for L, p in passes if p <= 3)
     late_cut = int(total_laps * 0.75)
@@ -118,6 +127,8 @@ def race_signals(rawdir, meta):
                 lead_on_track += 1
         leaders.append(ld)
     n_leaders = len(set(leaders))
+    if pass_source == "openf1-overtakes":
+        lead_on_track = sum(1 for L, p in passes if p == 1)
 
     # ---- gaps at the line: close running, front gap trajectory
     green = [L for L in range(2, total_laps + 1) if L in cum and L not in neutral and L - 1 not in neutral]
@@ -201,6 +212,7 @@ def race_signals(rawdir, meta):
         "front_passes": front_pass,
         "late_passes": late_pass / max(1, total_laps - late_cut),
         "lead_changes": lead_on_track,
+        "pass_source": pass_source,
         "leaders": n_leaders,
         "close_per_lap": close_pairs / n_green,
         "front_close_share": close_front / n_green,
