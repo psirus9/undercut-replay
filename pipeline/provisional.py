@@ -68,6 +68,16 @@ def main():
            "locality": nxt["Circuit"]["Location"]["locality"], "country": nxt["Circuit"]["Location"]["country"],
            "expected_tier": "Snoozer" if pct < 40 else "Worth It", "expected_pct": round(pct),
            "basis": basis, "grid_known": bool(grid)}
+    # Circuit map from this weekend's practice or qualifying, so the race-day page shows it at lights out.
+    prev = json.loads(old) if old else {}
+    out["track"] = prev.get("track") if prev.get("key") == out["key"] else None
+    try:
+        from circuit import pre_race_track
+        t = pre_race_track(YEAR, nxt["date"])
+        if t and (not out["track"] or t.get("from") != out["track"].get("from")):
+            out["track"] = t
+    except Exception as e:
+        print("circuit map skipped:", e, file=sys.stderr)
     new = json.dumps(out, indent=1)
     open(OUT, "w").write(new)
     print("PROVISIONAL CHANGED" if new != old else "PROVISIONAL: unchanged", "-", out["name"], out["expected_tier"], out["expected_pct"])

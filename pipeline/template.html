@@ -481,7 +481,7 @@ const level = p => p >= 75 ? "High" : p >= 50 ? "Above avg" : p >= 25 ? "Below a
 function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
 function svgEl(tag, attrs) { const e = document.createElementNS(SVGNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); return e; }
 
-function trackSvg(r, big) {
+function trackSvg(r, big, color) {
   const t = r.track;
   if (!t) {
     if (big) return el("div", "track-none", "No position data for this circuit");
@@ -492,7 +492,7 @@ function trackSvg(r, big) {
   const pad = big ? 6 : 4;
   const s = svgEl("svg", { viewBox: `${-pad} ${-pad} ${t.w + pad * 2} ${t.h + pad * 2}`, role: "img", "aria-label": `${r.locality} circuit outline` });
   if (big) s.appendChild(svgEl("path", { d: t.d, fill: "none", stroke: "var(--grid)", "stroke-width": 7, "stroke-linejoin": "round", "vector-effect": "non-scaling-stroke" }));
-  const p = svgEl("path", { d: t.d, fill: "none", stroke: tierColor(r), "stroke-width": big ? 3 : 1.6, "stroke-linejoin": "round", "stroke-linecap": "round", "vector-effect": "non-scaling-stroke" });
+  const p = svgEl("path", { d: t.d, fill: "none", stroke: color || tierColor(r), "stroke-width": big ? 3 : 1.6, "stroke-linejoin": "round", "stroke-linecap": "round", "vector-effect": "non-scaling-stroke" });
   if (big) { p.setAttribute("class", "hero-track"); p.setAttribute("pathLength", "1"); }
   s.appendChild(p);
   if (big) {
@@ -522,14 +522,15 @@ const heroKey = provActive ? PROV.key : `${DATA.season_year}-${last.round}`;
 const fmtStart = iso => new Date(iso).toLocaleString("en-US", { weekday: "short", month: "short", day: "numeric", hour: "numeric", minute: "2-digit" });
 const fmtTime = ms => new Date(ms).toLocaleString("en-US", { weekday: "short", hour: "numeric", minute: "2-digit" });
 // The official rating lands with the first scheduled refresh (refresh.yml) once timing data is out,
-// about 2.5 hours after lights out. Refreshes run at :41 past 17h and 23h UTC on Sat and Sun, and 03h UTC on Sun and Mon.
+// about 2.5 hours after lights out. Refreshes (refresh.yml) run at :41 past 17h and 23h UTC on Sat and Sun, 03h UTC on Sun and Mon,
+// and every hour from 07h to 22h UTC on Sunday.
 // Allow 10 minutes for the refresh and deploy to finish, then round up to the quarter hour.
 const RACE_MS = 2 * 3600e3, DATA_LAG_MS = 2.5 * 3600e3, DEPLOY_MS = 10 * 60e3;
 function nextRefresh(after) {
   const d = new Date(after); d.setUTCMinutes(41, 0, 0); if (d.getTime() < after) d.setUTCHours(d.getUTCHours() + 1);
   for (let i = 0; i < 24 * 9; i++, d.setUTCHours(d.getUTCHours() + 1)) {
     const h = d.getUTCHours(), w = d.getUTCDay();
-    if (((h === 17 || h === 23) && (w === 6 || w === 0)) || (h === 3 && (w === 0 || w === 1))) return Math.ceil((d.getTime() + DEPLOY_MS) / 900e3) * 900e3;
+    if (((h === 17 || h === 23) && (w === 6 || w === 0)) || (h === 3 && (w === 0 || w === 1)) || (w === 0 && h >= 7 && h <= 22)) return Math.ceil((d.getTime() + DEPLOY_MS) / 900e3) * 900e3;
   }
   return null;
 }
@@ -546,7 +547,7 @@ function renderProvisional() {
   $("last-date").textContent = fmtDate(PROV.date);
   $("last-h").textContent = PROV.name;
   $("last-sub").textContent = `Round ${PROV.round} · ${PROV.locality}`;
-  $("last-track").replaceChildren(el("div", "track-wait", "Circuit map arrives with the official rating"));
+  $("last-track").replaceChildren(PROV.track ? trackSvg(PROV, true, "var(--sky)") : el("div", "track-wait", "Circuit map arrives with the official rating"));
   $("verdict-label").textContent = "Pre-race guess";
   const vt = $("last-tier"); vt.textContent = PROV.expected_tier; vt.classList.add("outline");
   const start = Date.parse(PROV.start), now = Date.now(), eta = officialEta(), running = now < start + RACE_MS;
