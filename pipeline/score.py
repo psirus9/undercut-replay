@@ -251,7 +251,8 @@ def collect():
         year = int(tail)
         for m in load(rawdir, "held.json"):
             key = f"{year}-{m['round']}"
-            if key in cache: continue
+            # re-score races first scored before OpenF1 had published its overtakes feed
+            if key in cache and cache[key].get("pass_source") != "lap-end": continue
             try:
                 s = race_signals(rawdir, m)
             except Exception as e:
