@@ -1,11 +1,14 @@
 name: Race refresh
 
 # Race weekends only. Times are UTC: roughly 12:41, 18:41 and 22:41 Detroit time on Saturday and Sunday,
-# matching the schedule that ran inside Claude. Run it by hand from the Actions tab any time.
+# plus every hour on Sunday from 07:41 to 22:41 UTC so the official rating lands soon after the race data does
+# (about 2.5 hours after lights out). The race-day page's arrival estimate in template.html mirrors this schedule.
+# Run it by hand from the Actions tab any time.
 on:
   schedule:
     - cron: "41 17,23 * * 0,6"
     - cron: "41 3 * * 0,1"
+    - cron: "41 7-22 * * 0"
   workflow_dispatch:
 
 permissions:
